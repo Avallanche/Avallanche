@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+<id>1020</id>
+<defaultcontrol>2</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+
+<controls>
+	<import>settings.menu.xml</import>
+	
+	<control Style="BlueColor">
+		<type>label</type>
+		<id>1</id>
+		<posX>766</posX>
+		<posY>158</posY>
+		<width>500</width>
+		<label>#(L(101021))/#(L(102900))</label>
+		<font>fontB20</font>
+	</control>
+
+	
+	
+	<control>
+		<description>group element</description>
+      		<type>group</type>
+		<posX>736</posX>
+      		<posY>321</posY>
+		<dimColor>ffffffff</dimColor>
+    		<layout>StackLayout(0, Vertical, true)</layout>
+	  	<animation effect="fade" time="150">WindowOpen</animation>
+	  	<animation effect="fade" time="150">WindowClose</animation>
+
+
+     
+<control Style="SettingsButtonLarge">
+      <description>Enable screen saver</description>
+      <type>checkbutton</type>
+      <id>2</id>
+      <label>300133</label>      
+      <ondown>3</ondown>
+      <onup>5</onup>
+      <animation effect="fade" time="150">WindowOpen</animation>
+      <animation effect="fade" time="150">WindowClose</animation>
+    </control>
+</control>
+<control>
+		<type>image</type>
+		<id>1</id>
+		<posX>735</posX>
+		<posY>373</posY>
+		<width>955</width>
+		<height>52</height>
+		<texture>settings_button_large_focus.png</texture>
+		<visible>Control.HasFocus(3)</visible>
+	</control>
+	
+	<control>
+		<type>image</type>
+		<id>1</id>
+		<posX>735</posX>
+		<posY>373</posY>
+		<width>955</width>
+		<height>52</height>
+		<texture>settings_button_large_nofocus.png</texture>
+		<visible>!Control.HasFocus(3)</visible>
+
+	</control>
+    <control>
+      <description>Delay label</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>765</posX>
+      <posY>380</posY>
+      <label>340</label>
+      <width>954</width>
+      <visible>!Control.HasFocus(3)</visible>
+      <animation effect="fade" time="150">WindowOpen</animation>
+      <animation effect="fade" time="150">WindowClose</animation>
+    </control>
+
+<control>
+      <description>Delay label</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>765</posX>
+      <posY>380</posY>
+      <label>340</label>
+      <width>954</width>      
+      <textcolor>ffFFFFFF</textcolor>
+      <visible>Control.HasFocus(3)</visible>
+      <animation effect="fade" time="150">WindowOpen</animation>
+      <animation effect="fade" time="150">WindowClose</animation>
+    </control>
+
+    <control>
+      <description>Delay</description>
+      <type>spincontrol</type>
+      <id>3</id>
+      <posX>1617</posX>
+      <posY>385</posY>
+      <align>right</align>
+      <textcolor>ffffffff</textcolor>
+      <textXOff>32</textXOff>
+      <textYOff>3</textYOff>
+      <onup>2</onup>
+      <ondown>4</ondown>      
+    	<animation effect="fade" time="150">WindowOpen</animation>
+  	<animation effect="fade" time="150">WindowClose</animation>
+    </control>
+
+<control>
+		<description>buttons</description>
+		<type>group</type>
+		<posX>735</posX>
+		<posY>425</posY>
+		<dimColor>ffffffff</dimColor>
+    		<layout>StackLayout(0, Vertical, true)</layout>
+	  	<animation effect="fade" time="150">WindowOpen</animation>
+	  	<animation effect="fade" time="150">WindowClose</animation>
+
+
+<control Style="SettingsButtonLarge">
+      <description>BurnIn</description>
+      <type>checkbutton</type>
+      <id>4</id>
+      <label>300134</label>      
+      <onright>5</onright>
+      <onup>3</onup>
+   		<animation effect="fade" time="150">WindowOpen</animation>
+  		<animation effect="fade" time="150">WindowClose</animation>
+    </control>
+
+<control Style="SettingsButtonLarge">
+      <description>Reduce framerate</description>
+      <type>checkbutton</type>
+      <id>5</id>
+      <label>300135</label>  		
+      <ondown>2</ondown>
+      <onup>4</onup>
+   		<animation effect="fade" time="150">WindowOpen</animation>
+  		<animation effect="fade" time="150">WindowClose</animation>
+    </control>
+  
+
+
+    </control>   
+  
+
+<import>common.time.xml</import>
+<import>avallonis.version.xml</import>
+</controls>
+</window>

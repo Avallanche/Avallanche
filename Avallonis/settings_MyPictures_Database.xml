@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+<id>1012</id>
+<defaultcontrol>3</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+
+<controls>
+	<import>settings.menu.xml</import>
+	
+	<control Style="BlueColor">
+		<type>label</type>
+		<id>1</id>
+		<posX>766</posX>
+		<posY>158</posY>
+		<width>500</width>
+		<label>#(L(300152))/#(L(300161))</label>
+		<font>fontB20</font>
+	</control>
+
+
+	<control>
+    <description>Scan picture folder label</description>
+    <type>label</type>
+    <id>1</id>
+		<posX>735</posX>
+		<posY>270</posY>
+		<width>600</width>			
+    <label>300181</label>
+		<font>fontB14</font>
+    		<animation effect="fade" time="150">WindowOpen</animation>
+		<animation effect="fade" time="150">WindowClose</animation>					
+  </control>
+	
+	<control>
+    <description>Folder BG label</description>
+    <type>label</type>
+    <id>1</id>
+		<posX>1335</posX>
+		<posY>270</posY>
+		<width>600</width>	
+    <label>300071</label>
+		<font>fontB14</font>
+    		<animation effect="fade" time="150">WindowOpen</animation>
+		<animation effect="fade" time="150">WindowClose</animation>					
+  </control>
+		
+		<control Style="SettingsButtonLarge">
+      			<description>Scan database</description>
+      			<type>button</type>
+      			<id>3</id>
+      			<label>300164</label>
+      			<posX>735</posX>
+      			<posY>320</posY>
+			<width>500</width>
+			<height>50</height>
+			<textXOff>33</textXOff>
+			<textYOff>8</textYOff>					
+			<textalign>left</textalign>	
+      			<onright>2</onright>
+			<onup>4</onup>
+			<animation effect="fade" time="150">WindowOpen</animation>
+			<animation effect="fade" time="150">WindowClose</animation>					
+    		</control>
+	
+    		<control Style="SettingsButtonLarge">
+      			<description>Reset database</description>
+      			<type>button</type>
+      			<id>4</id>
+      			<label>300182</label>
+      			<posX>735</posX>
+      			<posY>370</posY>
+			<width>500</width>
+			<height>50</height>
+			<textXOff>33</textXOff>
+			<textYOff>8</textYOff>			
+			<textalign>left</textalign>		
+      			<onup>3</onup>
+			<ondown>3</ondown>
+      			<onright>2</onright>
+			<animation effect="fade" time="150">WindowOpen</animation>
+			<animation effect="fade" time="150">WindowClose</animation>					
+    </control>
+
+	<!--Scan Folderlist-->
+	
+	<control>
+		<type>image</type>
+		<id>0</id>
+		<posX>1304</posX>
+		<posY>325</posY>
+		<width>489</width>
+		<height>188</height>
+		<texture>info_bg.png</texture>
+		<animation effect="fade" time="150">WindowOpen</animation>
+		<animation effect="fade" time="150">WindowClose</animation>
+	</control>
+	
+		<control>
+      <description>Scan status</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>1100</posX>
+      <posY>120</posY>
+      <font>font10</font>
+      <width>600</width>
+      <label>#scanstatus</label>
+    </control>
+	
+    		<control>
+      			<description>Scan folders listcontrol</description>
+      			<type>listcontrol</type>
+      			<id>2</id>
+      			<posX>1300</posX>
+      			<posY>330</posY>
+      			<width>330</width>
+      			<height>200</height>
+      			<scrollOffset>2</scrollOffset>
+      			<textXOff>60</textXOff>
+      			<textYOff>10</textYOff>
+      			<textXOff2>440</textXOff2>
+      			<textYOff2>10</textYOff2>
+      			<textXOff3>710</textXOff3>
+      			<textYOff3>10</textYOff3>
+      			<onleft>3</onleft>      
+      			<textureFocus>basic_button_focus.png</textureFocus>
+      			<textureNoFocus>-</textureNoFocus>
+			<font>font11</font>
+			<font2>font11</font2>
+			<font3>font11</font3>
+			<textcolor>00000000</textcolor>
+			<textcolor2>00000000</textcolor2>
+			<textcolor3>00000000</textcolor3>	
+      			<selectedColor>ffffffff</selectedColor>
+      			<selectedColor2>ffffffff</selectedColor2>
+      			<selectedColor3>ffffffff</selectedColor3>		
+			<spinPosX>-2000</spinPosX>
+			<spinPosY>-500</spinPosY>
+      			<dimColor>ffffffff</dimColor>
+      			<unfocusedAlpha>255</unfocusedAlpha>
+      			<spaceBetweenItems>16</spaceBetweenItems>
+			<animation effect="fade" time="150">WindowOpen</animation>
+			<animation effect="fade" time="150">WindowClose</animation>			
+    		</control>
+   
+
+<import>common.time.xml</import>
+<import>avallonis.version.xml</import>
+</controls>
+</window>

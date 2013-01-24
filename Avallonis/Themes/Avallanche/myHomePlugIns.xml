@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>34</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<disabletopbar>no</disabletopbar>
+<controls>
+
+<control>
+	<description>DEFAULT BACKGROUND</description>
+	<type>image</type>
+	<id>0</id>
+	<posX>0</posX>
+	<posY>0</posY>
+	<width>1920</width>
+	<height>1080</height>
+	<texture>background.png</texture>
+	<shouldCache>true</shouldCache>
+</control>
+
+    <control Style="HeaderLabels">
+      <animation effect="fade" time="250">WindowOpen</animation>
+      <animation effect="fade" time="250">WindowClose</animation>
+      <type>label</type>
+      <id>1</id>
+      <posX>185</posX>
+      <posY>38</posY>
+      <width>500</width>
+      <label>Home Plugins</label>
+      <font>font22</font>
+    </control>
+
+	
+<import>common.time.xml</import>
+
+	<control>
+		<description>Menu</description>
+		<type>menu</type>
+		<id>50</id>
+		<posX>945</posX>
+		<posY>184</posY>
+		<width>800</width>
+		<textColorNoFocus>ff999999</textColorNoFocus>
+		<textcolor>000000</textcolor>
+		<buttonTextXOff>0</buttonTextXOff>
+		<buttonTextYOff>0</buttonTextYOff>
+		<buttonHeight>105</buttonHeight>
+		<buttonOffset>0</buttonOffset>
+		<buttonFont>AvalonLight32</buttonFont>
+		<spaceBetweenButtons>0</spaceBetweenButtons>
+        <numberOfButtons>5</numberOfButtons>
+        <textureButtonFocus>-</textureButtonFocus>
+        <textureButtonNoFocus>-</textureButtonNoFocus>
+		<hoverX>0</hoverX>
+		<hoverY>118</hoverY>
+		<hoverWidth>1173</hoverWidth>
+		<hoverHeight>664</hoverHeight>
+		<hoverKeepAspectratio>no</hoverKeepAspectratio>
+        <scrollTime>160</scrollTime>
+        <scrollTimeMin>100</scrollTimeMin>
+        <mouseScrollTime>900</mouseScrollTime>
+        <mouseScrollTimeMin>450</mouseScrollTimeMin>
+        <textureBackground>-</textureBackground>
+		<onright>3</onright>
+		<onleft>3</onleft>
+		<animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>        
+	</control>
+
+	<control>
+		<description>VIEWPORT</description>
+		<type>image</type>
+		<id>0</id>
+		<posX>0</posX>
+		<posY>92</posY>
+		<width>1893</width>
+		<height>716</height>
+		<texture>viewport_music_list_fanart.png</texture>
+		<shouldCache>true</shouldCache>
+		<animation effect="fade" time="250">WindowOpen</animation>
+		<animation effect="fade" time="250">WindowClose</animation>
+		<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+		<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+	</control>
+	
+	<control>
+		<animation effect="slide" start="-60,0" end="0,0" tween="quadratic" easing="in" time="250" delay="400">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="-60,0" tween="quadratic" easing="in" time="250" delay="100">WindowClose</animation>
+		<id>1</id>
+		<type>image</type>
+		<posX>0</posX>
+		<posY>440</posY>
+		<width>64</width>
+		<height>199</height>
+		<texture>hiddenmenu_tab.png</texture>
+		<visible>![Control.HasFocus(2) | Control.HasFocus(3) | Control.HasFocus(4)] + !string.contains(#Avalon.HiddenMenu, false)</visible>
+	</control>
+
+<control>
+	<description>RSS background</description>
+	<type>image</type>
+	<id>0</id>
+	<posX>0</posX>
+	<posY>754</posY>
+	<width>1865</width>
+	<height>90</height>
+	<texture>basichome_rss_bg.png</texture>
+	<visible>plugin.isenabled(InfoService) + !string.contains(#Avalon.RSS, false)</visible>
+	<animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+	<animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+</control>
+
+<control Style="RSSColor">
+	<description>RSS items</description>
+	<type>fadelabel</type>
+	<id>1</id>
+	<posX>25</posX>
+	<posY>799</posY>
+	<width>1810</width>
+	<height>30</height>
+	<font>font11</font>
+	<label>#infoservice.feed.titles</label>
+	<visible>plugin.isenabled(InfoService) + !string.contains(#Avalon.RSS, false)</visible>
+	<animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+	<animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+</control>
+
+<import>myHome.exitmenu.xml</import>
+<import>BasicHome.weather.xml</import>  
+<import>common.overlay.home.xml</import>
+</controls>
+</window>

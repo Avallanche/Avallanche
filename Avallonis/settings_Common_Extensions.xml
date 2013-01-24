@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+<id>1001</id>
+<defaultcontrol>3</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+
+<controls>
+	<import>settings.menu.xml</import>
+	
+	<control Style="BlueColor">
+		<type>label</type>
+		<id>1</id>
+		<posX>766</posX>
+		<posY>158</posY>
+		<width>500</width>
+		<label>300162</label>
+		<font>fontB20</font>
+	</control>
+
+	
+	
+	<control>
+		<description>group element</description>
+      		<type>group</type>
+		<dimColor>ffffffff</dimColor>
+		<animation effect="fade" time="150">WindowOpen</animation>
+		<animation effect="fade" time="150">WindowClose</animation>
+
+
+<control>
+		<type>image</type>
+		<id>0</id>
+		<posX>1290</posX>
+		<posY>280</posY>
+		<width>470</width>
+		<height>470</height>
+		<texture>info_bg.png</texture>
+		<animation effect="fade" time="150">WindowOpen</animation>
+		<animation effect="fade" time="150">WindowClose</animation>
+	</control>
+  
+	<control>
+		<description>buttons</description>
+		<type>group</type>
+		<posX>736</posX>
+		<posY>280</posY>
+		<dimColor>ffffffff</dimColor>
+    <layout>StackLayout(0, Vertical, true)</layout>
+	  <animation effect="fade" time="150">WindowOpen</animation>
+	  <animation effect="fade" time="150">WindowClose</animation>
+
+  	 <control Style="SettingsButtonLarge">
+        <description>Add</description>
+        <type>button</type>
+        <id>3</id>
+	<width>500</width>
+        <onright>2</onright>
+        <onup>5</onup>
+        <label>300063</label>
+      </control>
+
+  	 <control Style="SettingsButtonLarge">
+        <description>Remove</description>
+        <type>button</type>
+        <id>4</id>
+        <width>500</width>
+        <onright>2</onright>
+        <label>300064</label>
+      </control>
+
+  	 <control Style="SettingsButtonLarge">
+        <description>Default</description>
+        <type>button</type>
+        <id>5</id>
+	<width>500</width>
+        <onright>2</onright>
+        <ondown>3</ondown>
+        <label>886</label>
+      </control>
+    </control>
+
+    <control>
+      <description>Extensions listcontrol</description>
+      <type>listcontrol</type>
+      <id>2</id>
+      <posX>1300</posX>
+      <posY>280</posY>
+      <width>230</width>
+      <height>520</height>
+      <textXOff>40</textXOff>
+      <textYOff>8</textYOff>      
+      <selectedColor>ffffffff</selectedColor>
+      <selectedColor2>ffffffff</selectedColor2>
+      <selectedColor3>ffffffff</selectedColor3>	
+      <spinPosX>1750</spinPosX>
+      <spinPosY>720</spinPosY>
+      <spinColor>ffffffff</spinColor>
+      <onleft>3</onleft>
+      <onright>35</onright>
+      
+      <textureFocus>basic_button_focus.png</textureFocus>
+      <textureNoFocus>-</textureNoFocus>
+      <spaceBetweenItems>5</spaceBetweenItems>
+      <unfocusedAlpha>155</unfocusedAlpha>
+      <dimColor>ffffffff</dimColor>
+   	  <animation effect="fade" time="150">WindowOpen</animation>
+  	  <animation effect="fade" time="150">WindowClose</animation>
+    </control>
+  </control>  
+  
+
+
+   
+
+<import>common.time.xml</import>
+<import>avallonis.version.xml</import>
+</controls>
+</window>

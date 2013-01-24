@@ -1,0 +1,362 @@
+<window>
+	<controls>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>80</defaultcontrol>
+			<onexit>50</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>0</buttonwidth>
+			<buttonheight>0</buttonheight>
+			<textureFocus></textureFocus>
+			<textureNoFocus></textureNoFocus>
+			<width>1920</width>
+			<height>1080</height>
+			<dimColor>00ffffff</dimColor>
+			<control>
+				<type>image</type>
+				<posX>680</posX>
+				<posY>120</posY>
+				<width>1186</width>
+				<height>739</height>
+				<texture>info_bg.png</texture>
+				<visible>Control.HasFocus(80)</visible>
+				<animation effect="fade" time="250">WindowOpen</animation>
+				<animation effect="fade" time="250">WindowClose</animation>
+				<animation effect="zoom" start="20,100" end="100,100" time="250" reversible="false">WindowOpen</animation>
+				<animation effect="zoom" start="100,100" end="20,100" time="250" reversible="false">WindowClose</animation>
+				<animation effect="zoom" start="20,100" end="100,100" time="450" delay="0" reversible="false">visible</animation>
+				<animation effect="zoom" start="100,100" end="20,100" time="450" delay="0" reversible="false">hidden</animation>				
+				<animation effect="fade" time="300" delay="150">visible</animation>
+				<animation effect="fade" time="250">hidden</animation>	
+			</control>
+			<control>
+				<description>default button</description>
+				<type>button</type>
+				<id>80</id>
+				<posX>1200</posX>
+				<posY>335</posY>
+				<width>38</width>
+				<height>39</height>
+				<onright>50</onright>
+				<onleft>50</onleft>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<textureFocus></textureFocus>
+				<textureNoFocus></textureNoFocus>
+				<font>font12</font>
+			</control>
+			
+			<control>
+				<animation effect="fade" time="0">WindowClose</animation>
+				<animation effect="slide" time="450" start="1200,0">visible</animation>
+				<animation effect="fade" time="300">visible</animation>
+				<animation effect="slide" time="0" end="1500,0">hidden</animation>
+				<description>info gfx</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>741</posX>
+				<posY>151</posY>
+				<width>58</width>
+				<height>59</height>
+				<texture>info.png</texture>
+				<visible>Control.HasFocus(80)</visible>
+			</control>
+			
+			<control>
+				<description>Selected item Label</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>838</posX>
+				<posY>154</posY>
+				<width>1160</width>
+				<label>#myfilms.user.mastertitle.value</label>
+				<font>fontB20</font>
+				<visible>Control.HasFocus(80)</visible>
+				<animation effect="fade" time="0">WindowClose</animation>
+				<animation effect="slide" time="450" start="1200,0">visible</animation>
+				<animation effect="fade" time="300">visible</animation>
+				<animation effect="slide" time="0" end="1500,0">hidden</animation>
+			</control>
+			<control>
+                        	<description>Rotating blank disc</description>
+                        	<type>image</type>
+                       	 	<id>0</id>
+                        	<posX>1610</posX>
+                        	<posY>260</posY>
+                        	<width>288</width>
+                        	<height>260</height>
+                        	<texture>..\..\..\thumbs\MovingPictures\DVDArt\FullSize\cd.png</texture>
+                        	<keepaspectratio>yes</keepaspectratio>
+                        	<visible>Control.HasFocus(80)</visible>
+                        	<animation effect="fade" time="250">WindowOpen</animation>
+				<animation effect="fade" time="250">WindowClose</animation>
+                        	<animation effect="rotate" delay="0" end="-360" centre="475,258" time="8000" loop="true" condition="true">Conditional</animation> 
+                        	<animation effect="fade" time="350" delay="520" reversible="false">visible</animation>
+              	 	</control>
+			<control>
+				<description>Fanart</description>
+				<type>image</type>
+				<id>1012121</id>
+				<posX>1485</posX>
+				<posY>219</posY>
+				<width>253</width>
+				<height>351</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png" mask="poster_mask.png">#myfilms.coverimage</texture>		
+				<visible>Control.HasFocus(80)</visible>
+				<animation effect="fade" time="0">WindowClose</animation>
+				<animation effect="slide" time="450" start="1200,0">visible</animation>
+				<animation effect="fade" time="300">visible</animation>
+				<animation effect="slide" time="0" end="1500,0">hidden</animation>
+			</control>
+
+			<control>
+				<description>Fanart Frame</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1455</posX>
+				<posY>215</posY>
+				<width>285</width>
+				<height>360</height>
+				<shouldCache>true</shouldCache>
+				<texture flipY="true" diffuse="Thumb_Mask.png" mask="video_filmstrip_mask.png">video_filmstrip_frame.png</texture>	
+				<visible>Control.HasFocus(80)+string.equals(#MovingPictures.Coverart)</visible>
+				<animation effect="fade" time="0">WindowClose</animation>
+				<animation effect="slide" time="450" start="1200,0">visible</animation>
+				<animation effect="fade" time="300">visible</animation>
+				<animation effect="slide" time="0" end="1500,0">hidden</animation>
+			</control>
+				
+			<control Style="InfoLabelDetails">
+				<animation effect="fade" time="0">WindowClose</animation>
+				<animation effect="slide" time="450" start="1200,0">visible</animation>
+				<animation effect="fade" time="300">visible</animation>
+				<animation effect="slide" time="0" end="1500,0">hidden</animation>
+				<description>Release Date Label</description>
+				<type>label</type>
+				<label>#myfilms.db.year.label</label>
+				<id>0</id>
+				<posX>744</posX>
+				<posY>240</posY>
+				<width>240</width>
+				<align>left</align>
+				<visible>Control.HasFocus(80)</visible>
+			</control>
+
+			<control Style="InfoValueDetails">
+				<animation effect="fade" time="0">WindowClose</animation>
+				<animation effect="slide" time="450" start="1200,0">visible</animation>
+				<animation effect="fade" time="300">visible</animation>
+				<animation effect="slide" time="0" end="1500,0">hidden</animation>
+				<description>Release Date Value</description>
+				<type>label</type>
+				<label>#myfilms.db.year.value</label>
+				<id>0</id>
+				<posX>1048</posX>
+				<posY>240</posY>
+				<width>240</width>
+				<align>left</align>
+				<font>AvalonLight14</font>
+				<visible>Control.HasFocus(80)</visible>
+			</control>
+
+			<control Style="InfoLabelDetails">
+				<animation effect="fade" time="0">WindowClose</animation>
+				<animation effect="slide" time="450" start="1200,0">visible</animation>
+				<animation effect="fade" time="300">visible</animation>
+				<animation effect="slide" time="0" end="1500,0">hidden</animation>
+				<description>Runtime Label</description>
+				<type>label</type>
+				<label>#myfilms.db.length.label</label>
+				<id>0</id>
+				<posX>744</posX>
+				<posY>280</posY>
+				<width>240</width>
+				<align>left</align>
+				<visible>Control.HasFocus(80)</visible>
+			</control>
+			
+			<control Style="InfoValueDetails">
+				<animation effect="fade" time="0">WindowClose</animation>
+				<animation effect="slide" time="450" start="1200,0">visible</animation>
+				<animation effect="fade" time="300">visible</animation>
+				<animation effect="slide" time="0" end="1500,0">hidden</animation>
+				<description>Runtime</description>
+				<type>label</type>
+				<label>#myfilms.db.length.value min</label>
+				<id>0</id>
+				<posX>1048</posX>
+				<posY>280</posY>
+				<width>240</width>
+				<align>left</align>
+				<font>AvalonLight14</font>
+				<visible>Control.HasFocus(80)</visible>
+			</control>
+			
+			<control Style="InfoLabelDetails">
+				<animation effect="fade" time="0">WindowClose</animation>
+				<animation effect="slide" time="450" start="1200,0">visible</animation>
+				<animation effect="fade" time="300">visible</animation>
+				<animation effect="slide" time="0" end="1500,0">hidden</animation>
+				<description>Genre Label</description>
+				<type>label</type>
+				<label>#myfilms.db.category.label</label>
+				<id>0</id>
+				<posX>744</posX>
+				<posY>320</posY>
+				<width>240</width>
+				<align>left</align>
+				<visible>Control.HasFocus(80)</visible>
+			</control>
+			
+			<control Style="InfoValueDetails">
+				<animation effect="fade" time="0">WindowClose</animation>
+				<animation effect="slide" time="450" start="1200,0">visible</animation>
+				<animation effect="fade" time="300">visible</animation>
+				<animation effect="slide" time="0" end="1500,0">hidden</animation>
+				<description>Genre</description>
+				<type>fadelabel</type>
+				<label>#myfilms.db.category.value</label>
+				<id>0</id>
+				<posX>1048</posX>
+				<posY>320</posY>
+				<width>700</width>
+				<align>left</align>
+				<font>AvalonLight14</font>
+				<visible>Control.HasFocus(80)</visible>
+			</control>
+			
+			<control Style="InfoLabelDetails">
+				<animation effect="fade" time="0">WindowClose</animation>
+				<animation effect="slide" time="450" start="1200,0">visible</animation>
+				<animation effect="fade" time="300">visible</animation>
+				<animation effect="slide" time="0" end="1500,0">hidden</animation>
+				<description>Director Label</description>
+				<type>label</type>
+				<label>#myfilms.db.director.label</label>
+				<id>0</id>
+				<posX>744</posX>
+				<posY>360</posY>
+				<width>240</width>
+				<align>left</align>
+				<visible>Control.HasFocus(80)</visible>
+			</control>
+			
+			<control Style="InfoValueDetails">
+				<animation effect="fade" time="0">WindowClose</animation>
+				<animation effect="slide" time="450" start="1200,0">visible</animation>
+				<animation effect="fade" time="300">visible</animation>
+				<animation effect="slide" time="0" end="1500,0">hidden</animation>
+				<description>Director</description>
+				<type>fadelabel</type>
+				<label>#myfilms.db.director.value</label>
+				<id>0</id>
+				<posX>1048</posX>
+				<posY>360</posY>
+				<width>700</width>
+				<align>left</align>
+				<font>AvalonLight14</font>
+				<visible>Control.HasFocus(80)</visible>
+			</control>
+			
+			<control Style="InfoValueDetails">
+				<animation effect="fade" time="0">WindowClose</animation>
+				<animation effect="slide" time="450" start="1200,0">visible</animation>
+				<animation effect="fade" time="300">visible</animation>
+				<animation effect="slide" time="0" end="1500,0">hidden</animation>
+				<type>textboxscrollup</type>
+				<description>Summary (list)</description>
+				<id>1025</id>
+				<posX>744</posX>
+				<posY>422</posY>
+				<width>710</width>
+				<height>280</height>
+				<font>AvalonLight12</font>
+				<label>#myfilms.db.description.value</label>
+				<seperator>---------------------------------------------------------------------------------------------------------</seperator>
+				<onleft>1026</onleft>
+				<onright>1026</onright>
+				<onup>1026</onup>
+				<ondown>1026</ondown>
+				<visible>Control.HasFocus(80)</visible>
+			</control>
+			
+			<control>
+				<animation effect="fade" time="0">WindowClose</animation>
+				<animation effect="slide" time="450" start="1200,0">visible</animation>
+				<animation effect="fade" time="300">visible</animation>
+				<animation effect="slide" time="0" end="1500,0">hidden</animation>
+				<description>frame</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>743</posX>
+				<posY>748</posY>
+				<width>1041</width>
+				<height>73</height>
+				<texture>movie_detail_frame.png</texture>
+				<visible>Control.HasFocus(80)</visible>
+			</control>
+	
+			<control>
+				<type>imagelist</type>
+				<id>101</id>
+				<posX>840</posX>
+				<posY>769</posY>
+				<width>315</width>
+				<height>29</height>
+				<textureWidth>28</textureWidth>
+				<textureHeight>27</textureHeight>
+				<subitems>
+				<subitem>stargrey.png</subitem>
+				<subitem>starwhite.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<imagesToDraw>10</imagesToDraw>
+				<percentage>#myfilms.db.rating.value</percentage>
+				<visible>Control.HasFocus(80)</visible>
+				<animation effect="fade" time="0">WindowClose</animation>
+				<animation effect="slide" time="450" start="1200,0">visible</animation>
+				<animation effect="fade" time="300">visible</animation>
+				<animation effect="slide" time="0" end="1500,0">hidden</animation>
+			</control>
+
+			<control>
+				<description>Score</description>
+				<type>label</type>
+				<label>#myfilms.db.rating.value</label>
+				<id>0</id>
+				<posX>1220</posX>
+				<posY>765</posY>
+				<width>185</width>
+				<align>right</align>
+				<font>fontB14</font>
+				<visible>Control.HasFocus(80)</visible>
+				<animation effect="fade" time="0">WindowClose</animation>
+				<animation effect="slide" time="450" start="1200,0">visible</animation>
+				<animation effect="fade" time="300">visible</animation>
+				<animation effect="slide" time="0" end="1500,0">hidden</animation>
+			</control>
+	
+			<control>
+				<type>image</type>
+				<description>thumb Logos ID 2012</description>
+				<id>2012</id>
+				<posX>1274</posX>
+				<posY>765</posY>
+				<width>392</width>
+				<height>41</height>
+				<texture>#myfilms.logos_id2012</texture>
+				<keepaspectratio>no</keepaspectratio>
+				<spaceBetweenItems>2</spaceBetweenItems>
+				<visible>Control.HasFocus(80)</visible>
+				<animation effect="fade" time="0">WindowClose</animation>
+				<animation effect="slide" time="450" start="1200,0">visible</animation>
+				<animation effect="fade" time="300">visible</animation>
+				<animation effect="slide" time="0" end="1500,0">hidden</animation>
+			</control>
+		
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file should contain the facade view
+-->
+<window>
+<controls>
+
+	<!--            :: List Scrolling Popup ::            -->
+
+    <control>
+      <description>Default Category Image</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>700</posX>
+      <posY>175</posY>
+      <width>454</width>
+      <height>455</height>
+      <texture flipY="true" diffuse="Thumb_Mask.png">Categories\Movies.png</texture>
+      <keepaspectratio>yes</keepaspectratio>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+	<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>	
+      <!--<animation effect="fade" time="250">visible</animation>-->
+      <visible>control.isvisible(51)+!control.isvisible(50)+!Control.HasThumb(100)</visible>
+    </control>
+    <control>
+      <description>Selected Category Image</description>
+      <type>image</type>
+      <id>100</id>
+      <posX>700</posX>
+      <posY>175</posY>
+      <width>454</width>
+      <height>455</height>
+      <texture flipY="true" diffuse="Thumb_Mask.png">Categories\#MovingPictures.SelectedNode.FileFriendlyName.png</texture>
+      <keepaspectratio>yes</keepaspectratio>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+	<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+      <visible>control.isvisible(51)+!control.isvisible(50)</visible>
+    </control>
+
+    <control>
+        <description>listscroller bg</description>
+        <type>image</type>
+        <id>1</id>
+        <posX>980</posX>
+        <posY>320</posY>
+        <width>187</width>
+        <height>202</height>
+        <texture>listscroller_bg.png</texture>
+        <visible>facadeview.list+string.contains(#scrolling.up,yes)|string.contains(#scrolling.down,yes)</visible>
+        <animation effect="fade" start="0" end="100" time="300" delay="0">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="0" delay="0">Hidden</animation>
+    </control>
+    
+    <control Style="BlueColor">
+        <type>label</type>
+        <id>1</id>
+        <posX>1035</posX>
+        <posY>374</posY>
+        <width>96</width>
+        <height>96</height>
+        <font>AvalonLight32</font>
+        <label>#selecteditem.scrolllabel</label>
+        <visible>facadeview.list+string.contains(#scrolling.up,yes)|string.contains(#scrolling.down,yes)</visible>
+        <align>center</align>
+        <valign>middle</valign>
+        <animation effect="fade" start="0" end="100" time="300" delay="0">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="0" delay="0">Hidden</animation>
+    </control>
+
+	<!--            :: Count Background ::            -->
+
+	<control>
+		<description>RSS background</description>
+		<type>image</type>
+		<id>0</id>
+		<posX>0</posX>
+		<posY>680</posY>
+		<width>1865</width>
+		<height>96</height>
+		<texture>basichome_rss_bg.png</texture>
+		<visible>[facadeview.list | facadeview.smallicons | facadeview.largeicons] + control.isvisible(50)</visible>
+		<animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+	</control>
+    
+	<control>
+		<description>RSS background</description>
+		<type>image</type>
+		<id>0</id>
+		<posX>0</posX>
+		<posY>710</posY>
+		<width>1950</width>
+		<height>64</height>
+		<texture>movies_count_bg_filmstrip.png</texture>
+		<visible>[facadeview.filmstrip | facadeview.coverflow]+Control.IsVisible(50)</visible>
+		<animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+	</control>     
+    
+	<!--            :: Count ::            -->
+	
+    <control Style="BlueColor">
+      <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+      <animation effect="fade" start="0" end="100" time="300" delay="350" reversible="false">visible</animation>
+      <description>Moviecount</description>
+      <type>label</type>
+      <label>#MovingPictures.Translation.Movies.Label: #MovingPictures.general.filteredmoviecount  |  #(L(2053)): #MovingPictures.CurrentNode.name</label>
+      <id>0</id>
+      <posX>1242</posX>
+      <posY>725</posY>
+      <align>left</align>
+      <font>AvalonLight12</font>
+	  <visible>[facadeview.smallicons | facadeview.largeicons | facadeview.filmstrip | facadeview.coverflow] + control.isvisible(50)</visible>
+    </control>
+    
+     <control Style="BlueColor">
+      <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+      <animation effect="fade" start="0" end="100" time="300" delay="350" reversible="false">visible</animation>
+      <description>Moviecount</description>
+      <type>label</type>
+      <label>#MovingPictures.Translation.Movies.Label: #MovingPictures.general.filteredmoviecount  |  #(L(2053)): #MovingPictures.CurrentNode.name</label>
+      <id>0</id>
+      <posX>1242</posX>
+      <posY>725</posY>
+      <align>left</align>
+      <font>AvalonLight12</font>
+	  <visible>facadeview.list + control.isvisible(50)</visible>
+    </control>
+
+	<!--            :: Parental Lock ::            -->
+	
+    <control>
+      <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+      <animation effect="fade" start="0" end="100" time="300" delay="350" reversible="false">visible</animation>
+      <description>Parental Lock</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>683</posX>
+      <posY>720</posY>
+      <with>22</with>
+      <height>34</height>
+      <align>left</align>
+      <texture>parental_lock.png</texture>
+	  <visible>facadeview.list + control.isvisible(16) + control.isvisible(50)</visible>
+    </control>
+
+    <control>
+      <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+      <animation effect="fade" start="0" end="100" time="300" delay="350" reversible="false">visible</animation>
+      <description>Parental Lock</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>1315</posX>
+      <posY>720</posY>
+      <with>22</with>
+      <height>34</height>
+      <align>left</align>
+      <texture>parental_lock.png</texture>
+	  <visible>[facadeview.smallicons | facadeview.largeicons | facadeview.filmstrip | facadeview.coverflow] + control.isvisible(16) + control.isvisible(50)</visible>
+    </control>
+
+<control>
+      <type>facadeview</type>
+      <id>51</id>
+		<animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+      <control>
+        <description>Categories List</description>
+        <type>listcontrol</type>
+        <id>51</id>
+        <onleft>51</onleft>
+        <onright>51</onright>
+		<scrollOffset>1</scrollOffset>
+		<posX>1166</posX>
+		<posY>164</posY>
+		<height>750</height>
+		<width>684</width>
+		<textXOff>50</textXOff>
+		<textureHeight>55</textureHeight>		
+		<textureFocus>listcontrol_item_selected_small.png</textureFocus>
+		<textureNoFocus>-</textureNoFocus>
+		<dimColor>ffffffff</dimColor>
+        <explicitlyEnableScrollLabel>yes</explicitlyEnableScrollLabel>
+      </control>
+    </control>
+
+	<control>
+			<animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+		<type>facadeview</type>
+		<id>50</id>
+		<control>
+			<description>Movie List</description>
+			<type>listcontrol</type>
+			<id>50</id>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<scrollOffset>1</scrollOffset>
+			<posX>1166</posX>
+			<posY>164</posY>
+			<height>550</height>
+			<width>684</width>
+			<textXOff>50</textXOff>
+			<textXOff2>650</textXOff2>
+			<textureHeight>55</textureHeight>
+			<textureFocus>listcontrol_item_selected_small.png</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<dimColor>ffffffff</dimColor>
+            <spinPosX>1832</spinPosX>
+            <spinPosY>730</spinPosY>
+		</control>
+
+		<control>
+			<description>Filmstrip view</description>
+			<type>filmstrip</type>
+			<dimColor>90ffffff</dimColor>
+			<id>50</id>
+				<scrollOffset>3</scrollOffset>
+				<folderPrefix></folderPrefix>
+				<folderSuffix></folderSuffix>
+				<posX>40</posX>
+				<posY>310</posY>
+				<width>1920</width>
+				<height>768</height>
+				<onup>3</onup>
+				<ondown>3</ondown>
+				<onleft>50</onleft>
+				<onright>50</onright>				
+				<thumbWidth>225</thumbWidth>
+				<thumbHeight>314</thumbHeight>
+				<thumbPosX>32</thumbPosX>
+				<thumbPosY>5</thumbPosY>
+				<itemWidth>257</itemWidth>
+				<itemHeight>354</itemHeight>
+				<textureWidth>257</textureWidth>
+				<textureHeight>324</textureHeight>
+				<textYOff>-2000</textYOff>
+				<imageFolderFocus>-</imageFolderFocus>
+				<frame>video_filmstrip_frame.png</frame><!--sweborn-->				
+				<frameFocus>video_filmstrip_frame.png</frameFocus><!--sweborn-->				
+				<background>-</background>
+				<thumbs flipY="true"  mask="poster_mask.png"/>
+				<showFrame>yes</showFrame>
+				<showFolder>no</showFolder>
+				<showBackGround>no</showBackGround>
+				<showInfoImage>no</showInfoImage>
+				<scrollbarBackground>scrollbar_bg.png</scrollbarBackground>
+				<scrollbarLeft>scrollbar_left_hor.png</scrollbarLeft>
+				<scrollbarRight>scrollbar_right_hor.png</scrollbarRight>
+				<scrollbarWidth>689</scrollbarWidth>
+				<scrollbarHeight>4</scrollbarHeight>
+				<scrollbarYOff>538</scrollbarYOff>
+				<spinPosX>-2000</spinPosX>
+				<thumbAnimation effect="zoom" tween="back" acceleration="-1.1" easing="out"  start="100,100" reversible="true" end="135,142" center="0,580" time="450">focus</thumbAnimation>
+				<thumbAnimation effect="zoom" start="135,142"  reversible="true" end="100,100" center="0,780" time="200">unfocus</thumbAnimation>		  								
+		</control>
+
+			<control>
+				<description>Thumbnail Panel</description>
+				<type>thumbnailpanel</type>
+				<id>50</id>
+				<posX>710</posX>
+				<posY>162</posY>
+				<width>1250</width>
+				<height>600</height>
+				<folderPrefix></folderPrefix>
+				<folderSuffix></folderSuffix>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<itemWidth>126</itemWidth>
+				<itemHeight>174</itemHeight>
+				<textureWidth>121</textureWidth>
+				<textureHeight>169</textureHeight>
+				<thumbWidth>105</thumbWidth>
+				<thumbHeight>165</thumbHeight>
+				<thumbPosX>15</thumbPosX>
+				<thumbPosY>1</thumbPosY>
+				<itemWidthBig>189</itemWidthBig>
+				<itemHeightBig>254</itemHeightBig>
+				<thumbWidthBig>155</thumbWidthBig>
+				<thumbHeightBig>240</thumbHeightBig>
+				<textureWidthBig>179</textureWidthBig>
+				<textureHeightBig>247</textureHeightBig>
+				<thumbPosXBig>20</thumbPosXBig>
+				<thumbPosYBig>5</thumbPosYBig>
+				<zoomXPixels>40</zoomXPixels>
+				<zoomYPixels>60</zoomYPixels>
+				<hideUnfocusTexture>no</hideUnfocusTexture>
+				<keepaspectratio>no</keepaspectratio>
+				<renderFocusText>no</renderFocusText>
+				<renderUnfocusText>no</renderUnfocusText>
+				<frameNoFocus>video_filmstrip_frame.png</frameNoFocus><!--sweborn-->
+				<frameFocus>video_filmstrip_frame2.png</frameFocus><!--sweborn-->
+				<textureMask>poster_mask.png</textureMask><!--sweborn-->
+				<shadowAngle>90</shadowAngle>
+    			        <shadowDistance>50</shadowDistance>
+				<thumbZoom>yes</thumbZoom>
+                                <spinPosX>1832</spinPosX>
+                                <spinPosY>730</spinPosY>
+			        </control>
+
+				<control>
+				  <description>Cover Flow view</description>
+				  <type>coverflow</type>
+				  <colordiffuse>90ffffff</colordiffuse>
+				  <dimColor>90ffffff</dimColor>
+				  <id>50</id>
+				  <onup>3</onup>
+				  <ondown>3</ondown>
+				  <onleft>50</onleft>
+				  <onright>50</onright>	  
+				  <posX>-10</posX>
+				  <posY>186</posY>
+				  <width>1920</width>
+				  <height>1080</height>	  
+				  <selectedCard>0</selectedCard>
+				  <cardWidth>337</cardWidth>
+				  <cardHeight>477</cardHeight>
+				  <angle>45</angle>
+				  <sideShift>310</sideShift>
+				  <sideGap>100</sideGap>
+				  <sideDepth>270</sideDepth>
+				  <offsetY>0</offsetY>
+				  <selectedOffsetY>0</selectedOffsetY>
+				  <speed>8</speed>                                  
+				  <showFrame>yes</showFrame>
+				  <frame>video_filmstrip_frame2.png</frame><!--sweborn-->
+				  <frameFocus>video_filmstrip_frame2.png</frameFocus><!--sweborn-->
+				  <keepaspectratio>no</keepaspectratio>		  
+				  <frameWidth>337</frameWidth><!--Markus-->
+				  <frameHeight>477</frameHeight><!--Markus-->
+				  <spinSpeed>8</spinSpeed>
+				  <unfocusedAlpha>FF</unfocusedAlpha>
+				  <folderPrefix></folderPrefix>
+				  <folderSuffix></folderSuffix>
+				  <font1>font13</font1>
+				  <font2>font11</font2>
+				  <label1>#title</label1>
+				  <label2>#genre</label2>
+				  <shadowAngle>45</shadowAngle>
+				  <shadowDistance>1</shadowDistance>
+				  <shadowColor>FF000000</shadowColor>
+				  <label1YOff>1430</label1YOff>
+				  <label2YOff>1390</label2YOff>
+				  <pageSize>5</pageSize>
+                                  <scrollbarBackground>-</scrollbarBackground>
+                                  <scrollbarLeft>scrollbar_left_hor.png</scrollbarLeft>
+                                  <scrollbarRight>scrollbar_right_hor.png</scrollbarRight>
+                                  <scrollbarWidth>689</scrollbarWidth>
+		                  <scrollbarHeight>4</scrollbarHeight>
+                                  <scrollbarYOff>522</scrollbarYOff>
+				  <keepaspectratio>no</keepaspectratio>
+				  <cards flipY="true" diffuse="Thumb_Mask_test.png" mask="poster_mask.png"></cards>
+				  <subitems>
+					<subitem>
+						<![CDATA[
+                <controls>
+                  <control>
+                    <description>background</description>
+                    <type>image</type>
+                    <posX>0</posX>
+                    <posY>0</posY>
+                    <width>337</width>
+                    <height>477</height>
+					<texture flipY="true" diffuse="Thumb_Mask_test.png" mask="poster_mask.png">background.png</texture>
+                  </control>
+
+                  <control Style="BlueColor">
+                    <description>Movie Details</description>
+                    <type>label</type>
+                    <posX>20</posX>
+                    <posY>15</posY>
+                    <width>290</width>
+                    <label>Movie Details</label>
+                    <font>font2</font>
+                  </control>
+
+                  <control>
+                    <description>year</description>
+                    <type>label</type>
+		    <posX>20</posX>
+                    <posY>45</posY>
+                    <width>290</width>
+                    <label>#MovingPictures.SelectedMovie.year</label>
+                    <font>AvalonLight10</font>
+                  </control>				  
+				  
+                  <control>
+                    <description>genre</description>
+                    <type>label</type>
+                    <posX>20</posX>
+                    <posY>75</posY>
+                    <width>290</width>
+                    <label>#MovingPictures.SelectedMovie.genres</label>
+                    <font>AvalonLight10</font>
+                  </control>				 
+				  
+                  <control>
+                    <description>runtime</description>
+                    <type>label</type>
+                    <posX>20</posX>
+                    <posY>105</posY>
+                    <width>290</width>
+                    <label>#MovingPictures.Translation.Runtime.Label: #MovingPictures.SelectedMovie.runtime.localized.short</label>
+                    <font>AvalonLight10</font>
+                  </control>
+
+				  <control>
+					<type>imagelist</type>
+					<id>0</id>
+					<posX>20</posX>
+					<posY>137</posY>
+					<textureWidth>24</textureWidth>
+					<textureHeight>24</textureHeight>
+					<subitems>
+						<subitem>starblue.png</subitem>
+						<subitem>starwhite.png</subitem>
+					</subitems>
+					<orientation>horizontal</orientation>
+					<align>left</align>
+					<imagesToDraw>5</imagesToDraw>
+					<percentage>#MovingPictures.SelectedMovie.score.rounded</percentage>      
+				  </control>				  
+				  
+                  <control>
+                    <description>rating</description>
+                    <type>label</type>
+                    <posX>165</posX>
+                    <posY>135</posY>
+                    <width>270</width>
+                    <label>(#MovingPictures.SelectedMovie.score.rounded / 10)</label>
+                    <font>AvalonLight10</font>
+                  </control>               
+
+				  
+				  <control>
+						<description>Line separator</description>
+						<type>image</type>
+						<posX>20</posX>
+						<posY>172</posY>
+						<width>300</width>
+						<height>1</height>
+						<texture>weather_horizontal_bar.png</texture>
+			      </control>				  
+
+                  <control>
+                    <description>plot</description>
+                    <type>textboxscrollup</type>
+                    <posX>20</posX>
+                    <posY>190</posY>
+                    <width>315</width>
+                    <height>130</height>
+                    <label>#MovingPictures.SelectedMovie.summary</label>
+                    <font>AvalonLight10</font>
+                    <lineSpacing>2</lineSpacing>
+                  </control>
+
+
+                </controls>
+              ]]>
+					</subitem>
+				</subitems>
+				</control>
+	</control>
+</controls>
+</window>

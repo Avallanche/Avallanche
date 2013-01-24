@@ -1,0 +1,1528 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>35</id>
+	<defaultcontrol>901</defaultcontrol>
+	<define>#labelFont:AvalonLight18</define>
+	<define>#selectedfont:AvalonLight18</define>
+	<define>#menuitemFocus:FFFFFFFF</define>
+	<define>#menuitemNoFocus:6aa5cb</define>
+	<define tag="useRandomGamesUserFanart">#useRandomGamesUserFanart:Yes</define>
+	<define tag="useRandomMoviesUserFanart">#useRandomMoviesUserFanart:Yes</define>
+	<define tag="useRandomMoviesScraperFanart">#useRandomMoviesScraperFanart:Yes</define>
+	<define tag="useRandomMovingPicturesFanart">#useRandomMovingPicturesFanart:No</define>
+	<define tag="useRandomMusicUserFanart">#useRandomMusicUserFanart:Yes</define>
+	<define tag="useRandomMusicScraperFanart">#useRandomMusicScraperFanart:Yes</define>
+	<define tag="useRandomPicturesUserFanart">#useRandomPicturesUserFanart:Yes</define>
+	<define tag="useRandomPluginsUserFanart">#useRandomPluginsUserFanart:Yes</define>
+	<define tag="useRandomScoreCenterUserFanart">#useRandomScoreCenterUserFanart:Yes</define> 
+	<define tag="useRandomTVUserFanart">#useRandomTVUserFanart:Yes</define>
+	<define tag="useRandomTVSeriesFanart">#useRandomTVSeriesFanart:Yes</define>
+	<define>#useSelectedFanart:Yes</define>
+	<rememberLastFocusedControl>yes</rememberLastFocusedControl>
+	<allowoverlay>yes</allowoverlay>
+	<disabletopbar>no</disabletopbar>
+	<controls>
+
+		<control>
+			<description>dummy label for topbar</description>
+			<type>label</type>
+			<id>331</id>
+			<posX>-2000</posX>
+			<posY>300</posY>
+			<label>#showtopbar</label>
+			<visible>Control.HasText(331)</visible>
+		</control>
+
+		<control>
+			<description>dummy label for weather</description>
+			<type>label</type>
+			<id>332</id>
+			<posX>-2000</posX>
+			<posY>400</posY>
+			<label>#showweather</label>
+			<visible>Control.HasText(332)</visible>
+		</control>
+
+		<control>
+			<description>dummy label for weather</description>
+			<type>label</type>
+			<id>333</id>
+			<posX>-2000</posX>
+			<posY>500</posY>
+			<label>#showrss</label>
+			<visible>Control.HasText(333)</visible>
+		</control>
+
+		<control>
+			<description>dummy label for image 1 visibility</description>
+			<type>label</type>
+			<id>1201</id>
+			<posX>-2000</posX>
+			<posY>200</posY>
+			<label>#visbgimage1</label>
+			<visible>Control.HasText(1201) + ![control.hasfocus(91919991) | control.hasfocus(91919992) | control.hasfocus(91919993) | control.hasfocus(91919994) | Control.HasFocus(91919995) | Control.HasFocus(91919996)] | Control.HasFocus(99999)]</visible>
+		</control>
+
+		<control>
+			<description>dummy label for image 2 visibility</description>
+			<type>label</type>
+			<id>1202</id>
+			<posX>-2000</posX>
+			<posY>200</posY>
+			<label>#visbgimage2</label>
+			<visible>Control.HasText(1202) + ![control.hasfocus(91919991) | control.hasfocus(91919992) | control.hasfocus(91919993) | control.hasfocus(91919994) | Control.HasFocus(91919995) | Control.HasFocus(91919996)] | Control.HasFocus(99999)]</visible>
+		</control>
+
+		<control>
+			<description>DUMMY CONTROLL FOR FANART VISIBILITY CONDITION</description>
+			<type>label</type>
+			<id>91919291</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>2</width>	
+		</control>
+
+		<control>
+			<description>DUMMY CONTROLL FOR FANART VISIBILITY CONDITION</description>
+			<type>label</type>
+			<id>91919292</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>2</width>	
+		</control>
+
+		<control>
+			<description>DUMMY CONTROLL FOR BIG OR SMALL VISIBILITY CONDITION</description>
+			<type>label</type>
+			<id>1188773341</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1</width>
+			<visible>[string.equals(#recentMedia,Recordings) + string.equals(#latestMediaHandler.tvrecordings.latest.enabled,true)] | [string.equals(#recentMedia,MyVideos) + string.equals(#latestMediaHandler.myvideo.latest.enabled,true)] | [string.equals(#recentMedia,Pictures) + string.equals(#latestMediaHandler.picture.latest.enabled,true)] | [string.equals(#recentMedia,Music) + string.equals(#latestMediaHandler.music.latest.enabled,true)] | [string.equals(#recentMedia,MyFilms) + string.equals(#latestMediaHandler.myfilms.latest.enabled,true)] | [string.equals(#recentMedia,MovingPictures) + string.equals(#latestMediaHandler.movingpicture.latest.enabled,true)] | [string.equals(#recentMedia,TVSeries) + string.equals(#latestMediaHandler.tvseries.latest.enabled,true)] | !string.equals(#subitem1,)</visible>
+		</control>	
+
+		<control>
+			<description>DUMMY CONTROLL FOR BIG OR SMALL VISIBILITY CONDITION</description>
+			<type>label</type>
+			<id>1188773342</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1</width>
+			<!--<visible>![control.isvisible(919199940)|control.isvisible(919199840)|control.isvisible(919199710)|control.isvisible(919199880)|control.isvisible(919199970)|control.isvisible(919199910)]</visible>-->
+			<visible allowhiddenfocus="true">string.equals(#recentMedia,MovingPictures) + ![control.isvisible(601) | control.isvisible(501)] +string.equals(#latestMediaHandler.movingpicture.latest.enabled,true) + string.equals(#Avalon.basichomeHide,no)</visible>
+		</control>			
+
+		<control>
+			<description>DUMMY CONTROLL FOR BIG OR SMALL VISIBILITY CONDITION</description>
+			<type>label</type>
+			<id>1188773343</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1</width>
+			<!--<visible>![control.isvisible(919199940)|control.isvisible(919199840)|control.isvisible(919199710)|control.isvisible(919199880)|control.isvisible(919199970)|control.isvisible(919199910)]</visible>-->
+			<visible allowhiddenfocus="true">string.equals(#recentMedia,Recordings) + ![control.isvisible(601) | control.isvisible(501)] +string.equals(#latestMediaHandler.tvrecordings.latest.enabled,true) + string.equals(#Avalon.basichomeHide,no)</visible>
+		</control>			
+
+		<control>
+			<description>DUMMY CONTROLL FOR BIG OR SMALL VISIBILITY CONDITION</description>
+			<type>label</type>
+			<id>1188773344</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1</width>
+			<!--<visible>![control.isvisible(919199940)|control.isvisible(919199840)|control.isvisible(919199710)|control.isvisible(919199880)|control.isvisible(919199970)|control.isvisible(919199910)]</visible>-->
+			<visible allowhiddenfocus="true">string.equals(#recentMedia,MyFilms) + ![control.isvisible(601) | control.isvisible(501)] +string.equals(#latestMediaHandler.myfilms.latest.enabled,true) + string.equals(#Avalon.basichomeHide,no)</visible>
+		</control>			
+
+		<control>
+			<description>DUMMY CONTROLL FOR BIG OR SMALL VISIBILITY CONDITION</description>
+			<type>label</type>
+			<id>1188773345</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1</width>
+			<!--<visible>![control.isvisible(919199940)|control.isvisible(919199840)|control.isvisible(919199710)|control.isvisible(919199880)|control.isvisible(919199970)|control.isvisible(919199910)]</visible>-->
+			<visible allowhiddenfocus="true">string.equals(#recentMedia,Music) + ![control.isvisible(601) | control.isvisible(501)] +string.equals(#latestMediaHandler.music.latest.enabled,true) + string.equals(#Avalon.basichomeHide,no)</visible>
+		</control>			
+
+		<control>
+			<description>DUMMY CONTROLL FOR BIG OR SMALL VISIBILITY CONDITION</description>
+			<type>label</type>
+			<id>1188773346</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1</width>
+			<!--<visible>![control.isvisible(919199940)|control.isvisible(919199840)|control.isvisible(919199710)|control.isvisible(919199880)|control.isvisible(919199970)|control.isvisible(919199910)]</visible>-->
+			<visible allowhiddenfocus="true">string.equals(#recentMedia,TVSeries) + ![control.isvisible(601) | control.isvisible(501)] + string.equals(#latestMediaHandler.tvseries.latest.enabled,true) + string.equals(#Avalon.basichomeHide,no)</visible>
+		</control>			
+
+		<control>
+			<description>DUMMY CONTROLL FOR BIG OR SMALL VISIBILITY CONDITION</description>
+			<type>label</type>
+			<id>1188773347</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1</width>
+			<!--<visible>![control.isvisible(919199940)|control.isvisible(919199840)|control.isvisible(919199710)|control.isvisible(919199880)|control.isvisible(919199970)|control.isvisible(919199910)]</visible>-->
+			<visible allowhiddenfocus="true">string.equals(#recentMedia,Pictures) + ![control.isvisible(601) | control.isvisible(501)] +string.equals(#latestMediaHandler.picture.latest.enabled,true) + string.equals(#Avalon.basichomeHide,no)</visible>
+		</control>					
+
+		<control>
+			<description>DUMMY CONTROLL FOR BIG OR SMALL VISIBILITY CONDITION</description>
+			<type>label</type>
+			<id>1188773348</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1</width>
+			<visible>string.equals(#recentMedia,MyVideos) + ![control.isvisible(601) | control.isvisible(501)] +string.equals(#latestMediaHandler.myvideo.latest.enabled,true) + string.equals(#Avalon.basichomeHide,no)</visible>
+		</control>		
+
+		<control>
+			<description>DEFAULT BACKGROUND</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>background.png</texture>
+			<shouldCache>true</shouldCache>
+		</control>		
+
+		<import>BasicHome.FanartHandler_Big.xml</import>	
+
+		<control>
+			<description>background image 1</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<visible>Control.IsVisible(1201) + [!control.isvisible(1188773341) | string.equals(#Avalon.basichomeHide,yes)]</visible>
+			<animation effect="fade" start="100" end="0" time="450" reversible="false">Hidden</animation>
+			<animation effect="fade" start="30" end="100" time="750" reversible="false">Visible</animation>
+			<animation effect="fade" time="60">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+			<texture>#bgimage1</texture>
+		</control>
+
+		<control>
+			<description>background image 2</description>
+			<type>image</type>
+			<id>0</id>			
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<visible>Control.IsVisible(1202) + [!control.isvisible(1188773341) | string.equals(#Avalon.basichomeHide,yes)]</visible>
+			<animation effect="fade" start="100" end="0" time="450" reversible="false">Hidden</animation>
+			<animation effect="fade" start="30" end="100" time="750" reversible="false">Visible</animation>
+			<animation effect="fade" time="60">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+			<texture>#bgimage2</texture>
+		</control> 				
+
+		<control>
+			<description>Top Menu background</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>basichome_top_menu_bg_drop_fill.png</texture>
+			<visible>control.isvisible(1188773341) + string.equals(#Avalon.basichomeHide,no)</visible>
+			<animation effect="fade" time="60">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+			<animation effect="fade" time="60">visible</animation>
+			<animation effect="fade" time="50" delay="400">hidden</animation>
+		</control>		
+
+		<import>BasicHome.recentlyaddedSeriesFacade.xml</import>
+		<import>BasicHome.recentlyaddedMoviesFacade.xml</import>
+		<import>BasicHome.recentlyaddedMusicFacade.xml</import>
+		<import>BasicHome.recentlyaddedRecordingsFacade.xml</import>
+		<import>BasicHome.recentlyaddedPicturesFacade.xml</import>
+		<import>BasicHome.recentlyaddedMyFilmsFacade.xml</import>
+		<import>BasicHome.recentlyaddedMyVideosFacade.xml</import>
+		<import>BasicHome.FanartHandler.xml</import>	
+
+		<control>
+			<description>background image 1</description>
+			<type>image</type>
+			<id>1101</id>
+			<posX>0</posX>
+			<posY>170</posY>
+			<width>1184</width>
+			<height>659</height>
+			<visible>Control.IsVisible(1201) + control.isvisible(1188773341) + string.equals(#Avalon.basichomeHide,no)</visible>
+			<animation effect="fade" start="30" end="100" time="450" reversible="false">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="450" delay="250" reversible="false">Hidden</animation>									
+			<animation effect="fade" time="60">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>			
+			<texture>#bgimage1</texture>
+		</control>
+
+		<control>
+			<description>background image 2</description>
+			<type>image</type>
+			<id>1102</id>
+			<posX>0</posX>
+			<posY>170</posY>
+			<width>1184</width>
+			<height>659</height>
+			<visible>Control.IsVisible(1202) + control.isvisible(1188773341) + string.equals(#Avalon.basichomeHide,no)</visible>
+			<animation effect="fade" start="30" end="100" time="450" reversible="false">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="450" delay="250" reversible="false">Hidden</animation>									
+			<animation effect="fade" time="60">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>		
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+			<texture>#bgimage2</texture>
+		</control> 		
+
+		<control>
+			<description>TVSeries Selected Fanart</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>170</posY>
+			<width>1184</width>
+			<height>659</height>
+			<visible allowhiddenfocus="true">string.equals(#recentMedia,TVSeries) + ![control.isvisible(601) | control.isvisible(501)] +string.equals(#latestMediaHandler.tvseries.latest.enabled,true)+string.equals(#latestMediaHandler.tvseries.selected.showfanart1)</visible>			
+			<animation effect="fade" start="30" end="100" time="450" reversible="false">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="450" delay="250" reversible="false">Hidden</animation>									
+			<animation effect="fade" time="60">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>				
+			<texture>#latestMediaHandler.tvseries.selected.fanart1</texture>
+		</control> 
+
+		<control>
+			<description>TVSeries Selected Fanart</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>170</posY>
+			<width>1184</width>
+			<height>659</height>
+			<visible allowhiddenfocus="true">string.equals(#recentMedia,TVSeries) + ![control.isvisible(601) | control.isvisible(501)] +string.equals(#latestMediaHandler.tvseries.latest.enabled,true)+string.equals(#latestMediaHandler.tvseries.selected.showfanart2)</visible>
+			<animation effect="fade" start="30" end="100" time="450" reversible="false">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="450" delay="250" reversible="false">Hidden</animation>									
+			<animation effect="fade" time="60">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>		
+			<texture>#latestMediaHandler.tvseries.selected.fanart2</texture>
+		</control> 		
+
+		<control>
+			<description>MyFilms Selected Fanart</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>170</posY>
+			<width>1184</width>
+			<height>659</height>
+			<visible allowhiddenfocus="true">string.equals(#recentMedia,MyFilms) + ![control.isvisible(601) | control.isvisible(501)] +string.equals(#latestMediaHandler.myfilms.latest.enabled,true)+string.equals(#latestMediaHandler.myfilms.selected.showfanart1)</visible>
+			<animation effect="fade" start="30" end="100" time="450" reversible="false">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="450" delay="250" reversible="false">Hidden</animation>									
+			<animation effect="fade" time="60">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>		
+			<texture>#latestMediaHandler.myfilms.selected.fanart1</texture>
+		</control> 		
+
+		<control>
+			<description>MyFilms Selected Fanart</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>170</posY>
+			<width>1184</width>
+			<height>659</height>
+			<visible allowhiddenfocus="true">string.equals(#recentMedia,MyFilms) + ![control.isvisible(601) | control.isvisible(501)] +string.equals(#latestMediaHandler.myfilms.latest.enabled,true)+string.equals(#latestMediaHandler.myfilms.selected.showfanart2)</visible>
+			<animation effect="fade" start="30" end="100" time="450" reversible="false">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="450" delay="250" reversible="false">Hidden</animation>									
+			<animation effect="fade" time="60">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>		
+			<texture>#latestMediaHandler.myfilms.selected.fanart2</texture>
+		</control> 			
+
+		<control>
+			<description>MovingPicture Selected Fanart</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>170</posY>
+			<width>1184</width>
+			<height>659</height>
+			<visible allowhiddenfocus="true">string.equals(#recentMedia,MovingPictures) + ![control.isvisible(601) | control.isvisible(501)] +string.equals(#latestMediaHandler.movingpicture.latest.enabled,true)+string.equals(#latestMediaHandler.movingpicture.selected.showfanart1)</visible>
+			<animation effect="fade" start="30" end="100" time="450" reversible="false">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="450" delay="250" reversible="false">Hidden</animation>									
+			<animation effect="fade" time="60">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>		
+			<texture>#latestMediaHandler.movingpicture.selected.fanart1</texture>
+		</control> 
+
+		<control>
+			<description>MovingPicture Selected Fanart</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>170</posY>
+			<width>1184</width>
+			<height>659</height>
+			<visible allowhiddenfocus="true">string.equals(#recentMedia,MovingPictures) + ![control.isvisible(601) | control.isvisible(501)] +string.equals(#latestMediaHandler.movingpicture.latest.enabled,true)+string.equals(#latestMediaHandler.movingpicture.selected.showfanart2)</visible>
+			<animation effect="fade" start="30" end="100" time="450" reversible="false">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="450" delay="250" reversible="false">Hidden</animation>									
+			<animation effect="fade" time="60">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>		
+			<texture>#latestMediaHandler.movingpicture.selected.fanart2</texture>
+		</control> 		
+
+		<control>
+			<description>Music Selected Fanart</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>170</posY>
+			<width>1184</width>
+			<height>659</height>
+			<keepaspectratio>yes</keepaspectratio>	  
+			<zoom>yes</zoom>
+			<zoomfromtop>yes</zoomfromtop>	  
+			<centered>yes</centered>
+			<visible allowhiddenfocus="true">string.equals(#recentMedia,Music) + ![control.isvisible(601) | control.isvisible(501)] +string.equals(#latestMediaHandler.music.latest.enabled,true)+string.equals(#latestMediaHandler.music.selected.showfanart1)</visible>
+			<animation effect="fade" start="30" end="100" time="450" reversible="false">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="450" delay="250" reversible="false">Hidden</animation>									
+			<animation effect="fade" time="60">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>		
+			<texture>#latestMediaHandler.music.selected.fanart1</texture>
+		</control> 		
+
+		<control>
+			<description>Music Selected Fanart</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>170</posY>
+			<width>1184</width>
+			<height>659</height>
+			<keepaspectratio>yes</keepaspectratio>	  
+			<zoom>yes</zoom>
+			<zoomfromtop>yes</zoomfromtop>	  
+			<centered>yes</centered>
+			<visible allowhiddenfocus="true">string.equals(#recentMedia,Music) + ![control.isvisible(601) | control.isvisible(501)] +string.equals(#latestMediaHandler.music.latest.enabled,true)+string.equals(#latestMediaHandler.music.selected.showfanart2)</visible>
+			<animation effect="fade" start="30" end="100" time="450" reversible="false">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="450" delay="250" reversible="false">Hidden</animation>									
+			<animation effect="fade" time="60">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>		
+			<texture>#latestMediaHandler.music.selected.fanart2</texture>
+		</control> 			
+
+		<control>
+			<description>Picture Selected Fanart</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>170</posY>
+			<width>1184</width>
+			<height>659</height>
+			<keepaspectratio>yes</keepaspectratio>	  
+			<zoom>yes</zoom>
+			<zoomfromtop>yes</zoomfromtop>	  
+			<centered>yes</centered>			
+			<visible allowhiddenfocus="true">string.equals(#recentMedia,Pictures) + ![control.isvisible(601) | control.isvisible(501)] +string.equals(#latestMediaHandler.picture.latest.enabled,true)+string.equals(#latestMediaHandler.picture.selected.showfanart1)</visible>
+			<animation effect="fade" start="30" end="100" time="450" reversible="false">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="450" delay="250" reversible="false">Hidden</animation>									
+			<animation effect="fade" time="60">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>		
+			<texture>#latestMediaHandler.picture.selected.fanart1</texture>
+		</control> 		
+
+		<control>
+			<description>Picture Selected Fanart</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>170</posY>
+			<width>1184</width>
+			<height>659</height>
+			<keepaspectratio>yes</keepaspectratio>	  
+			<zoom>yes</zoom>
+			<zoomfromtop>yes</zoomfromtop>	  
+			<centered>yes</centered>
+			<visible allowhiddenfocus="true">string.equals(#recentMedia,Pictures) + ![control.isvisible(601) | control.isvisible(501)] +string.equals(#latestMediaHandler.picture.latest.enabled,true)+string.equals(#latestMediaHandler.picture.selected.showfanart2)</visible>
+			<animation effect="fade" start="30" end="100" time="450" reversible="false">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="450" delay="250" reversible="false">Hidden</animation>									
+			<animation effect="fade" time="60">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>		>
+		<texture>#latestMediaHandler.picture.selected.fanart2</texture>
+	</control> 			
+
+	<control>
+		<description>Recordings Selected Fanart</description>
+		<type>image</type>
+		<id>0</id>
+		<posX>0</posX>
+		<posY>170</posY>
+		<width>1184</width>
+		<height>659</height>
+		<keepaspectratio>yes</keepaspectratio>	  
+		<zoom>yes</zoom>
+		<zoomfromtop>yes</zoomfromtop>	  
+		<centered>yes</centered>
+		<visible allowhiddenfocus="true">string.equals(#recentMedia,Recordings) + ![control.isvisible(601) | control.isvisible(501)] +string.equals(#latestMediaHandler.tvrecordings.latest.enabled,true)+string.equals(#latestMediaHandler.tvrecordings.selected.showfanart1)</visible>
+		<animation effect="fade" start="30" end="100" time="450" reversible="false">Visible</animation>
+		<animation effect="fade" start="100" end="0" time="450" delay="250" reversible="false">Hidden</animation>									
+		<animation effect="fade" time="60">WindowOpen</animation>
+		<animation effect="fade" time="250">WindowClose</animation>		
+		<texture>#latestMediaHandler.tvrecordings.selected.fanart1</texture>
+	</control> 	
+
+	<control>
+		<description>Recordings Selected Fanart</description>
+		<type>image</type>
+		<id>0</id>
+		<posX>0</posX>
+		<posY>170</posY>
+		<width>1184</width>
+		<height>659</height>
+		<keepaspectratio>yes</keepaspectratio>	  
+		<zoom>yes</zoom>
+		<zoomfromtop>yes</zoomfromtop>	  
+		<centered>yes</centered>
+		<visible allowhiddenfocus="true">string.equals(#recentMedia,Recordings) + ![control.isvisible(601) | control.isvisible(501)] +string.equals(#latestMediaHandler.tvrecordings.latest.enabled,true)+string.equals(#latestMediaHandler.tvrecordings.selected.showfanart2)</visible>
+		<animation effect="fade" start="30" end="100" time="450" reversible="false">Visible</animation>
+		<animation effect="fade" start="100" end="0" time="450" delay="250" reversible="false">Hidden</animation>									
+		<animation effect="fade" time="60">WindowOpen</animation>
+		<animation effect="fade" time="250">WindowClose</animation>		
+		<texture>#latestMediaHandler.tvrecordings.selected.fanart2</texture>
+	</control> 			
+
+	<control>
+		<animation effect="fade" time="250">WindowOpen</animation>
+		<animation effect="fade" time="250">WindowClose</animation>
+		<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+		<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+		<type>label</type>
+		<id>1</id>
+		<posX>185</posX>
+		<posY>38</posY>
+		<width>500</width>
+		<label>Home</label>
+		<textcolor>6aa5cb</textcolor>
+		<font>font22</font>
+	</control>															
+
+	<control>
+		<description>Top Menu background</description>
+		<type>image</type>
+		<id>1</id>
+		<posX>0</posX>
+		<posY>0</posY>
+		<width>1920</width>
+		<height>1080</height>
+		<texture>basichome_top_menu_bg_drop.png</texture>
+		<visible>control.isvisible(1188773341) + string.equals(#Avalon.basichomeHide,no)</visible>
+		<animation effect="fade" time="60">WindowOpen</animation>
+		<animation effect="fade" time="250">WindowClose</animation>
+		<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+		<animation effect="fade" time="60">visible</animation>
+		<animation effect="fade" time="50" delay="400">hidden</animation>
+	</control>	
+
+	<control>
+		<description>Top Menu background</description>
+		<type>image</type>
+		<id>1</id>
+		<posX>0</posX>
+		<posY>-12</posY>
+		<width>1920</width>
+		<height>1170</height>
+		<texture>basichome_top_menu_bg_full.png</texture>
+		<animation effect="fade" time="60">WindowOpen</animation>
+		<animation effect="fade" time="250">WindowClose</animation>
+		<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+		<animation effect="fade" time="60">visible</animation>
+		<animation effect="fade" time="50" delay="400">hidden</animation>			
+	</control>				
+
+	<control>
+		<type>group</type>
+		<id>0</id>
+		<description>large group</description>
+		<dimColor>ffffffff</dimColor>
+		<animation effect="fade" time="250">WindowOpen</animation>
+		<animation effect="fade" time="250">WindowClose</animation>
+		<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+		<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+
+		<control>
+			<id>701</id>
+			<description>down group</description>
+			<type>group</type>
+			<layout>StackLayout(0,Horizontal)</layout>
+			<dimColor>ffffffff</dimColor>
+			<posX>-370</posX>
+			<posY>120</posY>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+
+			<control>
+				<id>101</id>
+				<type>label</type>
+				<height>105</height>
+				<width>384</width>
+				<label>#topitem3</label>
+				<align>left</align>
+				<font>AvalonLight18</font>
+				<textcolor>ff999999</textcolor>					
+				<!--<animation effect="fade" start="100" end="0" time="0" reversible="false">Visible</animation>-->
+				<visible>[!Control.IsVisible(202) + !Control.IsVisible(302) + !Control.IsVisible(402)] + [string.equals(#mainmenu,801)  | Control.HasFocus(801) | Control.HasFocus(601) | Control.HasFocus(602) | Control.HasFocus(603) | Control.HasFocus(604) | Control.HasFocus(605) | Control.HasFocus(606) | Control.HasFocus(607) | Control.HasFocus(608) | Control.HasFocus(99999) | Control.IsVisible(2) ]</visible>
+				<animation effect="slide" start="384,0" end="0,0" time="400" acceleration="-0.9" reversible="false">Visible</animation>
+			</control>
+
+			<control>
+				<id>102</id>
+				<type>label</type>
+				<height>105</height>
+				<width>384</width>
+				<label>#topitem2</label>
+				<align>left</align>
+				<font>AvalonLight18</font>
+				<textcolor>ff999999</textcolor>					
+				<visible>[!Control.IsVisible(202) + !Control.IsVisible(302) + !Control.IsVisible(402)] + [string.equals(#mainmenu,801)  | Control.HasFocus(801) | Control.HasFocus(601) | Control.HasFocus(602) | Control.HasFocus(603) | Control.HasFocus(604) | Control.HasFocus(605) | Control.HasFocus(606) | Control.HasFocus(607) | Control.HasFocus(608) | Control.HasFocus(99999) | Control.IsVisible(2) ]</visible>
+				<animation effect="slide" start="384,0" end="0,0" time="400" acceleration="-0.9" reversible="false">Visible</animation>
+			</control>
+
+			<control>
+				<id>103</id>
+				<type>label</type>
+				<height>105</height>
+				<width>384</width>
+				<label>#topitem1</label>
+				<align>left</align>
+				<font>AvalonLight18</font>
+				<textcolor>ff999999</textcolor>					
+				<visible>[!Control.IsVisible(202) + !Control.IsVisible(302) + !Control.IsVisible(402)] + [string.equals(#mainmenu,801)  | Control.HasFocus(801) | Control.HasFocus(601) | Control.HasFocus(602) | Control.HasFocus(603) | Control.HasFocus(604) | Control.HasFocus(605) | Control.HasFocus(606) | Control.HasFocus(607) | Control.HasFocus(608) | Control.HasFocus(99999) | Control.IsVisible(2) ]</visible>
+				<animation effect="slide" start="384,0" end="0,0" time="400" acceleration="-0.9" reversible="false">Visible</animation>
+			</control>
+
+			<control Style="BlueColor">
+				<id>801</id>
+				<width>384</width>
+				<height>105</height>
+				<type>button</type>
+				<textXOff>0</textXOff>
+				<textYOff>0</textYOff>
+				<label>#homeitem</label>
+				<font>AvalonLight18</font>
+				<textalign>left</textalign>
+				<textureFocus>-</textureFocus>
+				<textureNoFocus>-</textureNoFocus>
+				<onup>99999</onup>
+				<ondown>601</ondown>
+				<onleft>902</onleft>
+				<onright>802</onright>
+				<visible allowhiddenfocus="true">[!Control.IsVisible(202) + !Control.IsVisible(302) + !Control.IsVisible(402)] + [string.equals(#mainmenu,801)  | Control.HasFocus(801) | Control.HasFocus(601) | Control.HasFocus(602) | Control.HasFocus(603) | Control.HasFocus(604) | Control.HasFocus(605) | Control.HasFocus(606) | Control.HasFocus(607) | Control.HasFocus(608) | Control.HasFocus(99999) | Control.IsVisible(2) ]</visible>
+				<animation effect="slide" start="384,0" end="0,0" time="400" acceleration="-0.9" reversible="false">Visible</animation>
+			</control>
+
+			<control>
+				<id>105</id>
+				<type>label</type>
+				<height>105</height>
+				<width>384</width>
+				<label>#bottomitem1</label>
+				<align>left</align>
+				<font>AvalonLight18</font>
+				<textcolor>ff999999</textcolor>					
+				<visible>[!Control.IsVisible(202) + !Control.IsVisible(302) + !Control.IsVisible(402)] + [string.equals(#mainmenu,801)  | Control.HasFocus(801) | Control.HasFocus(601) | Control.HasFocus(602) | Control.HasFocus(603) | Control.HasFocus(604) | Control.HasFocus(605) | Control.HasFocus(606) | Control.HasFocus(607) | Control.HasFocus(608) | Control.HasFocus(99999) | Control.IsVisible(2) ]</visible>
+				<animation effect="slide" start="384,0" end="0,0" time="400" acceleration="-0.9" reversible="false">Visible</animation>
+			</control>
+
+			<control>
+				<id>106</id>
+				<type>label</type>
+				<height>105</height>
+				<width>384</width>
+				<label>#bottomitem2</label>
+				<align>left</align>
+				<font>AvalonLight18</font>
+				<textcolor>ff999999</textcolor>					
+				<animation effect="fade" start="0" end="100" time="50" delay="300" reversible="false">visible</animation>
+				<!--<visible>[!Control.IsVisible(202) + !Control.IsVisible(302) + !Control.IsVisible(402)] + string.equals(#mainmenu,801)</visible>-->
+				<visible>[!Control.IsVisible(202) + !Control.IsVisible(302) + !Control.IsVisible(402)] + [string.equals(#mainmenu,801)  | Control.HasFocus(801) | Control.HasFocus(601) | Control.HasFocus(602) | Control.HasFocus(603) | Control.HasFocus(604) | Control.HasFocus(605) | Control.HasFocus(606) | Control.HasFocus(607) | Control.HasFocus(608) | Control.HasFocus(99999) | Control.IsVisible(2) ]</visible>
+				<animation effect="slide" start="384,0" end="0,0" time="400" acceleration="-0.9" reversible="false">Visible</animation>
+			</control>
+		</control>	
+
+		<control>
+			<id>702</id>
+			<description>down group</description>
+			<type>group</type>
+			<layout>StackLayout(0,Horizontal)</layout>
+			<dimColor>ffffffff</dimColor>
+			<posX>-370</posX>
+			<posY>120</posY>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+
+			<control>
+				<id>201</id>
+				<type>label</type>
+				<height>105</height>
+				<width>384</width>
+				<label>#topitem3</label>
+				<align>left</align>
+				<font>AvalonLight18</font>
+				<textcolor>ff999999</textcolor>					
+				<animation effect="fade" start="100" end="0" time="0" reversible="false">Visible</animation>
+				<visible>[!Control.IsVisible(102) + !Control.IsVisible(302) + !Control.IsVisible(402)] + [string.equals(#mainmenu,802)  | Control.HasFocus(802) | Control.HasFocus(501) | Control.HasFocus(502) | Control.HasFocus(503) | Control.HasFocus(504) | Control.HasFocus(505)| Control.HasFocus(506)| Control.HasFocus(507)| Control.HasFocus(508)|Control.HasFocus(99999) | Control.IsVisible(2) ]</visible>
+				<animation effect="slide" start="384,0" end="0,0" time="400" acceleration="-0.9" reversible="false">Visible</animation>
+			</control>
+
+			<control>
+				<id>202</id>
+				<type>label</type>
+				<height>105</height>
+				<width>384</width>
+				<label>#topitem2</label>
+				<align>left</align>
+				<font>AvalonLight18</font>
+				<textcolor>ff999999</textcolor>					
+				<visible>[!Control.IsVisible(102) + !Control.IsVisible(302) + !Control.IsVisible(402)] + [string.equals(#mainmenu,802)  | Control.HasFocus(802) | Control.HasFocus(501) | Control.HasFocus(502) | Control.HasFocus(503) | Control.HasFocus(504) | Control.HasFocus(505)| Control.HasFocus(506)| Control.HasFocus(507)| Control.HasFocus(508)|Control.HasFocus(99999) | Control.IsVisible(2) ]</visible>
+				<animation effect="slide" start="384,0" end="0,0" time="400" acceleration="-0.9" reversible="false">Visible</animation>
+			</control>
+
+			<control>
+				<id>203</id>
+				<type>label</type>
+				<height>105</height>
+				<width>384</width>
+				<label>#topitem1</label>
+				<align>left</align>
+				<font>AvalonLight18</font>
+				<textcolor>ff999999</textcolor>					
+				<visible>[!Control.IsVisible(102) + !Control.IsVisible(302) + !Control.IsVisible(402)] + [string.equals(#mainmenu,802)  | Control.HasFocus(802) | Control.HasFocus(501) | Control.HasFocus(502) | Control.HasFocus(503) | Control.HasFocus(504) | Control.HasFocus(505)| Control.HasFocus(506)| Control.HasFocus(507)| Control.HasFocus(508)|Control.HasFocus(99999) | Control.IsVisible(2) ]</visible>
+				<animation effect="slide" start="384,0" end="0,0" time="400" acceleration="-0.9" reversible="false">Visible</animation>
+			</control>
+
+			<control Style="BlueColor">
+				<id>802</id>
+				<width>384</width>
+				<height>105</height>
+				<textXOff>0</textXOff>
+				<textYOff>0</textYOff>
+				<type>button</type>
+				<label>#homeitem</label>
+				<font>AvalonLight18</font>
+				<textalign>left</textalign>
+				<textureFocus>-</textureFocus>
+				<textureNoFocus>-</textureNoFocus>
+				<onup>99999</onup>
+				<ondown>501</ondown>
+				<onleft>901</onleft>
+				<onright>801</onright>
+				<visible allowhiddenfocus="true">[!Control.IsVisible(102) + !Control.IsVisible(302) + !Control.IsVisible(402)] + [string.equals(#mainmenu,802)  | Control.HasFocus(802) | Control.HasFocus(501) | Control.HasFocus(502) | Control.HasFocus(503) | Control.HasFocus(504) | Control.HasFocus(505)| Control.HasFocus(506)| Control.HasFocus(507)| Control.HasFocus(508)|Control.HasFocus(99999) | Control.IsVisible(2) ]</visible>
+				<animation effect="slide" start="384,0" end="0,0" time="400" acceleration="-0.9" reversible="false">Visible</animation>
+			</control>
+
+			<control>
+				<id>205</id>
+				<type>label</type>
+				<height>105</height>
+				<width>384</width>
+				<label>#bottomitem1</label>
+				<align>left</align>
+				<font>AvalonLight18</font>
+				<textcolor>ff999999</textcolor>					
+				<visible>[!Control.IsVisible(102) + !Control.IsVisible(302) + !Control.IsVisible(402)] + [string.equals(#mainmenu,802)  | Control.HasFocus(802) | Control.HasFocus(501) | Control.HasFocus(502) | Control.HasFocus(503) | Control.HasFocus(504) | Control.HasFocus(505)| Control.HasFocus(506)| Control.HasFocus(507)| Control.HasFocus(508)|Control.HasFocus(99999) | Control.IsVisible(2) ]</visible>
+				<animation effect="slide" start="384,0" end="0,0" time="400" acceleration="-0.9" reversible="false">Visible</animation>
+			</control>
+
+			<control>
+				<id>206</id>
+				<type>label</type>
+				<height>105</height>
+				<width>384</width>
+				<label>#bottomitem2</label>
+				<align>left</align>
+				<font>AvalonLight18</font>
+				<textcolor>ff999999</textcolor>					
+				<animation effect="fade" start="0" end="100" time="50" delay="300" reversible="false">Visible</animation>
+				<visible>[!Control.IsVisible(102) + !Control.IsVisible(302) + !Control.IsVisible(402)] + [string.equals(#mainmenu,802)  | Control.HasFocus(802) | Control.HasFocus(501) | Control.HasFocus(502) | Control.HasFocus(503) | Control.HasFocus(504) | Control.HasFocus(505)| Control.HasFocus(506)| Control.HasFocus(507)| Control.HasFocus(508)|Control.HasFocus(99999) | Control.IsVisible(2) ]</visible>
+				<animation effect="slide" start="384,0" end="0,0" time="400" acceleration="-0.9" reversible="false">Visible</animation>
+			</control>	
+		</control>
+
+		<control>
+			<id>703</id>
+			<description>up group</description>
+			<type>group</type>
+			<layout>StackLayout(2,Horizontal)</layout>
+			<dimColor>ffffffff</dimColor>
+			<posX>10</posX>
+			<posY>120</posY>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+
+			<control>
+				<id>302</id>
+				<type>label</type>
+				<height>105</height>
+				<width>384</width>
+				<label>#topitem2</label>
+				<font>AvalonLight18</font>
+				<textcolor>ff999999</textcolor>					
+				<align>left</align>
+				<animation effect="fade" start="0" end="100" time="50" delay="100" reversible="false">Visible</animation>
+				<visible>[!Control.IsVisible(102) + !Control.IsVisible(202) + !Control.IsVisible(402)] + [string.equals(#mainmenu,901)  | Control.HasFocus(901) | Control.HasFocus(601) | Control.HasFocus(602) | Control.HasFocus(603) | Control.HasFocus(604) | Control.HasFocus(605) | Control.HasFocus(606) | Control.HasFocus(607) | Control.HasFocus(608) | Control.HasFocus(99999) | Control.IsVisible(2) ]</visible>
+				<animation effect="slide" start="-384,0" end="0,0" time="400" acceleration="-0.9" reversible="false">visible</animation>
+			</control>
+
+			<control>
+				<id>303</id>
+				<type>label</type>
+				<height>105</height>
+				<width>384</width>
+				<label>#topitem1</label>
+				<align>left</align>
+				<font>AvalonLight18</font>
+				<textcolor>ff999999</textcolor>					
+				<visible>[!Control.IsVisible(102) + !Control.IsVisible(202) + !Control.IsVisible(402)] + [string.equals(#mainmenu,901)  | Control.HasFocus(901) | Control.HasFocus(601) | Control.HasFocus(602) | Control.HasFocus(603) | Control.HasFocus(604) | Control.HasFocus(605) | Control.HasFocus(606) | Control.HasFocus(607) | Control.HasFocus(608) | Control.HasFocus(99999) | Control.IsVisible(2) ]</visible>
+				<animation effect="slide" start="-384,0" end="0,0" time="400" acceleration="-0.9" reversible="false">visible</animation>
+			</control>
+
+			<control Style="BlueColor">
+				<id>901</id>
+				<posY>0</posY>
+				<width>384</width>
+				<height>105</height>
+				<textXOff>0</textXOff>
+				<textYOff>0</textYOff>
+				<type>button</type>
+				<label>#homeitem</label>
+				<font>AvalonLight18</font>
+				<textalign>left</textalign>
+				<textureFocus>-</textureFocus>
+				<textureNoFocus>-</textureNoFocus>
+				<onup>99999</onup>
+				<ondown>601</ondown>
+				<onleft>902</onleft>
+				<onright>802</onright>
+				<visible allowhiddenfocus="true">[!Control.IsVisible(102) + !Control.IsVisible(202) + !Control.IsVisible(402)] + [string.equals(#mainmenu,901)  | Control.HasFocus(901) | Control.HasFocus(601) | Control.HasFocus(602) | Control.HasFocus(603) | Control.HasFocus(604) | Control.HasFocus(605) | Control.HasFocus(606) | Control.HasFocus(607) | Control.HasFocus(608) | Control.HasFocus(99999) | Control.IsVisible(2) ]</visible>
+				<animation effect="slide" start="-384,0" end="0,0" time="400" acceleration="-0.9" reversible="false">visible</animation>
+			</control>
+
+			<control>
+				<id>305</id>
+				<type>label</type>
+				<height>105</height>
+				<width>384</width>
+				<label>#bottomitem1</label>
+				<align>left</align>
+				<font>AvalonLight18</font>
+				<textcolor>ff999999</textcolor>					
+				<visible>[!Control.IsVisible(102) + !Control.IsVisible(202) + !Control.IsVisible(402)] + [string.equals(#mainmenu,901)  | Control.HasFocus(901) | Control.HasFocus(601) | Control.HasFocus(602) | Control.HasFocus(603) | Control.HasFocus(604) | Control.HasFocus(605) | Control.HasFocus(606) | Control.HasFocus(607) | Control.HasFocus(608) | Control.HasFocus(99999) | Control.IsVisible(2) ]</visible>
+				<animation effect="slide" start="-384,0" end="0,0" time="400" acceleration="-0.9" reversible="false">visible</animation>
+			</control>
+
+			<control>
+				<id>306</id>
+				<type>label</type>
+				<height>105</height>
+				<width>384</width>
+				<label>#bottomitem2</label>
+				<align>left</align>
+				<font>AvalonLight18</font>
+				<textcolor>ff999999</textcolor>					
+				<visible>[!Control.IsVisible(102) + !Control.IsVisible(202) + !Control.IsVisible(402)] + [string.equals(#mainmenu,901)  | Control.HasFocus(901) | Control.HasFocus(601) | Control.HasFocus(602) | Control.HasFocus(603) | Control.HasFocus(604) | Control.HasFocus(605) | Control.HasFocus(606) | Control.HasFocus(607) | Control.HasFocus(608) | Control.HasFocus(99999) | Control.IsVisible(2) ]</visible>
+				<animation effect="slide" start="-384,0" end="0,0" time="400" acceleration="-0.9" reversible="false">visible</animation>
+			</control>
+
+			<control>
+				<id>307</id>
+				<type>label</type>
+				<height>105</height>
+				<width>384</width>
+				<label>#bottomitem3</label>
+				<align>left</align>
+				<font>AvalonLight18</font>
+				<textcolor>ff999999</textcolor>					
+				<animation effect="fade" start="100" end="0" time="0" reversible="false">Visible</animation>
+				<visible>[!Control.IsVisible(102) + !Control.IsVisible(202) + !Control.IsVisible(402)] + [string.equals(#mainmenu,901)  | Control.HasFocus(901) | Control.HasFocus(601) | Control.HasFocus(602) | Control.HasFocus(603) | Control.HasFocus(604) | Control.HasFocus(605) | Control.HasFocus(606) | Control.HasFocus(607) | Control.HasFocus(608) | Control.HasFocus(99999) | Control.IsVisible(2) ]</visible>
+				<animation effect="slide" start="-384,0" end="0,0" time="400" acceleration="-0.9" reversible="false">visible</animation>
+			</control>	
+		</control>
+
+		<control>
+			<id>704</id>
+			<description>up group</description>
+			<type>group</type>
+			<layout>StackLayout(0,Horizontal)</layout>
+			<dimColor>ffffffff</dimColor>
+			<posX>10</posX>
+			<posY>120</posY>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+
+			<control>
+				<id>402</id>
+				<type>label</type>
+				<height>105</height>
+				<width>384</width>
+				<label>#topitem2</label>
+				<align>left</align>
+				<font>AvalonLight18</font>
+				<textcolor>ff999999</textcolor>					
+				<animation effect="fade" start="0" end="100" time="50" delay="100" reversible="false">Visible</animation>
+				<visible>[!Control.IsVisible(102) + !Control.IsVisible(202) + !Control.IsVisible(302)] + [string.equals(#mainmenu,902)  | Control.HasFocus(902) | Control.HasFocus(501) | Control.HasFocus(502) | Control.HasFocus(503) | Control.HasFocus(504) | Control.HasFocus(505)| Control.HasFocus(506)| Control.HasFocus(507)| Control.HasFocus(508)|Control.HasFocus(99999) | Control.IsVisible(2) ]</visible>
+				<animation effect="slide" start="-384,0" end="0,0" time="400" acceleration="-0.9" reversible="false">visible</animation>		
+			</control>
+
+			<control>
+				<id>403</id>
+				<type>label</type>
+				<height>105</height>
+				<width>384</width>
+				<label>#topitem1</label>
+				<align>left</align>
+				<font>AvalonLight18</font>
+				<textcolor>ff999999</textcolor>					
+				<visible>[!Control.IsVisible(102) + !Control.IsVisible(202) + !Control.IsVisible(302)] + [string.equals(#mainmenu,902)  | Control.HasFocus(902) | Control.HasFocus(501) | Control.HasFocus(502) | Control.HasFocus(503) | Control.HasFocus(504) | Control.HasFocus(505)| Control.HasFocus(506)| Control.HasFocus(507)| Control.HasFocus(508)|Control.HasFocus(99999) | Control.IsVisible(2) ]</visible>
+				<animation effect="slide" start="-384,0" end="0,0" time="400" acceleration="-0.9" reversible="false">visible</animation>
+			</control>
+
+			<control Style="BlueColor">
+				<id>902</id>
+				<width>384</width>
+				<height>105</height>
+				<type>button</type>
+				<textXOff>0</textXOff>
+				<textYOff>0</textYOff>
+				<label>#homeitem</label>
+				<font>AvalonLight18</font>
+				<textalign>left</textalign>
+				<textureFocus>-</textureFocus>
+				<textureNoFocus>-</textureNoFocus>
+				<onup>99999</onup>
+				<ondown>501</ondown>
+				<onleft>901</onleft>
+				<onright>801</onright>
+				<visible allowhiddenfocus="true">[!Control.IsVisible(102) + !Control.IsVisible(202) + !Control.IsVisible(302)] + [string.equals(#mainmenu,902)  | Control.HasFocus(902) | Control.HasFocus(501) | Control.HasFocus(502) | Control.HasFocus(503) | Control.HasFocus(504) | Control.HasFocus(505)| Control.HasFocus(506)| Control.HasFocus(507)| Control.HasFocus(508)|Control.HasFocus(99999) | Control.IsVisible(2) ]</visible>
+				<animation effect="slide" start="-384,0" end="0,0" time="400" acceleration="-0.9" reversible="false">visible</animation>
+			</control>
+
+			<control>
+				<id>405</id>
+				<type>label</type>
+				<height>105</height>
+				<width>384</width>
+				<label>#bottomitem1</label>
+				<align>left</align>
+				<font>AvalonLight18</font>
+				<textcolor>ff999999</textcolor>					
+				<visible>[!Control.IsVisible(102) + !Control.IsVisible(202) + !Control.IsVisible(302)] + [string.equals(#mainmenu,902)  | Control.HasFocus(902) | Control.HasFocus(501) | Control.HasFocus(502) | Control.HasFocus(503) | Control.HasFocus(504) | Control.HasFocus(505)| Control.HasFocus(506)| Control.HasFocus(507)| Control.HasFocus(508)|Control.HasFocus(99999) | Control.IsVisible(2) ]</visible>
+				<animation effect="slide" start="-384,0" end="0,0" time="400" acceleration="-0.9" reversible="false">visible</animation>
+			</control>
+
+			<control>
+				<id>406</id>
+				<type>label</type>
+				<height>105</height>
+				<width>384</width>
+				<label>#bottomitem2</label>
+				<align>left</align>
+				<font>AvalonLight18</font>
+				<textcolor>ff999999</textcolor>					
+				<visible>[!Control.IsVisible(102) + !Control.IsVisible(202) + !Control.IsVisible(302)] + [string.equals(#mainmenu,902)  | Control.HasFocus(902) | Control.HasFocus(501) | Control.HasFocus(502) | Control.HasFocus(503) | Control.HasFocus(504) | Control.HasFocus(505)| Control.HasFocus(506)| Control.HasFocus(507)| Control.HasFocus(508)|Control.HasFocus(99999) | Control.IsVisible(2) ]</visible>
+				<animation effect="slide" start="-384,0" end="0,0" time="400" acceleration="-0.9" reversible="false">visible</animation>
+			</control>
+
+			<control>
+				<id>407</id>
+				<type>label</type>
+				<height>105</height>
+				<width>50</width>
+				<label>#bottomitem3</label>
+				<align>left</align>
+				<font>AvalonLight18</font>
+				<textcolor>ff999999</textcolor>					
+				<animation effect="fade" start="100" end="0" time="0" reversible="false">Visible</animation>
+				<visible>[!Control.IsVisible(102) + !Control.IsVisible(202) + !Control.IsVisible(302)] + [string.equals(#mainmenu,902)  | Control.HasFocus(902) | Control.HasFocus(501) | Control.HasFocus(502) | Control.HasFocus(503) | Control.HasFocus(504) | Control.HasFocus(505)| Control.HasFocus(506)| Control.HasFocus(507)| Control.HasFocus(508)|Control.HasFocus(99999) | Control.IsVisible(2) ]</visible>
+				<animation effect="slide" start="-384,0" end="0,0" time="400" acceleration="-0.9" reversible="false">visible</animation>
+			</control>	
+		</control>
+	</control>	
+
+	<!--Submenu-->
+	<control>
+		<id>0</id>
+		<description>submenu group</description>
+		<type>group</type>
+		<layout>StackLayout</layout>
+		<dimColor>ffffffff</dimColor>
+		<defaultcontrol>0</defaultcontrol>
+		<visible allowhiddenfocus="true">!control.isvisible(1188773342) + !control.isvisible(1188773343) + !control.isvisible(1188773344) + !control.isvisible(1188773345) + !control.isvisible(1188773346) + !control.isvisible(1188773347) + [Control.HasFocus(801)|Control.HasFocus(802)|Control.HasFocus(901)|Control.HasFocus(902)]+!string.equals(#subitem1,)+ string.equals(#Avalon.basichomeHide,no)</visible>
+		<animation effect="fade" start="0" end="100" time="400" reversible="true">Visible</animation>
+		<animation effect="fade" time="250">WindowOpen</animation>
+		<animation effect="fade" time="250">WindowClose</animation>
+		<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+		<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+		<height>1080</height>
+		<posX>1215</posX>
+		<posY>203</posY>
+
+		<control>
+			<id>0</id>
+			<type>label</type>
+			<height>58</height>
+			<width>390</width>
+			<label>#subitem1</label>
+			<font>AvalonLight18</font>
+			<textcolor>ff999999</textcolor>					
+			<textalign>left</textalign>
+		</control>
+
+		<control>
+			<id>0</id>
+			<type>label</type>
+			<height>58</height>
+			<width>390</width>
+			<label>#subitem2</label>
+			<font>AvalonLight18</font>
+			<textcolor>ff999999</textcolor>					
+			<textalign>left</textalign>
+		</control>			
+
+		<control>
+			<id>0</id>
+			<type>label</type>
+			<height>58</height>
+			<width>390</width>
+			<label>#subitem3</label>
+			<font>AvalonLight18</font>
+			<textcolor>ff999999</textcolor>					
+			<textalign>left</textalign>
+		</control>
+
+		<control>
+			<id>0</id>
+			<type>label</type>
+			<height>58</height>
+			<width>390</width>
+			<label>#subitem4</label>
+			<font>AvalonLight18</font>
+			<textcolor>ff999999</textcolor>					
+			<textalign>left</textalign>
+		</control>
+
+		<control>
+			<id>0</id>
+			<type>label</type>
+			<height>58</height>
+			<width>390</width>
+			<label>#subitem5</label>
+			<font>AvalonLight18</font>
+			<textcolor>ff999999</textcolor>					
+			<textalign>left</textalign>
+		</control>
+
+		<control>
+			<id>0</id>
+			<type>label</type>
+			<height>58</height>
+			<width>390</width>
+			<label>#subitem6</label>
+			<font>AvalonLight18</font>
+			<textcolor>ff999999</textcolor>					
+			<textalign>left</textalign>
+		</control>
+
+		<control>
+			<id>0</id>
+			<type>label</type>
+			<height>58</height>
+			<width>390</width>
+			<label>#subitem7</label>
+			<font>AvalonLight18</font>
+			<textcolor>ff999999</textcolor>					
+			<textalign>left</textalign>
+		</control>
+
+		<control>
+			<id>0</id>
+			<type>label</type>
+			<height>58</height>
+			<width>390</width>
+			<label>#subitem8</label>
+			<font>AvalonLight18</font>
+			<textcolor>ff999999</textcolor>					
+			<textalign>left</textalign>
+		</control>
+
+	</control>
+
+	<!--Submenu-->
+	<control>
+		<id>500</id>
+		<description>submenu group</description>
+		<type>group</type>
+		<layout>StackLayout</layout>
+		<dimColor>ffffffff</dimColor>
+		<defaultcontrol>501</defaultcontrol>
+		<animation effect="fade" start="0" end="100" time="400" reversible="false">Visible</animation>
+		<animation effect="fade" time="250">WindowOpen</animation>
+		<animation effect="fade" time="250">WindowClose</animation>
+		<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+		<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+		<height>1080</height>
+		<posX>1190</posX>
+		<posY>190</posY>
+
+		<control Style="MenuLabelColor">
+			<id>501</id>
+			<type>button</type>
+			<height>58</height>
+			<width>390</width>
+			<label>#subitem1</label>
+			<font>AvalonLight18</font>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<textalign>left</textalign>
+			<onleft>902</onleft>
+			<onright>501</onright>
+			<ondown>502</ondown>				
+			<visible allowhiddenfocus="true">Control.HasFocus(501) | Control.HasFocus(502) | Control.HasFocus(503) | Control.HasFocus(504) | Control.HasFocus(505)| Control.HasFocus(506)| Control.HasFocus(507)| Control.HasFocus(508)</visible>
+		</control>
+
+		<control Style="MenuLabelColor">
+			<id>502</id>
+			<type>button</type>
+			<height>58</height>
+			<width>390</width>
+			<label>#subitem2</label>
+			<font>AvalonLight18</font>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<textalign>left</textalign>
+			<onup>501</onup>
+			<onleft>902</onleft>
+			<onright>502</onright>
+			<ondown>503</ondown>
+			<visible allowhiddenfocus="true">Control.HasFocus(501) | Control.HasFocus(502) | Control.HasFocus(503) | Control.HasFocus(504) | Control.HasFocus(505)| Control.HasFocus(506)| Control.HasFocus(507)| Control.HasFocus(508)</visible>
+		</control>
+
+		<control Style="MenuLabelColor">
+			<id>503</id>
+			<type>button</type>
+			<height>58</height>
+			<width>390</width>
+			<label>#subitem3</label>
+			<font>AvalonLight18</font>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<textalign>left</textalign>
+			<onup>502</onup>
+			<onleft>902</onleft>
+			<onright>503</onright>
+			<ondown>504</ondown>
+			<visible allowhiddenfocus="true">Control.HasFocus(501) | Control.HasFocus(502) | Control.HasFocus(503) | Control.HasFocus(504) | Control.HasFocus(505)| Control.HasFocus(506)| Control.HasFocus(507)| Control.HasFocus(508)</visible>
+		</control>
+
+		<control Style="MenuLabelColor">
+			<id>504</id>
+			<type>button</type>
+			<height>58</height>
+			<width>390</width>
+			<label>#subitem4</label>
+			<font>AvalonLight18</font>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<textalign>left</textalign>
+			<onup>503</onup>
+			<onleft>902</onleft>
+			<onright>504</onright>
+			<ondown>505</ondown>
+			<visible allowhiddenfocus="true">Control.HasFocus(501) | Control.HasFocus(502) | Control.HasFocus(503) | Control.HasFocus(504) | Control.HasFocus(505)| Control.HasFocus(506)| Control.HasFocus(507)| Control.HasFocus(508)</visible>
+		</control>
+
+		<control Style="MenuLabelColor">
+			<id>505</id>
+			<type>button</type>
+			<height>58</height>
+			<width>390</width>
+			<label>#subitem5</label>
+			<font>AvalonLight18</font>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<textalign>left</textalign>
+			<onup>504</onup>
+			<ondown>506</ondown>
+			<onright>505</onright>
+			<onleft>902</onleft>
+			<visible allowhiddenfocus="true">Control.HasFocus(501) | Control.HasFocus(502) | Control.HasFocus(503) | Control.HasFocus(504) | Control.HasFocus(505)| Control.HasFocus(506)| Control.HasFocus(507)| Control.HasFocus(508)</visible>
+		</control>
+
+		<control Style="MenuLabelColor">
+			<id>506</id>
+			<type>button</type>
+			<height>58</height>
+			<width>390</width>
+			<label>#subitem6</label>
+			<font>AvalonLight18</font>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<textalign>left</textalign>
+			<onup>505</onup>
+			<ondown>507</ondown>
+			<onright>506</onright>
+			<onleft>902</onleft>
+			<visible allowhiddenfocus="true">Control.HasFocus(501) | Control.HasFocus(502) | Control.HasFocus(503) | Control.HasFocus(504) | Control.HasFocus(505)| Control.HasFocus(506)| Control.HasFocus(507)| Control.HasFocus(508)</visible>
+		</control>
+
+		<control Style="MenuLabelColor">
+			<id>507</id>
+			<type>button</type>
+			<height>58</height>
+			<width>390</width>
+			<label>#subitem7</label>
+			<font>AvalonLight18</font>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<textalign>left</textalign>
+			<onup>506</onup>
+			<ondown>508</ondown>
+			<onright>507</onright>
+			<onleft>902</onleft>
+			<visible allowhiddenfocus="true">Control.HasFocus(501) | Control.HasFocus(502) | Control.HasFocus(503) | Control.HasFocus(504) | Control.HasFocus(505)| Control.HasFocus(506)| Control.HasFocus(507)| Control.HasFocus(508)</visible>
+		</control>
+
+		<control Style="MenuLabelColor">
+			<id>508</id>
+			<type>button</type>
+			<height>58</height>
+			<width>390</width>
+			<label>#subitem8</label>
+			<font>AvalonLight18</font>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<textalign>left</textalign>
+			<onup>507</onup>
+			<ondown>508</ondown>
+			<onright>508</onright>
+			<onleft>902</onleft>
+			<visible allowhiddenfocus="true">Control.HasFocus(501) | Control.HasFocus(502) | Control.HasFocus(503) | Control.HasFocus(504) | Control.HasFocus(505)| Control.HasFocus(506)| Control.HasFocus(507)| Control.HasFocus(508)</visible>
+		</control>
+	</control>
+
+	<control>
+		<id>600</id>
+		<description>submenu group</description>
+		<type>group</type>
+		<layout>StackLayout</layout>
+		<dimColor>ffffffff</dimColor>
+		<defaultcontrol>601</defaultcontrol>
+		<visible allowhiddenfocus="true">Control.HasFocus(601) | Control.HasFocus(602) | Control.HasFocus(603) | Control.HasFocus(604) | Control.HasFocus(605) | Control.HasFocus(606) | Control.HasFocus(607) | Control.HasFocus(608)</visible>
+		<animation effect="fade" start="0" end="100" time="400" reversible="false">Visible</animation>
+		<animation effect="fade" time="250">WindowOpen</animation>
+		<animation effect="fade" time="250">WindowClose</animation>
+		<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+		<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+		<height>1080</height>
+		<posX>1190</posX>
+		<posY>190</posY>
+
+		<control Style="MenuLabelColor">
+			<id>601</id>
+			<type>button</type>
+			<height>58</height>
+			<width>390</width>
+			<label>#subitem1</label>
+			<font>AvalonLight18</font>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<textalign>left</textalign>
+			<onleft>901</onleft>
+			<onright>601</onright>
+			<ondown>602</ondown>
+			<!--				<visible allowhiddenfocus="true">[control.isvisible(801) | control.isvisible(802) | Control.HasFocus(501) | Control.HasFocus(502) | Control.HasFocus(503) | Control.HasFocus(504) | Control.HasFocus(505)| Control.HasFocus(506)| Control.HasFocus(507)| Control.HasFocus(508)] + !control.isvisible(1188773342) + !string.equals(#subitem1,)</visible>-->
+			<visible allowhiddenfocus="true">Control.HasFocus(601) | Control.HasFocus(602) | Control.HasFocus(603) | Control.HasFocus(604) | Control.HasFocus(605) | Control.HasFocus(606) | Control.HasFocus(607) | Control.HasFocus(608)</visible>
+		</control>
+
+		<control Style="MenuLabelColor">
+			<id>602</id>
+			<type>button</type>
+			<height>58</height>
+			<width>390</width>
+			<label>#subitem2</label>
+			<font>AvalonLight18</font>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<textalign>left</textalign>
+			<onup>601</onup>
+			<onleft>901</onleft>
+			<onright>602</onright>
+			<ondown>603</ondown>
+			<visible>!string.equals(#subitem2,)+[Control.HasFocus(601) | Control.HasFocus(602) | Control.HasFocus(603) | Control.HasFocus(604) | Control.HasFocus(605) | Control.HasFocus(606) | Control.HasFocus(607) | Control.HasFocus(608)]</visible>
+		</control>
+
+		<control Style="MenuLabelColor">
+			<id>603</id>
+			<type>button</type>
+			<height>58</height>
+			<width>390</width>
+			<label>#subitem3</label>
+			<font>AvalonLight18</font>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<textalign>left</textalign>
+			<onup>602</onup>
+			<onleft>901</onleft>
+			<onright>603</onright>
+			<ondown>604</ondown>
+			<visible>!string.equals(#subitem3,)+[Control.HasFocus(601) | Control.HasFocus(602) | Control.HasFocus(603) | Control.HasFocus(604) | Control.HasFocus(605) | Control.HasFocus(606) | Control.HasFocus(607) | Control.HasFocus(608)]</visible>
+		</control>
+
+		<control Style="MenuLabelColor">
+			<id>604</id>
+			<type>button</type>
+			<height>58</height>
+			<width>390</width>
+			<label>#subitem4</label>
+			<font>AvalonLight18</font>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<textalign>left</textalign>
+			<onup>603</onup>
+			<onleft>901</onleft>
+			<onright>604</onright>
+			<ondown>605</ondown>
+			<visible>!string.equals(#subitem4,)+[Control.HasFocus(601) | Control.HasFocus(602) | Control.HasFocus(603) | Control.HasFocus(604) | Control.HasFocus(605) | Control.HasFocus(606) | Control.HasFocus(607) | Control.HasFocus(608)]</visible>
+		</control>
+
+		<control Style="MenuLabelColor">
+			<id>605</id>
+			<type>button</type>
+			<height>58</height>
+			<width>390</width>
+			<label>#subitem5</label>
+			<font>AvalonLight18</font>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<textalign>left</textalign>
+			<onup>604</onup>
+			<ondown>606</ondown>
+			<onright>605</onright>
+			<onleft>901</onleft>
+			<visible>!string.equals(#subitem5,)+[Control.HasFocus(601) | Control.HasFocus(602) | Control.HasFocus(603) | Control.HasFocus(604) | Control.HasFocus(605) | Control.HasFocus(606) | Control.HasFocus(607) | Control.HasFocus(608)]</visible>
+		</control>
+
+		<control Style="MenuLabelColor">
+			<id>606</id>
+			<type>button</type>
+			<height>58</height>
+			<width>390</width>
+			<label>#subitem6</label>
+			<font>AvalonLight18</font>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<textalign>left</textalign>
+			<onup>605</onup>
+			<ondown>607</ondown>
+			<onright>606</onright>
+			<onleft>901</onleft>
+			<visible>!string.equals(#subitem6,)+[Control.HasFocus(601) | Control.HasFocus(602) | Control.HasFocus(603) | Control.HasFocus(604) | Control.HasFocus(605) | Control.HasFocus(606) | Control.HasFocus(607) | Control.HasFocus(608)]</visible>
+		</control>
+
+		<control Style="MenuLabelColor">
+			<id>607</id>
+			<type>button</type>
+			<height>58</height>
+			<width>390</width>
+			<label>#subitem7</label>
+			<font>AvalonLight18</font>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<textalign>left</textalign>
+			<onup>606</onup>
+			<ondown>608</ondown>
+			<onright>607</onright>
+			<onleft>901</onleft>
+			<visible>!string.equals(#subitem7,)+[Control.HasFocus(601) | Control.HasFocus(602) | Control.HasFocus(603) | Control.HasFocus(604) | Control.HasFocus(605) | Control.HasFocus(606) | Control.HasFocus(607) | Control.HasFocus(608)]</visible>
+		</control>
+
+		<control Style="MenuLabelColor">
+			<id>608</id>
+			<type>button</type>
+			<height>58</height>
+			<width>390</width>
+			<label>#subitem8</label>
+			<font>AvalonLight18</font>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<textalign>left</textalign>
+			<onup>607</onup>
+			<ondown>608</ondown>
+			<onright>608</onright>
+			<onleft>901</onleft>
+			<visible>!string.equals(#subitem8,)+[Control.HasFocus(601) | Control.HasFocus(602) | Control.HasFocus(603) | Control.HasFocus(604) | Control.HasFocus(605) | Control.HasFocus(606) | Control.HasFocus(607) | Control.HasFocus(608)]</visible>
+		</control>
+	</control>
+
+	<control>
+		<description>Update Indicator</description>
+		<type>button</type>
+		<id>99999</id>
+		<label>-</label>
+		<textureFocus>update_notification_focus.png</textureFocus>
+		<textureNoFocus>update_notification_nofocus.png</textureNoFocus>
+		<posX>348</posX>
+		<posY>38</posY>
+		<width>64</width>
+		<height>64</height>
+		<hyperlink>155104</hyperlink>
+		<onright>99999</onright>
+		<onleft>99999</onleft>
+		<onup>3</onup>
+		<ondown>901</ondown>
+		<visible>string.equals(#Avalon.ShowUpdateInd,true)</visible>
+		<animation effect="fade" time="250">WindowOpen</animation>
+		<animation effect="fade" time="250">WindowClose</animation>
+		<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+		<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+	</control>
+
+	<control Style="BlueColor">
+		<type>label</type>
+		<id>4201</id>
+		<posX>410</posX>
+		<posY>55</posY>
+		<width>500</width>
+		<label>#Avalon.SkinUpdateNF</label>
+		<font>AvalonLight12</font>
+		<visible>string.equals(#Avalon.ShowUpdateInd,true) + string.equals(#uplabel1,yes)</visible>
+		<animation effect="fade" time="250">WindowOpen</animation>
+		<animation effect="fade" time="250">WindowClose</animation>
+		<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+		<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="600">visiblechange</animation>
+	</control>
+
+	<control Style="BlueColor">
+		<type>label</type>
+		<id>4202</id>
+		<posX>410</posX>
+		<posY>55</posY>
+		<width>800</width>
+		<label>#Avalon.SkinUpdateNF2</label>
+		<font>AvalonLight12</font>
+		<visible>string.equals(#Avalon.ShowUpdateInd,true) + string.equals(#uplabel2,yes)</visible>
+		<animation effect="fade" time="250">WindowOpen</animation>
+		<animation effect="fade" time="250">WindowClose</animation>
+		<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+		<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="600">visiblechange</animation>
+	</control>		
+
+	<control>
+		<id>1</id>
+		<type>image</type>
+		<posX>858</posX>
+		<posY>0</posY>
+		<texture>basichome_exit.png</texture>		
+		<visible>![Control.HasFocus(2) | Control.HasFocus(3) | Control.HasFocus(4)] + !string.contains(#Avalon.HiddenMenu, false)</visible>
+		<animation effect="slide" start="0,-60" end="0,0" tween="quadratic" easing="in" time="250" delay="400">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="0,-60" tween="quadratic" easing="in" time="250" delay="100">WindowClose</animation>
+	</control>
+
+	<!--RSS-->
+
+	<control>
+		<description>RSS background</description>
+		<type>image</type>
+		<id>1</id>
+		<posX>-5</posX>
+		<posY>796</posY>
+		<width>1865</width>
+		<height>90</height>
+		<texture>basichome_rss_bg.png</texture>
+		<animation effect="fade" time="250">WindowOpen</animation>
+		<animation effect="fade" time="250">WindowClose</animation>
+		<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+		<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+	</control>
+
+	<control Style="RSSColor">
+		<description>RSS items</description>
+		<type>fadelabel</type>
+		<id>1</id>
+		<posX>25</posX>
+		<posY>840</posY>
+		<width>1810</width>
+		<height>30</height>
+		<font>font11</font>
+		<label>#infoservice.feed.titles</label>
+		<visible>plugin.isenabled(InfoService) + !string.contains(#Avalon.RSS, false)</visible>
+		<animation effect="fade" time="250">WindowOpen</animation>
+		<animation effect="fade" time="250">WindowClose</animation>
+		<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+		<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+	</control>
+
+	<import>BasicHome.weather.xml</import> 
+	<import>BasicHome.scraper.xml</import>  		
+	<import>common.overlay.home.xml</import>
+	<import>BasicHome.recentlyaddedSeries.xml</import>
+	<import>BasicHome.recentlyaddedMovies.xml</import>
+	<import>BasicHome.recentlyaddedMusic.xml</import>
+	<import>BasicHome.recentlyaddedRecordings.xml</import>
+	<import>BasicHome.recentlyaddedPictures.xml</import>
+	<import>BasicHome.recentlyaddedMyFilms.xml</import>	
+	<import>BasicHome.recentlyaddedMyVideos.xml</import>	
+	<import>common.time.xml</import>
+
+	<control>
+		<description>Submenu tab</description>
+		<type>image</type>
+		<id>566</id>
+		<posX>720</posX>
+		<posY>124</posY>
+		<width>46</width>
+		<height>43</height>
+		<visible>[Control.HasFocus(801)|Control.HasFocus(802)|Control.HasFocus(901)|Control.HasFocus(902)]+!string.equals(#subitem1,)</visible>
+		<animation effect="fade" start="100" end="40" time="700" delay="250" tween="cubic" easing="inout" condition="true" pulse="true">Conditional</animation>
+		<animation effect="fade" start="100" end="0" time="100" reversible="true">Hidden</animation>
+		<animation effect="fade" start="0" end="100" delay="150" time="400" reversible="true">Visible</animation>
+		<animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="10" >WindowClose</animation>
+		<texture>submenu_arrow.png</texture>
+	</control>		
+
+	<import>BasicHome.exitmenu.xml</import>		
+
+	<control>
+		<type>image</type>
+		<id>0</id>
+		<width>1920</width>
+		<height>1080</height>
+		<shouldCache>true</shouldCache>
+		<texture>semi_trans_back_hidden_menu.png</texture>
+		<visible>string.equals(#Avalon.HasDialog,false)</visible>
+		<animation effect="fade" time="450">visible</animation>
+		<animation effect="fade" time="400">hidden</animation>
+	</control>
+
+</controls>
+</window>

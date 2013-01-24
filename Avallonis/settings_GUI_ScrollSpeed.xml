@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+<id>31</id>
+<defaultcontrol>2</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+
+<controls>
+	<import>settings.menu.xml</import>
+	
+	<control Style="BlueColor">
+		<type>label</type>
+		<id>1</id>
+		<posX>766</posX>
+		<posY>158</posY>
+		<width>600</width>
+		<label>#(L(131))/#(L(673))</label>
+		<font>fontB20</font>
+	</control>
+
+	
+	
+	<control>
+		<description>group element</description>
+      <type>group</type>
+		<dimColor>ffffffff</dimColor>
+		<animation effect="fade" time="150">WindowOpen</animation>
+		<animation effect="fade" time="150">WindowClose</animation>
+
+	<control>
+		<type>image</type>
+		<id>1</id>
+		<posX>735</posX>
+		<posY>260</posY>
+		<width>955</width>
+		<height>46</height>
+		<texture>settings_button_large_focus.png</texture>
+		<visible>Control.HasFocus(2)</visible>
+	</control>
+	
+	<control>
+		<type>image</type>
+		<id>1</id>
+		<posX>735</posX>
+		<posY>260</posY>
+		<width>955</width>
+		<height>46</height>
+		<texture>settings_button_large_nofocus.png</texture>
+		<visible>!Control.HasFocus(2)</visible>
+	</control>
+
+<control>
+      <description>Horizontal Speed label</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>765</posX>
+      <posY>265</posY>
+      <label>1442</label>
+      <width>954</width>
+      <visible>!Control.HasFocus(2)</visible>
+      <animation effect="fade" time="150">WindowOpen</animation>
+      <animation effect="fade" time="150">WindowClose</animation>
+    </control>
+     
+ <control>
+        <description>Horizontal Speed label</description>
+        <type>label</type>
+        <id>1</id>
+        <posX>765</posX>
+        <posY>265</posY>
+        <label>1442</label>
+	<width>954</width>      
+        <textcolor>ffFFFFFF</textcolor>
+        <visible>Control.HasFocus(2)</visible>
+      </control>
+
+      <control>
+        <description>Horizontal Speed select</description>
+        <type>spincontrol</type>
+        <id>2</id>
+        <posX>1610</posX>
+        <posY>265</posY>
+        <align>right</align>
+	<textcolor>ffffffff</textcolor>
+      	<textXOff>32</textXOff>
+      	<textYOff>3</textYOff>
+        <onup>3</onup>
+        <ondown>4</ondown>
+        <textcolor>FFFFFFFF</textcolor>
+      </control>
+      
+      <control>
+		<type>image</type>
+		<id>1</id>
+		<posX>735</posX>
+		<posY>305</posY>
+		<width>955</width>
+		<height>46</height>
+		<texture>settings_button_large_focus.png</texture>
+		<visible>Control.HasFocus(4)</visible>
+	</control>
+	
+	<control>
+		<type>image</type>
+		<id>1</id>
+		<posX>735</posX>
+		<posY>305</posY>
+		<width>955</width>
+		<height>46</height>
+		<texture>settings_button_large_nofocus.png</texture>
+		<visible>!Control.HasFocus(4)</visible>
+	</control>  
+
+      <control>
+        <description>Vertical Speed label</description>
+        <type>label</type>
+        <id>1</id>
+        <posX>765</posX>
+        <posY>312</posY>
+        <label>1443</label>
+	<width>954</width>
+        <visible>!Control.HasFocus(4)</visible>
+      </control>
+
+     <control>
+      <description>Vertical Speed label</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>765</posX>
+      <posY>312</posY>
+      <label>1443</label>
+      <width>954</width>      
+      <textcolor>ffFFFFFF</textcolor>
+      <visible>Control.HasFocus(4)</visible>
+      <animation effect="fade" time="150">WindowOpen</animation>
+      <animation effect="fade" time="150">WindowClose</animation>
+    </control>
+
+      <control>
+        <description>Vertical Speed select</description>
+        <type>spincontrol</type>
+        <id>4</id>
+        <posX>1610</posX>
+        <posY>313</posY>
+        <align>right</align>
+        <textcolor>ffffffff</textcolor>
+        <textXOff>32</textXOff>
+        <textYOff>3</textYOff>
+        <onup>2</onup>
+        <ondown>5</ondown>        
+      </control>
+
+      <!--List loop delay-->
+
+      <control>
+		<type>image</type>
+		<id>1</id>
+		<posX>735</posX>
+		<posY>350</posY>
+		<width>955</width>
+		<height>46</height>
+		<texture>settings_button_large_focus.png</texture>
+		<visible>Control.HasFocus(5)</visible>
+	</control>
+	
+	<control>
+		<type>image</type>
+		<id>1</id>
+		<posX>735</posX>
+		<posY>350</posY>
+		<width>955</width>
+		<height>46</height>
+		<texture>settings_button_large_nofocus.png</texture>
+		<visible>!Control.HasFocus(5)</visible>
+	</control>
+
+      <control>
+        <description>List loop delay label</description>
+        <type>label</type>
+        <id>1</id>
+        <posX>765</posX>
+        <posY>355</posY>
+        <label>300136</label>
+	<width>954</width>
+	<visible>!Control.HasFocus(5)</visible>
+	<animation effect="fade" time="150">WindowOpen</animation>
+        <animation effect="fade" time="150">WindowClose</animation>
+      </control>
+
+     <control>
+      <description>List loop delay label</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>765</posX>
+      <posY>355</posY>
+      <label>300136</label>
+      <width>954</width>      
+      <textcolor>ffFFFFFF</textcolor>
+      <visible>Control.HasFocus(5)</visible>
+      <animation effect="fade" time="150">WindowOpen</animation>
+      <animation effect="fade" time="150">WindowClose</animation>
+    </control>
+
+      <control>
+        <description>List loop delay</description>
+        <type>spincontrol</type>
+        <id>5</id>
+        <posX>1610</posX>
+        <posY>357</posY>
+        <align>right</align>
+	<textcolor>ffffffff</textcolor>
+        <textXOff>32</textXOff>
+        <textYOff>3</textYOff>
+        <onup>4</onup>
+        <ondown>3</ondown>
+        <textcolor>FFFFFFFF</textcolor>
+      </control>
+
+      <control>
+		<type>image</type>
+		<id>1</id>
+		<posX>735</posX>
+		<posY>395</posY>
+		<width>955</width>
+		<height>46</height>
+		<texture>settings_button_large_focus.png</texture>
+		<visible>Control.HasFocus(3)</visible>
+	</control>
+	
+	<control>
+		<type>image</type>
+		<id>1</id>
+		<posX>735</posX>
+		<posY>395</posY>
+		<width>955</width>
+		<height>46</height>
+		<texture>settings_button_large_nofocus.png</texture>
+		<visible>!Control.HasFocus(3)</visible>
+	</control>
+
+      <control>
+        <description>FPS label</description>
+        <type>label</type>
+        <id>1</id>
+        <posX>765</posX>
+        <posY>400</posY>
+        <label>973</label>
+        <width>954</width>
+        <visible>!Control.HasFocus(3)</visible>
+	<animation effect="fade" time="150">WindowOpen</animation>
+        <animation effect="fade" time="150">WindowClose</animation>
+      </control>
+
+      <control>
+      <description>FPS label</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>765</posX>
+      <posY>400</posY>
+      <label>973</label>
+      <width>954</width>      
+      <textcolor>ffFFFFFF</textcolor>
+      <visible>Control.HasFocus(3)</visible>
+      <animation effect="fade" time="150">WindowOpen</animation>
+      <animation effect="fade" time="150">WindowClose</animation>
+    </control>
+
+      <control>
+        <description>FPS select</description>
+        <type>spincontrol</type>
+        <id>3</id>
+        <posX>1610</posX>
+        <posY>402</posY>
+        <align>right</align>
+        <onup>5</onup>
+        <ondown>2</ondown>
+        <textcolor>ffffffff</textcolor>
+        <textXOff>32</textXOff>
+        <textYOff>3</textYOff>
+      </control>
+      <control>
+        <description>currentFPS count</description>
+        <type>label</type>
+        <id>1</id>
+        <posX>990</posX>
+        <posY>400</posY>
+        <label>#fps</label>
+      </control>
+      <control>
+        <description>Example label</description>
+        <type>label</type>
+        <id>1</id>
+        <posX>735</posX>
+        <posY>457</posY>
+        <width>711</width>
+        <label>675</label>
+      </control>
+      <control>
+        <description>TagLine value</description>
+        <type>fadelabel</type>
+        <id>25</id>
+        <posX>735</posX>
+        <posY>510</posY>
+        <width>960</width>
+        <label>-</label>
+        <font>font12</font>
+        <textcolor>FFFFFFFF</textcolor>
+      </control>
+      <control>
+        <description>Description1</description>
+        <type>textboxscrollup</type>
+        <id>26</id>
+        <posX>735</posX>
+        <posY>590</posY>
+        <width>960</width>
+        <height>200</height>
+        <label>-</label>
+        <font>font12</font>
+        <textcolor>FFFFFFFF</textcolor>
+      </control>
+    </control>
+
+<import>common.time.xml</import>
+<import>avallonis.version.xml</import>
+</controls>
+</window>

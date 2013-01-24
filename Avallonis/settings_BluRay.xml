@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+<id>1024</id>
+<defaultcontrol>2</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+<controls>
+	<import>settings.menu.xml</import>
+	
+	<control Style="BlueColor">
+		<type>label</type>
+		<id>1</id>
+		<posX>766</posX>
+		<posY>159</posY>
+		<width>500</width>
+		<label>300217</label>
+		<font>fontB20</font>
+	</control>
+	
+	<control>
+		<description>buttons</description>
+		<type>group</type>
+		<posX>735</posX>
+		<posY>248</posY>
+		<dimColor>ffffffff</dimColor>
+    		<layout>StackLayout(0, Vertical, true)</layout>
+	  	<animation effect="fade" time="150">WindowOpen</animation>
+	  	<animation effect="fade" time="150">WindowClose</animation>
+
+      <control Style="SettingsButtonLarge">
+			<description>Region</description>
+			<type>button</type>
+			<id>2</id>
+			<label>300218</label>
+			<onup>23</onup>
+		</control>
+
+      <control Style="SettingsButtonLarge">
+			<description>AudioType</description>
+			<type>button</type>
+			<id>3</id>
+			<label>300219</label>
+		</control>
+
+      <control Style="SettingsButtonLarge">
+			<description>Video</description>
+			<type>button</type>
+			<id>4</id>
+			<label>2134</label>
+		</control>
+
+      <control Style="SettingsButtonLarge">
+			<description>Audio</description>
+			<type>button</type>
+			<id>5</id>
+			<label>2135</label>
+		</control>
+
+      <control Style="SettingsButtonLarge">
+			<description>Subtitles On/Off</description>
+			<type>checkbutton</type>
+			<id>6</id>
+			<label>1196</label>
+			<ondown>7</ondown>
+
+	
+			</control>
+</control>
+			
+  
+
+   
+<control>
+		<type>image</type>
+		<id>1</id>
+		<posX>736</posX>
+		<posY>510</posY>
+		<width>955</width>
+		<height>52</height>
+		<texture>settings_button_large_focus.png</texture>
+		<visible>Control.HasFocus(7)</visible>
+	</control>
+	
+	<control>
+		<type>image</type>
+		<id>1</id>
+		<posX>736</posX>
+		<posY>510</posY>
+		<width>955</width>
+		<height>52</height>
+		<texture>settings_button_large_nofocus.png</texture>
+		<visible>!Control.HasFocus(7)</visible>
+
+	</control>
+
+    <control>
+      <description>Dynamic content label</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>765</posX>
+      <posY>520</posY>
+      <label>300220</label>
+      <width>954</width>
+      <high>50</high>
+      <visible>!Control.HasFocus(7)</visible>
+      <animation effect="fade" time="150">WindowOpen</animation>
+      <animation effect="fade" time="150">WindowClose</animation>
+    </control>
+
+<control>
+      <description>Dynamic content label</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>765</posX>
+      <posY>520</posY>
+      <label>300220</label>
+      <width>954</width>
+      <high>50</high>
+      <textcolor>ffFFFFFF</textcolor>
+      <visible>Control.HasFocus(7)</visible>
+      <animation effect="fade" time="150">WindowOpen</animation>
+      <animation effect="fade" time="150">WindowClose</animation>
+    </control>
+
+  
+ <control>
+    <description>Age limit value</description>
+    <type>spincontrol</type>
+    <id>7</id>
+    <posX>1617</posX>
+    <posY>520</posY>
+    <onup>5</onup>
+    <onleft>5</onleft>
+    <ondown>99</ondown>
+    <align>right</align>
+    <textcolor>ffFFFFFF</textcolor>
+    <buddycontrolid>100</buddycontrolid>
+    <animation effect="fade" time="150">WindowOpen</animation>
+    <animation effect="fade" time="150">WindowClose</animation>
+ </control> 
+
+        
+	
+<import>common.time.xml</import>
+<import>avallonis.version.xml</import>
+</controls>
+</window>

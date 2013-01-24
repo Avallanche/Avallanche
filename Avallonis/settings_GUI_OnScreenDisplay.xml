@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+<id>1006</id>
+<defaultcontrol>2</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+<rememberLastFocusedControl>no</rememberLastFocusedControl>
+<controls>
+	<import>settings.menu.xml</import>
+	
+	<control Style="BlueColor">
+		<type>label</type>
+		<id>1</id>
+		<posX>766</posX>
+		<posY>158</posY>
+		<width>600</width>
+		<label>#(L(101021))/#(L(300121))</label>
+		<font>fontB20</font>
+	</control>
+	
+	control>
+		<description>group element</description>
+                <type>group</type>
+		<dimColor>ffffffff</dimColor>
+		<animation effect="fade" time="150">WindowOpen</animation>
+		<animation effect="fade" time="150">WindowClose</animation>
+
+<control>
+      <description>Display timeout Section label</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>735</posX>
+      <posY>220</posY>
+      <label>300121</label>
+      <font>fontB12</font>
+      
+      <animation effect="fade" time="150">WindowOpen</animation>
+      <animation effect="fade" time="150">WindowClose</animation>
+    </control>
+      
+<control Style="SettingsButtonLarge">
+      	<description>DisplayTimeout button</description>
+      	<type>button</type>
+      	<id>2</id>
+	<posX>735</posX>
+      	<posY>265</posY>
+	<onup>17</onup>
+	<label>300129</label>
+	<animation effect="fade" time="150">WindowOpen</animation>
+	<animation effect="fade" time="150">WindowClose</animation>
+    </control>
+
+      
+    <control>
+	<description>DisplayTimeout value label</description>
+      	<type>label</type>
+      	<id>1</id>
+	<posX>1670</posX>
+      	<posY>275</posY>
+      	<label>#displayTimeout</label>
+      	<align>right</align>
+	<textcolor>ffffffff</textcolor>
+	<animation effect="fade" time="150">WindowOpen</animation>
+	<animation effect="fade" time="150">WindowClose</animation>
+    </control>
+    
+<!--Zap-->
+    <control>
+      <description>Zap Section label</description>
+      <type>label</type>
+      <id>1</id>
+		  <posX>735</posX>
+		  <posY>371</posY>
+      <label>300130</label>
+			<font>fontB12</font>
+     	
+  		<animation effect="fade" time="150">WindowOpen</animation>
+  		<animation effect="fade" time="150">WindowClose</animation>
+    </control>
+    <control Style="SettingsButtonLarge">
+      <description>Zap delay button</description>
+      <type>button</type>
+      <id>3</id>
+      <label>300131</label>
+		  <posX>735</posX>
+		  <posY>417</posY>
+      
+  		<animation effect="fade" time="150">WindowOpen</animation>
+  		<animation effect="fade" time="150">WindowClose</animation>
+    </control>
+    <control>
+      <description>Zap Delay value</description>
+      <type>label</type>
+      <id>1</id>
+		  <posX>1670</posX>
+		  <posY>430</posY>
+		  <align>right</align>
+      <label>#zapDelay</label>
+		<textcolor>ffffffff</textcolor>
+  		<animation effect="fade" time="150">WindowOpen</animation>
+  		<animation effect="fade" time="150">WindowClose</animation>
+    </control>
+    <control Style="SettingsButtonLarge">
+      <description>ZapTimeout button</description>
+      <type>button</type>
+      <id>4</id>
+      <label>300132</label>
+		  <posX>735</posX>
+		  <posY>470</posY>
+      <ondown>2</ondown>
+      
+  		<animation effect="fade" time="150">WindowOpen</animation>
+  		<animation effect="fade" time="150">WindowClose</animation>
+    </control>
+    <control>
+      <description>ZapTimeout value label</description>
+      <type>label</type>
+      <id>1</id>
+		  <posX>1670</posX>
+		  <posY>480</posY>
+		  <align>right</align>
+      <label>#zapTimeout</label>
+		<textcolor>ffffffff</textcolor>
+  		<animation effect="fade" time="150">WindowOpen</animation>
+  		<animation effect="fade" time="150">WindowClose</animation>
+    </control>
+
+
+
+
+		
+	
+           
+	
+<import>common.time.xml</import>
+<import>avallonis.version.xml</import>
+</controls>
+</window>

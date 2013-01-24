@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+<id>704</id>
+<defaultcontrol>22</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+<controls>
+	<import>settings.menu.xml</import>
+	
+	<control Style="BlueColor">
+		<type>label</type>
+		<id>1</id>
+		<posX>766</posX>
+		<posY>158</posY>
+		<width>500</width>
+		<label>446</label>
+		<font>fontB20</font>
+	</control>
+	
+	<control>
+		<description>buttons</description>
+		<type>group</type>
+		<posX>736</posX>
+		<posY>254</posY>
+		<layout>GridLayout(1, 0, 1, 0, 1)</layout>
+      <control Style="SettingsButtonLarge">
+			<description>Enable Subtitles</description>
+			<type>checkbutton</type>
+			<id>22</id>
+			<label>1196</label>
+			<onup>23</onup>
+		</control>
+
+      <control Style="SettingsButtonLarge">
+			<description>Enable Closed Caption</description>
+			<type>checkbutton</type>
+			<id>31</id>
+			<label>300079</label>
+		</control>
+
+      <control Style="SettingsButtonLarge">
+			<description>Turn Off DXVA</description>
+			<type>checkbutton</type>
+			<id>23</id>
+			<label>1197</label>
+		</control>
+
+      <control Style="SettingsButtonLarge">
+			<description>Video</description>
+			<type>button</type>
+			<id>24</id>
+			<label>291</label>
+		</control>
+
+      <control Style="SettingsButtonLarge">
+			<description>Audio</description>
+			<type>button</type>
+			<id>25</id>
+			<label>292</label>
+			<ondown>21</ondown>
+		</control>
+
+           
+	</control>
+<import>common.time.xml</import>
+<import>avallonis.version.xml</import>
+</controls>
+</window>

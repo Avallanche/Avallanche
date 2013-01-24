@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+<id>1007</id>
+<defaultcontrol>2</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+<rememberLastFocusedControl>no</rememberLastFocusedControl>
+<controls>
+	<import>settings.menu.xml</import>
+	
+	<control Style="BlueColor">
+		<type>label</type>
+		<id>1</id>
+		<posX>766</posX>
+		<posY>158</posY>
+		<width>500</width>
+		<label>#(L(128))/#(L(101007))</label>
+		<font>fontB20</font>
+	</control>
+	
+	<control>
+		<description>buttons</description>
+		<type>group</type>
+		<posX>736</posX>
+		<posY>254</posY>
+		<dimColor>ffffffff</dimColor>
+                <layout>StackLayout(0, Vertical, true)</layout>
+	  <animation effect="fade" time="150">WindowOpen</animation>
+	  <animation effect="fade" time="150">WindowClose</animation>
+<control Style="SettingsButtonLarge">
+				<description>Master volume</description>
+				<type>checkbutton</type>
+				<id>2</id>
+				<posX>350</posX>
+				<posY>150</posY>
+				<onleft>10</onleft>
+				<onright>10</onright>
+				<align>right</align>
+				<label>300112</label>
+			</control>
+			
+			<control Style="SettingsButtonLarge">
+				<description>Wave</description>
+				<type>checkbutton</type>
+				<id>3</id>
+				<posX>350</posX>
+				<posY>195</posY>
+				<onleft>10</onleft>
+				<onright>10</onright>
+				<align>right</align>
+				<label>300113</label>
+			</control>
+		</control>
+    <!--Scale-->
+    <control>
+      <description>Scale label</description>
+      <type>label</type>
+      <id>1</id>
+		  <posX>736</posX>
+		  <posY>370</posY>
+     		  <width>400</width>
+      		  <label>300114</label>		  
+		  <font>fontB14</font>
+    </control>
+		
+	<control>
+		<description>buttons</description>
+		<type>group</type>
+		<posX>736</posX>
+		<posY>410</posY>
+		<dimColor>ffffffff</dimColor>
+    <layout>StackLayout(0, Vertical, true)</layout>
+	  <animation effect="fade" time="150">WindowOpen</animation>
+	  <animation effect="fade" time="150">WindowClose</animation>
+		
+		<control Style="SettingsButtonLarge">
+      <description>WinXP</description>
+      <type>checkbutton</type>
+      <id>4</id>
+      <label>300115</label>
+    </control>
+		
+		<control Style="SettingsButtonLarge">
+      <description>Classic</description>
+      <type>checkbutton</type>
+      <id>5</id>
+      <label>300116</label>
+    </control>
+		
+		<control Style="SettingsButtonLarge">
+      <description>Logarithmic</description>
+      <type>checkbutton</type>
+      <id>6</id>
+      <label>300117</label>
+    </control>
+		
+		<control Style="SettingsButtonLarge">
+      <description>Vista/Win7</description>
+      <type>checkbutton</type>
+      <id>7</id>
+      <label>300118</label>
+    </control>
+		
+		<control Style="SettingsButtonLarge">
+      <description>Custom</description>
+      <type>checkbutton</type>
+      <id>8</id>
+      <label>993</label>
+    </control>
+	</control>
+		
+    <control>
+      <description>Custom values label</description>
+      <type>fadelabel</type>
+      <id>1</id>
+      <posX>600</posX>
+      <posY>510</posY>
+      <width>600</width>
+      <font>font10</font>
+      <label>#customScalevalues</label>
+      <visible>control.hasfocus(8)</visible>
+    </control>
+    <!--OSD-->
+    <control>
+      <description>Scale label</description>
+      <type>label</type>
+      <id>1</id>
+		  <posX>736</posX>
+		  <posY>720</posY>
+      <width>400</width>
+      <label>478</label>
+		  
+		  <font>fontB14</font>
+    </control>
+		
+		<control Style="SettingsButtonLarge">
+      <description>OSD button</description>
+      <type>checkbutton</type>
+      <id>9</id>
+		  <posX>736</posX>
+		  <posY>755</posY>
+			<onup>8</onup>
+      <ondown>2</ondown>
+      <label>300119</label>
+    </control>      
+           
+	
+<import>common.time.xml</import>
+<import>avallonis.version.xml</import>
+</controls>
+</window>

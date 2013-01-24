@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+<controls>
+
+	<!--            :: LIST / THUMBVIEW ::            -->
+	
+	<control>
+		<description>Selected item Label</description>
+		<type>fadelabel</type>
+		<id>1</id>
+		<posX>714</posX>
+		<posY>810</posY>
+		<width>810</width>
+		<label>#selecteditem</label>
+		<font>fontB16</font>
+		<visible>[facadeview.list | facadeview.album | facadeview.smallicons | facadeview.largeicons | facadeview.filmstrip | facadeview.coverflow]+control.isvisible(50)</visible>
+		<animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="300" delay="350" reversible="false">visible</animation>
+	</control>
+	
+	<!--            :: INFO LABELS ::            -->
+	
+	<control Style="BlueColor">
+		<animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="300" delay="350" reversible="false">visible</animation>
+		<description>Release Date Label</description>
+		<type>label</type>
+		<label>#myfilms.db.year.label</label>
+		<id>0</id>
+		<posX>714</posX>
+		<posY>872</posY>
+		<width>240</width>
+		<align>left</align>
+		<font>AvalonLight12</font>
+		<visible>[facadeview.list | facadeview.album | facadeview.smallicons | facadeview.largeicons | facadeview.filmstrip | facadeview.coverflow]+Control.IsVisible(50)+string.equals(#myfilms.db.year.value)</visible>
+	</control>
+
+	<control>
+		<animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="300" delay="350" reversible="false">visible</animation>
+		<description>Year below the movie title</description>
+		<type>label</type>
+		<label>#myfilms.db.year.value</label>
+		<id>0</id>
+		<posX>882</posX>
+		<posY>872</posY>
+		<width>240</width>
+		<align>left</align>
+		<font>AvalonLight12</font>
+		<visible>[facadeview.list | facadeview.album | facadeview.smallicons | facadeview.largeicons | facadeview.filmstrip | facadeview.coverflow]+Control.IsVisible(50)+string.equals(#myfilms.db.year.value)</visible>
+	</control>
+
+	<control Style="BlueColor">
+		<animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="300" delay="350" reversible="false">visible</animation>
+		<description>Runtime Label</description>
+		<type>label</type>
+		<label>#myfilms.db.length.label</label>
+		<id>0</id>
+		<posX>714</posX>
+		<posY>912</posY>
+		<width>240</width>
+		<align>left</align>
+		<font>AvalonLight12</font>
+		<visible>[facadeview.list | facadeview.album | facadeview.smallicons | facadeview.largeicons | facadeview.filmstrip | facadeview.coverflow]+Control.IsVisible(50)+string.equals(#myfilms.db.length.value)</visible>
+	</control>
+	
+	<control>
+		<animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="300" delay="350" reversible="false">visible</animation>
+		<description>Runtime</description>
+		<type>label</type>
+		<label>#myfilms.db.length.value min</label>
+		<id>0</id>
+		<posX>882</posX>
+		<posY>912</posY>
+		<width>240</width>
+		<align>left</align>
+		<font>AvalonLight12</font>
+		<visible>[facadeview.list | facadeview.album | facadeview.smallicons | facadeview.largeicons | facadeview.filmstrip | facadeview.coverflow]+Control.IsVisible(50)+string.equals(#myfilms.db.length.value)</visible>
+	</control>
+	
+	<control Style="BlueColor">
+		<animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="300" delay="350" reversible="false">visible</animation>
+		<description>Genre Label</description>
+		<type>label</type>
+		<label>#myfilms.db.category.label</label>
+		<id>0</id>
+		<posX>714</posX>
+		<posY>952</posY>
+		<width>240</width>
+		<align>left</align>
+		<font>AvalonLight12</font>
+		<visible>[facadeview.list | facadeview.album | facadeview.smallicons | facadeview.largeicons | facadeview.filmstrip | facadeview.coverflow]+Control.IsVisible(50)+string.equals(#myfilms.db.category.value)</visible>
+	</control>
+	
+	<control>
+		<animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="300" delay="350" reversible="false">visible</animation>
+		<description>Genre</description>
+		<type>fadelabel</type>
+		<label>#myfilms.db.category.value</label>
+		<id>0</id>
+		<posX>882</posX>
+		<posY>952</posY>
+		<width>240</width>
+		<align>left</align>
+		<font>AvalonLight12</font>
+		<visible>[facadeview.list | facadeview.album | facadeview.smallicons | facadeview.largeicons | facadeview.filmstrip | facadeview.coverflow]+Control.IsVisible(50)+string.equals(#myfilms.db.category.value)</visible>
+	</control>
+	
+	<control Style="BlueColor">
+		<animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="300" delay="350" reversible="false">visible</animation>
+		<description>Director Label</description>
+		<type>label</type>
+		<label>#myfilms.db.director.label</label>
+		<id>0</id>
+		<posX>714</posX>
+		<posY>990</posY>
+		<width>240</width>
+		<align>left</align>
+		<font>AvalonLight12</font>
+		<visible>[facadeview.list | facadeview.album | facadeview.smallicons | facadeview.largeicons | facadeview.filmstrip | facadeview.coverflow]+Control.IsVisible(50)+string.equals(#myfilms.db.director.value)</visible>
+	</control>
+	
+	<control>
+		<animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="300" delay="350" reversible="false">visible</animation>
+		<description>Director</description>
+		<type>fadelabel</type>
+		<label>#myfilms.db.director.value</label>
+		<id>0</id>
+		<posX>882</posX>
+		<posY>990</posY>
+		<width>240</width>
+		<align>left</align>
+		<font>AvalonLight12</font>
+		<visible>[facadeview.list | facadeview.album | facadeview.smallicons | facadeview.largeicons | facadeview.filmstrip | facadeview.coverflow]+Control.IsVisible(50)+string.equals(#myfilms.db.director.value)</visible>
+	</control>
+	
+	<control>
+		<animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="300" delay="350" reversible="false">visible</animation>
+		<type>textboxscrollup</type>
+		<description>Summary (list)</description>
+		<id>1025</id>
+		<posX>1175</posX>
+		<posY>872</posY>
+		<width>725</width>
+		<height>160</height>
+		<label>#myfilms.db.description.value</label>
+		<font>AvalonLight12</font>
+		<seperator>---------------------------------------------------------------------------------------------------------</seperator>
+		<onleft>1026</onleft>
+		<onright>1026</onright>
+		<onup>1026</onup>
+		<ondown>1026</ondown>	
+		<visible>[facadeview.list | facadeview.album | facadeview.smallicons | facadeview.largeicons | facadeview.filmstrip | facadeview.coverflow]+Control.IsVisible(50)+string.equals(#myfilms.db.description.value)</visible>
+	</control>
+	
+	<control>
+		<type>imagelist</type>
+		<id>101</id>
+		<posX>880</posX>
+		<posY>726</posY>
+		<width>185</width>
+		<height>29</height>
+		<textureWidth>32</textureWidth>
+		<textureHeight>27</textureHeight>
+		<subitems>
+		<subitem>starblue.png</subitem>
+		<subitem>starwhite.png</subitem>
+		</subitems>
+		<orientation>horizontal</orientation>
+		<align>left</align>
+		<imagesToDraw>5</imagesToDraw>
+		<percentage>#myfilms.db.rating.value</percentage>
+		<visible>[facadeview.list|facadeview.album | facadeview.smallicons | facadeview.largeicons | facadeview.filmstrip | facadeview.coverflow]+Control.IsVisible(50) + [Control.isvisible(36)|Control.isvisible(39)] + !Control.HasFocus(80)</visible>
+	        <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="300" delay="350" reversible="false">visible</animation>
+        </control>
+
+	<control>
+		<animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="300" delay="350" reversible="false">visible</animation>	
+		<type>image</type>
+		<description>thumb Logos ID 2012</description>
+		<id>2012</id>
+		<posX>1500</posX>
+		<posY>814</posY>
+		<width>720</width>
+		<height>38</height>
+		<texture>#myfilms.logos_id2012</texture>
+		<keepaspectratio>yes</keepaspectratio>
+		<spaceBetweenItems>2</spaceBetweenItems>
+		<visible>[facadeview.list | facadeview.album | facadeview.smallicons | facadeview.largeicons | facadeview.filmstrip | facadeview.coverflow]+Control.IsVisible(50)</visible>
+		</control>	
+</controls>
+</window>

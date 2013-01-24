@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+  <id>600</id>
+  <defaultcontrol>2</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <controls>
+    <include condition="#(eq(#skin.tvguide.rows,' 8'))">mytvguide.8rows.xml</include>
+    <include condition="#(eq(#skin.tvguide.rows,' 11'))">mytvguide.11rows.xml</include>
+    <import>common.time.xml</import>
+    <import>common.overlay.home.xml</import>
+  </controls>
+</window>
