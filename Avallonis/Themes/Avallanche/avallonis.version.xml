@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <window>
 	<!--
 Avalon Version 0.1.0.0
@@ -10,7 +10,7 @@ Avalon Version 0.1.0.0
 			<posY>880</posY>
 			<align>right</align>
 			<font>AvalonLight12</font>
-			<label>Avallonis v1.3.0.0</label>
+			<label>Avallanche v1.3.0.2</label>
 			<animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
 			<animation effect="fade" start="0" end="100" time="300" delay="250" reversible="false">visible</animation>
