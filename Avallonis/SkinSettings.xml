@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<profile>
+  <section name="booleansettings">
+    <entry name="#skin.tvguide.usecolorsforbuttons">False</entry>
+    <entry name="#skin.tvguide.usecolorsforgenre">False</entry>
+    <entry name="#skin.tvguide.useborderhighlight">False</entry>
+    <entry name="#skin.tvguide.showgenrekey">False</entry>
+    <entry name="#skin.show.selectedbackdrops">False</entry>
+    <entry name="#skin.enable.latest.myVideo">False</entry>
+    <entry name="#skin.enable.latest.MovingPictures">False</entry>
+    <entry name="#skin.enable.latest.Series">False</entry>
+  </section>
+  <section name="theme">
+    <entry name="name">Avallanche</entry>
+  </section>
+  <section name="stringsettings">
+    <entry name="#skin.basichome.moviePlugin">Moving Pictures</entry>
+    <entry name="#skin.mymusic.info">None</entry>
+    <entry name="#skin.tvguide.rows"> 8</entry>
+  </section>
+</profile>
