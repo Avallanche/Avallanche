@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<window>
+    <allowoverlay>yes</allowoverlay>
+    
+    <controls>
+        
+        <!--*** Overlay ***-->
+        <control>
+            <description>Overlay</description>
+            <type>image</type>
+            <id>0</id>
+            <width>1920</width>
+            <height>1080</height>
+            <texture>weather_bg_transparent.png</texture>
+            <visible>string.equals(#WorldWeather.View,Astronomy)</visible>
+            <animation effect="fade" time="700">visiblechange</animation>
+        </control>
+        
+        <!-- *** Avallonis logo *** -->
+        <control>
+            <description>Avallonis logo</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>60</posX>
+            <posY>910</posY>
+            <width>200</width>
+            <height>200</height>
+            <align>left</align>
+            <keepaspectratio>yes</keepaspectratio>
+            <texture>Avallonis_logo.png</texture>
+            <visible>string.equals(#WorldWeather.View,Astronomy)</visible>
+            <shouldCache>true</shouldCache>
+            <animation effect="fade" time="700">visiblechange</animation>
+        </control>
+        
+        <!--*** Description Label ***-->
+        <control Style="RealWhiteColor">
+            <description>Image description</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>822</posX>
+            <posY>895</posY>
+            <width>1043</width>
+            <align>center</align>
+            <label>#WorldWeather.ImageStarrySkyDescription</label>
+            <font>fontB14</font>
+            <visible>string.equals(#WorldWeather.View,Astronomy)</visible>
+            <animation effect="fade" time="700">visiblechange</animation>
+        </control>
+        
+        <!--*** Astronomy Image ***-->
+        <control>
+            <description>Astronomy image</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>825</posX>
+            <posY>140</posY>
+            <width>1035</width>
+            <height>700</height>
+            <align>center</align>
+            <valign>bottom</valign>
+            <texture>#WorldWeather.ImageStarrySky</texture>
+            <visible>string.equals(#WorldWeather.View,Astronomy)</visible>
+            <animation effect="fade" time="700">visiblechange</animation>
+        </control>
+        
+        <!--*** Zodiac ***-->
+        <control>
+            <description>Zodiac image</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>1050</posX>
+            <posY>180</posY>
+            <width>580</width>
+            <height>580</height>
+            <texture>#WorldWeather.ImageZodiac</texture>
+            <visible>string.equals(#WorldWeather.View,Astronomy)+string.equals(#WorldWeather.ImageZodiacEnabled,true)+control.hasfocus(21)</visible>
+            <animation effect="fade" time="700">visiblechange</animation>
+        </control>
+        <control>
+            <description>Zodiac Today image</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>600</posX>
+            <posY>960</posY>
+            <width>80</width>
+            <height>80</height>
+            <texture>#WorldWeather.TodayZodiacImage</texture>
+            <visible>string.equals(#WorldWeather.View,Astronomy)+string.equals(#WorldWeather.ImageZodiacEnabled,true)+control.hasfocus(21)</visible>
+            <animation effect="fade" time="700">visiblechange</animation>
+        </control>
+        <control>
+            <description>Zodiac Date Range label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>100</posX>
+            <posY>1010</posY>
+            <width>1820</width>
+            <align>CENTER</align>
+            <font>AvalonLight12</font>
+            <label>Current star sign is #WorldWeather.TodayZodiac  #WorldWeather.TodayZodiacDateRange</label>
+            <visible>string.equals(#WorldWeather.View,Astronomy)+string.equals(#WorldWeather.ImageZodiacEnabled,true)+control.hasfocus(21)</visible>
+            <animation effect="fade" time="700">visiblechange</animation>
+        </control>
+        
+        <!--*** Section Label ***-->
+        <control>
+            <description>Section label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1832</posX>
+            <posY>958</posY>
+            <width>1170</width>
+            <align>right</align>
+            <label>Astronomy</label>
+            <font>fontB16</font>
+            <visible>string.equals(#WorldWeather.View,Astronomy)</visible>
+            <animation effect="fade" time="700">visiblechange</animation>
+        </control>
+        
+        <!--*** Feed ***-->
+        <control Style="RealWhiteColor">
+            <description>Feed description</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>100</posX>
+            <posY>130</posY>
+            <label>#WorldWeather.Feed1Description</label>
+            <font>fontB16</font>
+            <textcolor>6aa5cb</textcolor>
+            <visible>string.equals(#WorldWeather.View,Astronomy)</visible>
+            <animation effect="fade" time="700">visiblechange</animation>
+        </control>
+        <control>
+            <description>horizontal line</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>100</posX>
+            <posY>180</posY>
+            <width>650</width>
+            <height>2</height>
+            <align>LEFT</align>
+            <texture>weather_horizontal_bar_blue.png</texture>
+            <visible>string.equals(#WorldWeather.View,Astronomy)</visible>
+            <animation effect="fade" time="700">visiblechange</animation>
+        </control>
+        <control>
+            <description>Astronomy feed</description>
+            <type>textboxscrollup</type>
+            <id>0</id>
+            <posX>100</posX>
+            <posY>184</posY>
+            <width>650</width>
+            <height>675</height>
+            <label>#WorldWeather.Feed1Text</label>
+            <font>AvalonLight14</font>
+            <textcolor>white</textcolor>
+            <align>LEFT</align>
+            <visible>string.equals(#WorldWeather.View,Astronomy)</visible>
+            <animation effect="fade" time="700">visiblechange</animation>
+        </control>
+        
+    </controls>
+</window>

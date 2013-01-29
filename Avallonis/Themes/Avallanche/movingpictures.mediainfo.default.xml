@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<controls>
+
+	<!-- Videocodec -->
+    
+    <control>
+		<description>Video</description>
+		<animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+		<type>image</type>
+		<id>0</id>
+		<posX>1478</posX>
+		<posY>816</posY>
+		<width>177</width>
+		<height>38</height>
+		<keepaspectratio>yes</keepaspectratio>
+		<texture>Logos\video\#MovingPictures.LocalMedia.videoresolution #MovingPictures.LocalMedia.videocodec #MovingPictures.LocalMedia.videoaspectratio.png</texture>
+		<visible>[facadeview.list | facadeview.smallicons | facadeview.largeicons | facadeview.filmstrip | facadeview.coverflow] + Control.IsVisible(50)</visible>
+	</control> 
+    
+	
+	<!-- Audiocodec -->
+    
+    
+	<control>
+		<description>Audio</description>
+		<animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+		<type>image</type>
+		<id>0</id>
+		<posX>1663</posX>
+		<posY>816</posY>
+		<width>177</width>
+		<height>38</height>
+		<keepaspectratio>yes</keepaspectratio>
+		<texture>Logos\audio\#MovingPictures.LocalMedia.audiocodec #MovingPictures.LocalMedia.audiochannels.png</texture>
+		<visible>[facadeview.list | facadeview.smallicons | facadeview.largeicons | facadeview.filmstrip | facadeview.coverflow] + Control.IsVisible(50)</visible>
+	</control>
+	
+	<!-- Source -->
+	<control>
+		<description>BluRay</description>
+		<animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+		<type>image</type>
+		<id>0</id>
+		<posX>1778</posX>
+		<posY>816</posY>
+		<height>38</height>
+		<keepaspectratio>yes</keepaspectratio>
+		<texture>Logos\source\bluray.png</texture>
+		<visible>[facadeview.list | facadeview.smallicons | facadeview.largeicons | facadeview.filmstrip | facadeview.coverflow] + Control.IsVisible(50) + [string.contains(#MovingPictures.LocalMedia.videoresolution,720p)|string.contains(#MovingPictures.LocalMedia.videoresolution,1080p)]</visible>
+	</control>
+	
+	<control>
+		<description>DVD</description>
+		<animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+		<type>image</type>
+		<id>0</id>
+		<posX>1778</posX>
+		<posY>816</posY>
+		<height>38</height>
+		<keepaspectratio>yes</keepaspectratio>
+		<texture>Logos\source\dvd.png</texture>
+		<visible>[facadeview.list | facadeview.smallicons | facadeview.largeicons | facadeview.filmstrip | facadeview.coverflow] + Control.IsVisible(50) + [string.contains(#MovingPictures.LocalMedia.videoresolution,SD)]</visible>
+	</control>
+
+	</controls>
+</window>

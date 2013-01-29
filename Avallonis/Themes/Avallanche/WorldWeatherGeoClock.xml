@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+    <allowoverlay>yes</allowoverlay>
+    
+    <controls>
+        
+        <!--*** Overlay ***-->
+        <control>
+            <id>0</id>
+            <description>Overlay</description>
+            <type>image</type>
+            <visible>string.equals(#WorldWeather.View,GeoClock)</visible>
+            <width>1920</width>
+            <height>1080</height>
+            <texture>weather_bg_transparent.png</texture>
+            <animation effect="fade" time="700">visiblechange</animation>
+        </control>
+        
+        <!-- *** Avallonis logo *** -->
+        <control>
+            <description>Avallonis logo</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>60</posX>
+            <posY>910</posY>
+            <width>200</width>
+            <height>200</height>
+            <align>left</align>
+            <keepaspectratio>yes</keepaspectratio>
+            <texture>Avallonis_logo.png</texture>
+            <visible>string.equals(#WorldWeather.View,GeoClock)</visible>
+            <shouldCache>true</shouldCache>
+            <animation effect="fade" time="700">visiblechange</animation>
+        </control>
+        
+        <!--*** GeoClock image ***-->
+        <control>
+            <description>GeoClock image</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>822</posX>
+            <posY>110</posY>
+            <width>1040</width>
+            <height>720</height>
+            <align>center</align>
+            <valign>bottom</valign>
+            <keepaspectratio>yes</keepaspectratio>
+            <texture>#WorldWeather.ImageGeoClock</texture>
+            <visible>string.equals(#WorldWeather.View,GeoClock)</visible>
+            <animation effect="fade" time="700">visiblechange</animation>
+        </control>
+        
+        <!-- *** Current sunset label *** -->
+        <control>
+            <description>current sunset static label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>900</posX>
+            <posY>120</posY>
+            <label>#WorldWeather.TranslationSunset:</label>
+            <font>AvalonLight14</font>
+            <textcolor>6aa5cb</textcolor>
+            <visible>string.equals(#WorldWeather.View,GeoClock)</visible>
+            <animation effect="fade" time="700">visiblechange</animation>
+        </control>
+        <control Style="RealWhiteColor">
+            <description>current sunset label</description>
+            <type>fadelabel</type>
+            <id>0</id>
+            <posX>1260</posX>
+            <posY>120</posY>
+            <width>433</width>
+            <label>#WorldWeather.LocationSunsetTime</label>
+            <font>AvalonLight12</font>
+            <visible>string.equals(#WorldWeather.View,GeoClock)</visible>
+            <animation effect="fade" time="700">visiblechange</animation>
+        </control>
+        
+        <!-- *** Current sunrise label *** -->
+        <control>
+            <description>current sunrise static label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>900</posX>
+            <posY>160</posY>
+            <label>#WorldWeather.TranslationSunrise:</label>
+            <font>AvalonLight14</font>
+            <textcolor>6aa5cb</textcolor>
+            <visible>string.equals(#WorldWeather.View,GeoClock)</visible>
+            <animation effect="fade" time="700">visiblechange</animation>
+        </control>
+        <control Style="RealWhiteColor">
+            <description>current sunrise label</description>
+            <type>fadelabel</type>
+            <id>0</id>
+            <posX>1260</posX>
+            <posY>160</posY>
+            <width>433</width>
+            <label>#WorldWeather.LocationSunriseTime</label>
+            <font>AvalonLight12</font>
+            <visible>string.equals(#WorldWeather.View,GeoClock)</visible>
+            <animation effect="fade" time="700">visiblechange</animation>
+        </control>
+        
+        <!-- *** Current moonphase label *** -->
+        <control>
+            <description>current moonphase static label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>900</posX>
+            <posY>200</posY>
+            <label>#WorldWeather.TranslationMoonPhase:</label>
+            <font>AvalonLight14</font>
+            <textcolor>6aa5cb</textcolor>
+            <visible>string.equals(#WorldWeather.View,GeoClock)</visible>
+            <animation effect="fade" time="700">visiblechange</animation>
+        </control>
+        <control Style="RealWhiteColor">
+            <description>current moonphase label</description>
+            <type>fadelabel</type>
+            <id>0</id>
+            <posX>1260</posX>
+            <posY>200</posY>
+            <width>400</width>
+            <label>#WorldWeather.LocationMoonPhase</label>
+            <font>AvalonLight12</font>
+            <visible>string.equals(#WorldWeather.View,GeoClock)</visible>
+            <animation effect="fade" time="700">visiblechange</animation>
+        </control>
+        <control>
+            <description>current Moonphase image</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>1760</posX>
+            <posY>180</posY>
+            <height>60</height>
+            <width>60</width>
+            <texture>#WorldWeather.LocationMoonPhaseImage</texture>
+            <visible>string.equals(#WorldWeather.View,GeoClock)</visible>
+            <animation effect="fade" time="700">visiblechange</animation>
+        </control>
+        
+        <!-- *** DST label *** -->
+        <control>
+            <description>Daylight static label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>900</posX>
+            <posY>240</posY>
+            <label>Daylight Saving Time:</label>
+            <font>AvalonLight14</font>
+            <textcolor>6aa5cb</textcolor>
+            <visible>string.equals(#WorldWeather.View,GeoClock)</visible>
+            <animation effect="fade" time="700">visiblechange</animation>
+        </control>
+        <control Style="RealWhiteColor">
+            <description>Daylight label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1260</posX>
+            <posY>240</posY>
+            <label>#WorldWeather.LocationDaylightStart - #WorldWeather.LocationDaylightEnd</label>
+            <font>AvalonLight12</font>
+            <visible>string.equals(#WorldWeather.View,Geoclock)</visible>
+            <animation effect="fade" time="700">visiblechange</animation>
+        </control>
+        
+        <!--*** Daylight hours ***-->
+        <control>
+            <description>Daylight hours static label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>900</posX>
+            <posY>280</posY>
+            <label>Daylight Hours:</label>
+            <font>AvalonLight14</font>
+            <textcolor>6aa5cb</textcolor>
+            <visible>string.equals(#WorldWeather.View,GeoClock)</visible>
+            <animation effect="fade" time="700">visiblechange</animation>
+        </control>
+        <control Style="RealWhiteColor">
+            <description>Daylight hours label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1260</posX>
+            <posY>280</posY>
+            <label>#WorldWeather.LocationSunshineDuration hrs</label>
+            <font>AvalonLight12</font>
+            <visible>string.equals(#WorldWeather.View,Geoclock)</visible>
+            <animation effect="fade" time="700">visiblechange</animation>
+        </control>
+        
+        <!--*** GeoClock label ***-->
+        <control>
+            <description>Header label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1832</posX>
+            <posY>958</posY>
+            <width>1170</width>
+            <label>#(L(19100))</label>
+            <font>fontB16</font>
+            <align>right</align>
+            <visible>string.equals(#WorldWeather.View,GeoClock)</visible>
+            <animation effect="fade" time="700">visiblechange</animation>
+        </control>
+        
+    </controls>
+</window>

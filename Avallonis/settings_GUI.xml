@@ -101,6 +101,18 @@
 			<label>101016</label>
 			<hyperlink>1022</hyperlink>
 		</control>
+		
+		<control>
+			<description>Misc</description>
+			<type>button</type>
+			<id>10000</id>
+			<width>385</width>
+			<height>64</height>
+			<textureFocus>settings_button_focus.png</textureFocus>
+			<textureNoFocus>settings_button_nofocus.png</textureNoFocus>
+			<label>#Avalon.SkinSettingsMisc</label>
+			<hyperlink>155106</hyperlink>
+      	</control>
 
 		<control>
 			<description>Screen</description>
