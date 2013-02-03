@@ -1,0 +1,722 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+    <allowoverlay>yes</allowoverlay>
+    
+    <controls>
+        
+        <!--*** Image Overlay ***-->
+        <control>
+            <description>Overlay</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>-140</posX>
+            <posY>90</posY>
+            <width>2020</width>
+            <height>850</height>
+            <texture>viewport_thumbs2.png</texture>
+            <visible>string.equals(#WorldWeather.View,Calendar)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!--*** Holiday/Season header label ***-->
+        <control>
+            <description>Holidays label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>380</posX>
+            <posY>50</posY>
+            <font>fontB16</font>
+            <textcolor>6aa5cb</textcolor>
+            <label> - #WorldWeather.TranslationHoliday/#WorldWeather.TranslationSeason</label>
+            <visible>string.equals(#WorldWeather.View,Calendar)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!--*** Current week/day label ***-->
+        <control Style="RealWhiteColor">
+            <description>Holiday Week/Day label</description>
+            <type>fadelabel</type>
+            <id>0</id>
+            <posX>0</posX>
+            <posY>880</posY>
+            <width>1920</width>
+            <align>CENTER</align>
+            <font>AvalonLight16</font>
+            <label>#WorldWeather.CalendarWeek of 52  -  #WorldWeather.CalendarDay of 365</label>
+			<visible>string.equals(#WorldWeather.View,Calendar)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!--*** Current New Year ***-->
+        <control>
+            <description>Current New Year static label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>150</posX>
+            <posY>220</posY>
+			<visible>string.equals(#WorldWeather.View,Calendar)</visible>
+            <font>AvalonLight16</font>
+            <textcolor>6aa5cb</textcolor>
+			<label>#WorldWeather.TranslationNewYear:</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>current New Year label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>600</posX>
+            <posY>225</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)</visible>
+            <font>AvalonLight16</font>
+            <label>#WorldWeather.CalendarNewYear</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!--*** Current Epiphany ***-->
+        <control>
+            <description>current Epiphany static label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>150</posX>
+            <posY>270</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)</visible>
+            <font>AvalonLight16</font>
+            <textcolor>6aa5cb</textcolor>
+            <label>#WorldWeather.TranslationEpiphany:</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>current Epiphany label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>600</posX>
+            <posY>275</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)</visible>
+            <font>AvalonLight16</font>
+            <label>#WorldWeather.CalendarEpiphany</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!--*** Current Holy Thursday ***-->
+        <control>
+            <description>current Holy Thursday static label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>150</posX>
+            <posY>320</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)</visible>
+            <font>AvalonLight16</font>
+            <textcolor>6aa5cb</textcolor>
+            <label>#WorldWeather.TranslationHolyThursday:</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>current Holy Thursday label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>600</posX>
+            <posY>325</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)</visible>
+            <font>AvalonLight16</font>
+            <label>#WorldWeather.CalendarHolyThursday</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!--*** Current Good Friday ***-->
+        <control>
+            <description>current Good Friday static label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>150</posX>
+            <posY>370</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)</visible>
+            <font>AvalonLight16</font>
+            <textcolor>6aa5cb</textcolor>
+            <label>#WorldWeather.TranslationGoodFriday:</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>current Good Friday label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>600</posX>
+            <posY>375</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)</visible>
+            <font>AvalonLight16</font>
+            <label>#WorldWeather.CalendarGoodFriday</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!--*** Current Easter Sunday ***-->
+        <control>
+            <description>current Easter Sunday static label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>150</posX>
+            <posY>420</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)</visible>
+            <font>AvalonLight16</font>
+            <textcolor>6aa5cb</textcolor>
+            <label>#WorldWeather.TranslationEasterSunday:</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>current Easter Sunday label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>600</posX>
+            <posY>425</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)</visible>
+            <font>AvalonLight16</font>
+            <label>#WorldWeather.CalendarEasterSunday</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!--*** Current Ascension Day ***-->
+        <control>
+            <description>current Ascension Day static label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>150</posX>
+            <posY>470</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)</visible>
+            <font>AvalonLight16</font>
+            <textcolor>6aa5cb</textcolor>
+            <label>#WorldWeather.TranslationAscensionDay:</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>current Ascension Day label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>600</posX>
+            <posY>475</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)</visible>
+            <font>AvalonLight16</font>
+            <label>#WorldWeather.CalendarAscensionDay</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!--*** Current Whit Sunday ***-->
+        <control>
+            <description>current Whit Sunday static label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>150</posX>
+            <posY>520</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)</visible>
+            <font>AvalonLight16</font>
+            <textcolor>6aa5cb</textcolor>
+            <label>#WorldWeather.TranslationWhitSunday:</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>current Whit Sunday label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>600</posX>
+            <posY>525</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)</visible>
+            <font>AvalonLight16</font>
+            <label>#WorldWeather.CalendarWhitSunday</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!--*** Current Corpus Christi ***-->
+        <control>
+            <description>current Corpus Christi static label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>150</posX>
+            <posY>570</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)</visible>
+            <font>AvalonLight16</font>
+            <textcolor>6aa5cb</textcolor>
+            <label>#WorldWeather.TranslationCorpusChristi:</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>current Corpus Christi label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>600</posX>
+            <posY>575</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)</visible>
+            <font>AvalonLight16</font>
+            <label>#WorldWeather.CalendarCorpusChristi</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!--*** Current Assumption Day ***-->
+        <control>
+            <description>current Assumption Day static label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>150</posX>
+            <posY>620</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)</visible>
+            <font>AvalonLight16</font>
+            <textcolor>6aa5cb</textcolor>
+            <label>#WorldWeather.TranslationAssumptionDay:</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>current Assumption Day label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>600</posX>
+            <posY>625</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)</visible>
+            <font>AvalonLight16</font>
+            <label>#WorldWeather.CalendarAssumptionDay</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!--*** Current Reformation Day ***-->
+        <control>
+            <description>current Reformation Day static label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>150</posX>
+            <posY>670</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)</visible>
+            <font>AvalonLight16</font>
+            <textcolor>6aa5cb</textcolor>
+            <label>#WorldWeather.TranslationReformationDay:</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>current Reformation Day label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>600</posX>
+            <posY>675</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)</visible>
+            <font>AvalonLight16</font>
+            <label>#WorldWeather.CalendarReformationDay</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!--*** Current All Saints Day ***-->
+        <control>
+            <description>current All Saints Day static label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>150</posX>
+            <posY>720</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)</visible>
+            <font>AvalonLight16</font>
+            <textcolor>6aa5cb</textcolor>
+            <label>#WorldWeather.TranslationAllSaintsDay:</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>current All Saints Day label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>600</posX>
+            <posY>725</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)</visible>
+            <font>AvalonLight16</font>
+            <label>#WorldWeather.CalendarAllSaintsDay</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!--*** Current spring season ***-->
+        <control>
+            <description>current Spring Season static label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>900</posX>
+            <posY>220</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)</visible>
+            <font>AvalonLight16</font>
+            <textcolor>6aa5cb</textcolor>
+            <label>#WorldWeather.TranslationSpringSeason:</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>current Spring Season label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1350</posX>
+            <posY>225</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)</visible>
+            <font>AvalonLight16</font>
+            <label>#WorldWeather.CalendarSpringSeason</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!--*** Current summer season ***-->
+        <control>
+            <description>current Summer Season static label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>900</posX>
+            <posY>270</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)</visible>
+            <font>AvalonLight16</font>
+            <textcolor>6aa5cb</textcolor>
+            <label>#WorldWeather.TranslationSummerSeason:</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>current Summer Season label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1350</posX>
+            <posY>275</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)</visible>
+            <font>AvalonLight16</font>
+            <label>#WorldWeather.CalendarSummerSeason</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!--*** Current autumn season ***-->
+        <control>
+            <description>current Autumn Season static label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>900</posX>
+            <posY>320</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)</visible>
+            <font>AvalonLight16</font>
+            <textcolor>6aa5cb</textcolor>
+            <label>#WorldWeather.TranslationAutumnSeason:</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>current Autumn Season label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1350</posX>
+            <posY>325</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)</visible>
+            <font>AvalonLight16</font>
+            <label>#WorldWeather.CalendarAutumnSeason</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!--*** Current winter season ***-->
+        <control>
+            <description>current Winter Season static label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>900</posX>
+            <posY>370</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)</visible>
+            <font>AvalonLight16</font>
+            <textcolor>6aa5cb</textcolor>
+            <label>#WorldWeather.TranslationWinterSeason:</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>current Winter Season label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1350</posX>
+            <posY>375</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)</visible>
+            <font>AvalonLight16</font>
+            <label>#WorldWeather.CalendarWinterSeason</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!-- *** Self-defined labels divider*** -->
+        <control>
+            <description>Divider</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>900</posX>
+            <posY>460</posY>
+            <width>650</width>
+            <height>2</height>
+            <texture>weather_horizontal_bar_blue.png</texture>
+            <visible>string.equals(#WorldWeather.View,Calendar)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!-- *** Self-defined label 0 *** -->
+        <control>
+            <description>Self-defined0 static label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>900</posX>
+            <posY>520</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)+!string.equals(#WorldWeather.CalendarSelfDefined0DayDescription, )</visible>
+            <font>AvalonLight16</font>
+            <textcolor>ffffffff</textcolor>
+            <label>#WorldWeather.CalendarSelfDefined0DayDescription:</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>Self-defined0 label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1350</posX>
+            <posY>525</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)+!string.equals(#WorldWeather.CalendarSelfDefined0DayDescription, )</visible>
+            <font>AvalonLight16</font>
+            <textcolor>6aa5cb</textcolor>
+            <label>#WorldWeather.CalendarSelfDefined0Day</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!-- *** Self-defined label 1 *** -->
+        <control>
+            <description>Self-defined1 static label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>900</posX>
+            <posY>570</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)+!string.equals(#WorldWeather.CalendarSelfDefined1DayDescription, )</visible>
+            <font>AvalonLight16</font>
+            <textcolor>ffffffff</textcolor>
+            <label>#WorldWeather.CalendarSelfDefined1DayDescription:</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>Self-defined1 label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1350</posX>
+            <posY>575</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)+!string.equals(#WorldWeather.CalendarSelfDefined1DayDescription, )</visible>
+            <font>AvalonLight16</font>
+            <textcolor>6aa5cb</textcolor>
+            <label>#WorldWeather.CalendarSelfDefined1Day</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!-- *** Self-defined label 2 *** -->
+        <control>
+            <description>Self-defined2 static label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>900</posX>
+            <posY>620</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)+!string.equals(#WorldWeather.CalendarSelfDefined2DayDescription, )</visible>
+            <font>AvalonLight16</font>
+            <textcolor>ffffffff</textcolor>
+            <label>#WorldWeather.CalendarSelfDefined2DayDescription:</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>Self-defined2 label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1350</posX>
+            <posY>625</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)+!string.equals(#WorldWeather.CalendarSelfDefined2DayDescription, )</visible>
+            <font>AvalonLight16</font>
+            <textcolor>6aa5cb</textcolor>
+            <label>#WorldWeather.CalendarSelfDefined2Day</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!-- *** Self-defined label 3 *** -->
+        <control>
+            <description>Self-defined3 static label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>900</posX>
+            <posY>670</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)+!string.equals(#WorldWeather.CalendarSelfDefined3DayDescription, )</visible>
+            <font>AvalonLight16</font>
+            <textcolor>ffffffff</textcolor>
+            <label>#WorldWeather.CalendarSelfDefined3DayDescription:</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>Self-defined3 label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1350</posX>
+            <posY>675</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)+!string.equals(#WorldWeather.CalendarSelfDefined3DayDescription, )</visible>
+            <font>AvalonLight16</font>
+            <textcolor>6aa5cb</textcolor>
+            <label>#WorldWeather.CalendarSelfDefined3Day</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!-- *** Self-defined label 4 *** -->
+        <control>
+            <description>Self-defined4 static label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>900</posX>
+            <posY>720</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)+!string.equals(#WorldWeather.CalendarSelfDefined4DayDescription, )</visible>
+            <font>AvalonLight16</font>
+            <textcolor>ffffffff</textcolor>
+            <label>#WorldWeather.CalendarSelfDefined4DayDescription:</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>Self-defined4 label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1350</posX>
+            <posY>725</posY>
+            <visible>string.equals(#WorldWeather.View,Calendar)+!string.equals(#WorldWeather.CalendarSelfDefined4DayDescription, )</visible>
+            <font>AvalonLight16</font>
+            <textcolor>6aa5cb</textcolor>
+            <label>#WorldWeather.CalendarSelfDefined4Day</label>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+    </controls>
+</window>

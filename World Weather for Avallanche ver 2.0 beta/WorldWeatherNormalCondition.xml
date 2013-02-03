@@ -1,0 +1,937 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+    <allowoverlay>yes</allowoverlay>
+    
+    <controls>
+        
+        <!--*** Image Overlay ***-->
+        <control>
+            <description>Overlay</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>-140</posX>
+            <posY>90</posY>
+            <width>2020</width>
+            <height>850</height>
+            <texture>viewport_tv_recordings.png</texture>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!-- *** Current Condition header label *** -->
+        <control>
+            <description>Current Condition label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>380</posX>
+            <posY>50</posY>
+            <font>fontB16</font>
+            <textcolor>6aa5cb</textcolor>
+            <label> - #WorldWeather.TranslationCondition/Forecast</label>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+                
+        <!-- *** Provider Info *** -->
+        <control>
+            <description>provider logo</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>60</posX>
+            <posY>970</posY>
+            <width>150</width>
+            <height>150</height>
+            <align>left</align>
+            <keepaspectratio>yes</keepaspectratio>
+            <texture>#WorldWeather.ProviderImage</texture>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+            <shouldCache>true</shouldCache>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>provider label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>0</posX>
+            <posY>1040</posY>
+            <width>1920</width>
+            <align>center</align>
+            <font>AvalonLight12</font>
+            <textcolor>6aa5cb</textcolor>
+            <label>#WorldWeather.Provider (#WorldWeather.TranslationCurrentCondition) + #WorldWeather.ForecastProvider (#WorldWeather.TranslationForecastCondition)</label>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!-- *** Weather Icon *** -->
+        <control>
+            <description>current weather icon</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>850</posX>
+            <posY>200</posY>
+            <width>250</width>
+            <height>250</height>
+            <texture>#WorldWeather.TodayIconImage</texture>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>today value</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>875</posX>
+            <posY>420</posY>
+            <width>185</width>
+            <align>center</align>
+            <label>#WorldWeather.TodayTemperature</label>
+            <font>AvalonLight32</font>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>today label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>895</posX>
+            <posY>170</posY>
+            <width>930</width>
+            <align>CENTER</align>
+            <label>#(string.rtrim(L(143),':')) conditions in #WorldWeather.Location #WorldWeather.LocationRegion</label>
+            <font>AvalonLight20</font>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!--<control>
+            <description>horizontal line</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>895</posX>
+            <posY>190</posY>
+            <width>900</width>
+            <height>2</height>
+            <texture>weather_horizontal_bar_blue.png</texture>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>-->
+        
+        <!-- *** Current condition label *** -->
+        <control>
+            <description>current condition static label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1100</posX>
+            <posY>215</posY>
+            <label>#WorldWeather.TranslationCondition:</label>
+            <font>AvalonLight14</font>
+            <textcolor>6aa5cb</textcolor>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>current condition label</description>
+            <type>fadelabel</type>
+            <id>0</id>
+            <posX>1450</posX>
+            <posY>215</posY>
+            <width>433</width>
+            <label>#WorldWeather.TodayCondition</label>
+            <font>AvalonLight14</font>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!-- *** Current wind label *** -->
+        <control>
+            <description>current wind static label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1100</posX>
+            <posY>255</posY>
+            <label>#WorldWeather.TranslationWind:</label>
+            <font>AvalonLight14</font>
+            <textcolor>6aa5cb</textcolor>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>current wind label</description>
+            <type>fadelabel</type>
+            <id>0</id>
+            <posX>1450</posX>
+            <posY>255</posY>
+            <width>433</width>
+            <label>#WorldWeather.TodayWindSpeed - #WorldWeather.TodayWindDirection</label>
+            <font>AvalonLight14</font>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>current wind direction image</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>1760</posX>
+            <posY>240</posY>
+            <height>60</height>
+            <width>60</width>
+            <texture>#WorldWeather.TodayWindDirectionImage</texture>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!-- *** Current humidity label *** -->
+        <control>
+            <description>current humidity static label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1100</posX>
+            <posY>295</posY>
+            <label>#WorldWeather.TranslationHumidity:</label>
+            <font>AvalonLight14</font>
+            <textcolor>6aa5cb</textcolor>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>current humidity label</description>
+            <type>fadelabel</type>
+            <id>0</id>
+            <posX>1450</posX>
+            <posY>295</posY>
+            <width>433</width>
+            <label>#WorldWeather.TodayHumidity</label>
+            <font>AvalonLight14</font>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!-- *** Current feels like label *** -->
+        <control>
+            <description>current feels like static label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1100</posX>
+            <posY>335</posY>
+            <label>#WorldWeather.TranslationTemperatureFeelsLike:</label>
+            <font>AvalonLight14</font>
+            <textcolor>6aa5cb</textcolor>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>current feels like label</description>
+            <type>fadelabel</type>
+            <id>0</id>
+            <posX>1450</posX>
+            <posY>335</posY>
+            <width>433</width>
+            <label>#WorldWeather.TodayTemperatureFeelsLike</label>
+            <font>AvalonLight14</font>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!-- *** Current cloud coverage label *** -->
+        <control>
+            <description>current cloud coverage static label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1100</posX>
+            <posY>375</posY>
+            <label>#WorldWeather.TranslationCloudCoverage:</label>
+            <font>AvalonLight14</font>
+            <textcolor>6aa5cb</textcolor>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>current cloud coverage label</description>
+            <type>fadelabel</type>
+            <id>0</id>
+            <posX>1450</posX>
+            <posY>375</posY>
+            <width>433</width>
+            <label>#WorldWeather.TodayCloudCoverage</label>
+            <font>AvalonLight14</font>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!-- *** Current barometric label *** -->
+        <control>
+            <description>current barometric static label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1100</posX>
+            <posY>415</posY>
+            <label>#WorldWeather.TranslationBarometricPressure:</label>
+            <font>AvalonLight14</font>
+            <textcolor>6aa5cb</textcolor>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>current barometric label</description>
+            <type>fadelabel</type>
+            <id>0</id>
+            <posX>1450</posX>
+            <posY>415</posY>
+            <width>400</width>
+            <label>#WorldWeather.TodayBarometricPressure</label>
+            <font>AvalonLight14</font>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>current barometric image</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>1760</posX>
+            <posY>400</posY>
+            <height>60</height>
+            <width>60</width>
+            <texture>#WorldWeather.TodayBarometricPressureImage</texture>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!-- *** Forecast Label *** -->
+        <control Style="RealWhiteColor">
+            <description>today label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>895</posX>
+            <posY>530</posY>
+            <width>930</width>
+            <align>CENTER</align>
+            <label>Forecast</label>
+            <font>AvalonLight20</font>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!--<control>
+            <description>horizontal line</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>895</posX>
+            <posY>550</posY>
+            <width>900</width>
+            <height>2</height>
+            <texture>weather_horizontal_bar_blue.png</texture>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>-->
+        
+        <!-- *** Forecast (Today + 1) *** -->
+        <control>
+            <description>day 1 label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>945</posX>
+            <posY>590</posY>
+            <align>CENTER</align>
+            <label>#WorldWeather.ForecastDay1Day</label>
+            <font>AvalonLight14</font>
+            <textcolor>6aa5cb</textcolor>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>day 1 Hi label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>860</posX>
+            <posY>785</posY>
+            <width>185</width>
+            <align>LEFT</align>
+            <label>#WorldWeather.ForecastDay1High </label>
+            <font>AvalonLight16</font>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>day 1 low label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1030</posX>
+            <posY>785</posY>
+            <width>185</width>
+            <align>RIGHT</align>
+            <label>#WorldWeather.ForecastDay1Low</label>
+            <font>AvalonLight16</font>
+            <textcolor>6aa5cb</textcolor>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>day 1 icon</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>870</posX>
+            <posY>640</posY>
+            <width>150</width>
+            <height>150</height>
+            <texture>#WorldWeather.ForecastDay1IconImage</texture>
+            <align>CENTER</align>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>day 1 condition label</description>
+            <type>fadelabel</type>
+            <id>0</id>
+            <posX>860</posX>
+            <posY>860</posY>
+            <width>210</width>
+            <align>center</align>
+            <label>#WorldWeather.ForecastDay1Condition</label>
+            <font>AvalonLight11</font>
+            <textcolor>6aa5cb</textcolor>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!--<control>
+            <description>horizontal line</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>850</posX>
+            <posY>610</posY>
+            <width>200</width>
+            <height>2</height>
+            <texture>weather_horizontal_bar_blue.png</texture>
+            <align>CENTER</align>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>-->
+        
+        <control>
+            <description>vertical line</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>1080</posX>
+            <posY>620</posY>
+            <width>2</width>
+            <height>200</height>
+            <texture>vertical_bar_separator.png</texture>
+            <align>CENTER</align>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!-- *** Forecast (Today + 2) *** -->
+        <control>
+            <description>day 2 label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1210</posX>
+            <posY>590</posY>
+            <align>CENTER</align>
+            <label>#WorldWeather.ForecastDay2Day</label>
+            <font>AvalonLight14</font>
+            <textcolor>6aa5cb</textcolor>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>day 2 Hi label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1120</posX>
+            <posY>785</posY>
+            <width>185</width>
+            <align>LEFT</align>
+            <label>#WorldWeather.ForecastDay2High</label>
+            <font>AvalonLight16</font>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>day 2 low label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1295</posX>
+            <posY>785</posY>
+            <width>185</width>
+            <align>RIGHT</align>
+            <label>#WorldWeather.ForecastDay2Low</label>
+            <font>AvalonLight16</font>
+            <textcolor>6aa5cb</textcolor>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>day 2 icon</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>1129</posX>
+            <posY>640</posY>
+            <width>150</width>
+            <height>150</height>
+            <texture>#WorldWeather.ForecastDay2IconImage</texture>
+            <align>CENTER</align>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>day 2 condition label</description>
+            <type>fadelabel</type>
+            <id>0</id>
+            <posX>1110</posX>
+            <posY>860</posY>
+            <width>200</width>
+            <align>CENTER</align>
+            <label>#WorldWeather.ForecastDay2Condition</label>
+            <font>AvalonLight11</font>
+            <textcolor>6aa5cb</textcolor>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!--<control>
+            <description>horizontal line</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>1110</posX>
+            <posY>610</posY>
+            <width>200</width>
+            <height>2</height>
+            <texture>weather_horizontal_bar_blue.png</texture>
+            <align>CENTER</align>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>-->
+        
+        <control>
+            <description>vertical line</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>1340</posX>
+            <posY>620</posY>
+            <width>2</width>
+            <height>200</height>
+            <texture>vertical_bar_separator.png</texture>
+            <align>CENTER</align>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!-- *** Forecast (Today + 3) *** -->
+        <control>
+            <description>day 3 label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1473</posX>
+            <posY>590</posY>
+            <align>CENTER</align>
+            <label>#WorldWeather.ForecastDay3Day</label>
+            <font>AvalonLight14</font>
+            <textcolor>6aa5cb</textcolor>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>day 3 Hi label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1390</posX>
+            <posY>785</posY>
+            <width>185</width>
+            <align>LEFT</align>
+            <label>#WorldWeather.ForecastDay3High</label>
+            <font>AvalonLight16</font>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>day 3 low label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1558</posX>
+            <posY>785</posY>
+            <width>185</width>
+            <align>RIGHT</align>
+            <label>#WorldWeather.ForecastDay3Low</label>
+            <font>AvalonLight16</font>
+            <textcolor>6aa5cb</textcolor>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>day 3 icon</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>1393</posX>
+            <posY>640</posY>
+            <width>150</width>
+            <height>150</height>
+            <texture>#WorldWeather.ForecastDay3IconImage</texture>
+            <align>CENTER</align>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>day 3 condition label</description>
+            <type>fadelabel</type>
+            <id>0</id>
+            <posX>1374</posX>
+            <posY>860</posY>
+            <width>200</width>
+            <align>CENTER</align>
+            <label>#WorldWeather.ForecastDay3Condition</label>
+            <font>AvalonLight11</font>
+            <textcolor>6aa5cb</textcolor>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!--<control>
+            <description>horizontal line</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>1380</posX>
+            <posY>610</posY>
+            <width>200</width>
+            <height>2</height>
+            <texture>weather_horizontal_bar_blue.png</texture>
+            <align>CENTER</align>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>-->
+        
+        <control>
+            <description>vertical line</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>1610</posX>
+            <posY>620</posY>
+            <width>2</width>
+            <height>200</height>
+            <texture>vertical_bar_separator.png</texture>
+            <align>CENTER</align>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!-- *** Forecast (Today + 4) *** -->
+        <control>
+            <description>day 4 label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1735</posX>
+            <posY>590</posY>
+            <align>CENTER</align>
+            <label>#WorldWeather.ForecastDay4Day</label>
+            <font>AvalonLight14</font>
+            <textcolor>6aa5cb</textcolor>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>day 4 Hi label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1650</posX>
+            <posY>785</posY>
+            <width>185</width>
+            <align>LEFT</align>
+            <label>#WorldWeather.ForecastDay4High</label>
+            <font>AvalonLight16</font>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>day 4 low label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1820</posX>
+            <posY>785</posY>
+            <width>185</width>
+            <align>RIGHT</align>
+            <label>#WorldWeather.ForecastDay4Low</label>
+            <font>AvalonLight16</font>
+            <textcolor>6aa5cb</textcolor>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>day 4 icon</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>1658</posX>
+            <posY>640</posY>
+            <width>150</width>
+            <height>150</height>
+            <texture>#WorldWeather.ForecastDay4IconImage</texture>
+            <align>CENTER</align>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>day 4 condition label</description>
+            <type>fadelabel</type>
+            <id>0</id>
+            <posX>1635</posX>
+            <posY>860</posY>
+            <width>200</width>
+            <align>CENTER</align>
+            <label>#WorldWeather.ForecastDay4Condition</label>
+            <font>AvalonLight11</font>
+            <textcolor>6aa5cb</textcolor>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!--<control>
+            <description>horizontal line</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>1640</posX>
+            <posY>610</posY>
+            <width>200</width>
+            <height>2</height>
+            <texture>weather_horizontal_bar_blue.png</texture>
+            <align>CENTER</align>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>-->
+        
+        <!--*** Feed ***-->
+        <control>
+            <description>Feed description</description>
+            <type>fadelabel</type>
+            <id>0</id>
+            <posX>100</posX>
+            <posY>170</posY>
+            <width>600</width>
+            <align>center</align>
+            <label>#WorldWeather.Feed0Description</label>
+            <font>AvalonLight20</font>
+            <textcolor>6aa5cb</textcolor>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!--<control>
+            <description>horizontal line</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>100</posX>
+            <posY>180</posY>
+            <width>650</width>
+            <height>2</height>
+            <align>LEFT</align>
+            <texture>weather_horizontal_bar_blue.png</texture>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>-->
+        
+        <control>
+            <description>Condition feed</description>
+            <type>textboxscrollup</type>
+            <id>0</id>
+            <posX>100</posX>
+            <posY>210</posY>
+            <width>650</width>
+            <height>675</height>
+            <label>#WorldWeather.Feed0Text</label>
+            <font>AvalonLight14</font>
+            <textcolor>white</textcolor>
+            <align>LEFT</align>
+            <visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+    </controls>
+</window>
