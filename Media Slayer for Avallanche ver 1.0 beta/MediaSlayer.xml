@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+    
+	<id>8765</id>
+	<defaultcontrol>25</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+    
+	<controls>
+        
+            <!-- *** Import *** -->
+                
+            <import>common.overlay.home.xml</import>	
+            <import>common.time.xml</import>
+        
+		<control>
+			<description>default background</description>
+			<type>image</type>
+			<id>1</id>
+			<posY>0</posY>
+			<posX>0</posX>
+			<width>1920</width>
+			<height>1080</height>
+			<keepaspectratio>no</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture>hover_mediaslayer.png</texture>
+			<animation effect="fade" time="300">visible</animation>
+			<animation effect="fade" time="300" delay="300">hidden</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+			<animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>			
+		</control>		
+        
+        <control>
+            <description>viewport</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>0</posX>
+            <posY>92</posY>
+            <width>1893</width>
+            <height>795</height>
+            <texture>viewport_settings.png</texture>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>	
+        
+        <control>
+            <description>Avallanche logo</description>
+            <type>image</type>
+            <id>1</id>
+            <posX>20</posX>
+            <posY>-40</posY>
+            <width>200</width>
+            <height>200</height>
+            <keepaspectratio>yes</keepaspectratio>
+			<texture>Avallanche logo.png</texture>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+        
+        <control Style="HeaderLabels">
+            <type>label</type>
+            <description>Media Slayer label</description>
+            <id>121</id>
+            <posX>250</posX>
+            <posY>38</posY>
+            <width>500</width>
+            <label>Media Slayer</label>
+            <font>font22</font>
+            <shadowAngle>120</shadowAngle> 
+            <shadowDistance>2</shadowDistance> 
+            <shadowColor>FFFFFFFF</shadowColor>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+        
+        <control>
+            <description>DISK STATUS</description>
+            <type>fadelabel</type>
+            <id>5</id>
+            <posX>1300</posX>
+            <posY>170</posY>
+            <width>500</width>
+            <label></label>
+            <font>AvalonLight10</font>
+            <align>center</align>
+            <textcolor>ff6aa5cb</textcolor>
+            <shadowAngle>120</shadowAngle> 
+            <shadowDistance>2</shadowDistance> 
+            <shadowColor>FF000000</shadowColor>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+            
+        <control>
+            <type>image</type>
+            <id>1</id>
+            <posX>1300</posX>
+            <posY>200</posY>
+            <width>492</width>
+            <height>12</height>
+            <texture>osd_progress_background_medium.png</texture>
+            <visible>Control.IsVisible(8)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+        
+        <control>
+            <type>progress</type>
+            <description>track progress</description>
+            <id>8</id>
+            <posX>1303</posX>
+            <posY>204</posY>
+            <width>484</width>
+            <height>4</height> 
+            <offset>0</offset> 
+            <innerheight>4</innerheight> 
+            <lefttexture>-</lefttexture> 
+            <midtexture>osd_progress_mid.png</midtexture> 
+            <righttexture>-</righttexture> 
+            <label />
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+        
+        <control>
+            <description>TOTAL PROGRESS</description>
+            <type>fadelabel</type>
+            <id>13</id>
+            <posX>1220</posX>
+            <posY>170</posY>
+            <width>600</width>
+            <label></label>
+            <font>AvalonLight10</font>
+            <align>center</align>
+            <textcolor>ff6aa5cb</textcolor>
+            <shadowAngle>120</shadowAngle> 
+            <shadowDistance>2</shadowDistance> 
+            <shadowColor>FF000000</shadowColor>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+            
+        <control>
+            <type>image</type>
+            <id>1</id>
+            <posX>1300</posX>
+            <posY>200</posY>
+            <width>492</width>
+            <height>12</height>
+            <texture>osd_progress_background_medium.png</texture>
+            <visible>Control.IsVisible(12)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+            
+        <control>
+            <type>progress</type>
+            <description>total progress</description>
+            <id>12</id>
+            <posX>1303</posX>
+            <posY>204</posY>
+            <width>484</width>
+            <height>4</height> 
+            <offset>0</offset> 
+            <innerheight>4</innerheight> 
+            <lefttexture>-</lefttexture> 
+            <midtexture>osd_progress_mid.png</midtexture> 
+            <righttexture>-</righttexture>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+            
+        <control>
+            <description>Artist/Movie label</description>
+            <type>fadelabel</type>
+            <id>7</id>
+            <posX>1300</posX>
+            <posY>270</posY>
+            <width>500</width>
+            <label></label>
+            <font>fontB20</font>
+            <textcolor>ff6aa5cb</textcolor>
+            <shadowAngle>120</shadowAngle> 
+            <shadowDistance>2</shadowDistance> 
+            <shadowColor>FF000000</shadowColor>
+            <align>center</align>      
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control> 
+            
+        <control>
+            <description>Album Art background</description>
+            <type>image</type>
+            <id>21</id>
+            <posX>650</posX>
+            <posY>200</posY>
+            <width>560</width>
+            <height>560</height>	  
+            <visible>[Control.IsVisible(20)+!Control.HasThumb(20)|!Control.IsVisible(20)+!Control.IsVisible(22)]</visible>
+            <texture mask="music_filmstrip_mask.png"></texture>  
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+            
+        <control>
+            <type>image</type>
+            <id>23</id>
+            <posX>740</posX>
+            <posY>200</posY>
+            <width>380</width>
+            <height>560</height>
+            <visible>Control.IsVisible(22)+!Control.HasThumb(22)</visible>
+            <texture mask="filmstrip_mask.png"></texture>   
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+            
+        <control>
+            <description>Album Art</description>
+            <type>image</type>
+            <id>20</id>      
+            <posX>650</posX>
+            <posY>200</posY>
+            <width>560</width>
+            <height>560</height>
+            <texture mask="music_filmstrip_mask.png"></texture>    
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+            
+        <control>
+            <id>22</id>
+            <type>image</type>
+            <posX>740</posX>
+            <posY>200</posY>
+            <width>380</width>
+            <height>560</height>
+            <texture mask="filmstrip_mask.png"></texture>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+            
+        <control>
+            <description>spin control</description>
+            <type>spincontrol</type>
+            <id>25</id>	  
+            <font>AvalonLight12</font>
+            <textcolor>ff6aa5cb</textcolor>	  
+            <posX>900</posX>
+            <posY>800</posY>
+            <onright>26</onright>
+            <onleft>3</onleft>
+            <onup>25</onup>
+            <ondown>26</ondown>
+            <align>right</align>	  
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+            
+        <control>
+            <description>textarea</description> 
+            <type>textbox</type> 
+            <id>26</id>	  
+            <posX>1300</posX>
+            <posY>300</posY>
+            <spinPosX>1740</spinPosX>
+            <spinPosY>950</spinPosY>
+            <spinWidth>18</spinWidth>
+            <spinHeight>16</spinHeight>
+            <width>500</width>
+            <height>590</height>
+            <font>AvalonLight12</font>     
+            <onup>25</onup>
+            <ondown>3</ondown>	  
+            <onright>3</onright>
+            <onleft>25</onleft>	 
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control> 
+            
+		<!-- *** Buttons *** -->
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<layout>StackLayout(0, Vertical, true)</layout>
+			<posX>70</posX>
+			<posY>156</posY>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+            
+			<control>
+                <id>3</id>
+                <description>Rip Disc</description>
+                <type>button</type>
+                <onup>18</onup>
+                <ondown>10</ondown>
+                <label>Rip Disc</label>
+                <textXOff>62</textXOff>
+                <textYOff>16</textYOff>
+				<width>425</width>
+                <textcolor>ffffffff</textcolor>
+                <textcolorNoFocus>FF00537C</textcolorNoFocus>
+                <shadowAngle>120</shadowAngle> 
+                <shadowDistance>2</shadowDistance> 
+                <shadowColor>FFFFFFFF</shadowColor>
+			</control>
+            
+			<control>
+                <id>10</id>
+                <description>art</description>
+                <type>checkbutton</type>
+                <onup>3</onup>
+                <ondown>19</ondown>
+                <label>Get Cover Art</label>	
+                <textXOff>62</textXOff>
+                <textYOff>16</textYOff>	
+                <markXOff>56</markXOff>
+                <markYOff>20</markYOff>				
+				<width>425</width>
+                <height>65</height>
+                <textcolor>ffffffff</textcolor>
+                <textcolorNoFocus>FF00537C</textcolorNoFocus>
+                <shadowAngle>120</shadowAngle> 
+                <shadowDistance>2</shadowDistance> 
+                <shadowColor>FFFFFFFF</shadowColor>
+                <textureFocus>hiddenmenu_toggle-on-focus.png</textureFocus>
+                <textureNoFocus>hiddenmenu_toggle-on-nofocus.png</textureNoFocus>
+                <AltTextureFocus>hiddenmenu_toggle-off-focus.png</AltTextureFocus>
+                <AltTextureNoFocus>hiddenmenu_toggle-off-nofocus.png</AltTextureNoFocus>				            
+                <visible>control.isvisible(10)</visible>
+			</control>
+            
+			<control>
+                <id>19</id>
+                <description>eject</description>
+                <type>checkbutton</type>
+                <onup>10</onup>
+                <ondown>9</ondown>
+                <label>Eject Disc</label>
+                <textXOff>62</textXOff>
+                <textYOff>16</textYOff>			
+                <markXOff>56</markXOff>
+                <markYOff>20</markYOff>						
+				<width>425</width>
+                <height>65</height>
+                <textcolor>ffffffff</textcolor>
+                <textcolorNoFocus>FF00537C</textcolorNoFocus>
+                <shadowAngle>120</shadowAngle> 
+                <shadowDistance>2</shadowDistance> 
+                <shadowColor>FFFFFFFF</shadowColor>
+                <textureFocus>hiddenmenu_toggle-on-focus.png</textureFocus>
+                <textureNoFocus>hiddenmenu_toggle-on-nofocus.png</textureNoFocus>
+                <AltTextureFocus>hiddenmenu_toggle-off-focus.png</AltTextureFocus>
+                <AltTextureNoFocus>hiddenmenu_toggle-off-nofocus.png</AltTextureNoFocus>			            
+                <visible>control.isvisible(19)</visible>			
+			</control>
+            
+			<control>
+                <id>9</id>
+                <description>target</description>
+                <type>button</type>
+                <onup>19</onup>
+                <ondown>14</ondown>
+                <label>Music</label>
+                <textXOff>62</textXOff>
+                <textYOff>16</textYOff>
+				<width>425</width>
+                <textcolor>ffffffff</textcolor>
+                <textcolorNoFocus>FF00537C</textcolorNoFocus>
+                <shadowAngle>120</shadowAngle> 
+                <shadowDistance>2</shadowDistance> 
+                <shadowColor>FFFFFFFF</shadowColor>
+			    <visible>control.isvisible(9)</visible>
+			</control>
+            
+			<control>
+                <id>14</id>
+                <description>format</description>
+                <type>button</type>
+                <onup>9</onup>
+                <ondown>24</ondown>
+                <label>Ogg Vorbis</label>
+                <textXOff>62</textXOff>
+                <textYOff>16</textYOff>
+				<width>425</width>
+                <textcolor>ffffffff</textcolor>
+                <textcolorNoFocus>FF00537C</textcolorNoFocus>
+                <shadowAngle>120</shadowAngle> 
+                <shadowDistance>2</shadowDistance> 
+                <shadowColor>FFFFFFFF</shadowColor>
+			    <visible>control.isvisible(14)</visible>
+			</control>
+            
+			<control>
+                <id>24</id>
+                <description>target</description>
+                <type>button</type>
+                <onup>14</onup>
+                <ondown>18</ondown>
+                <label>Video</label>
+                <textXOff>62</textXOff>
+                <textYOff>16</textYOff>
+				<width>425</width>
+                <textcolor>ffffffff</textcolor>
+                <textcolorNoFocus>FF00537C</textcolorNoFocus>
+                <shadowAngle>120</shadowAngle> 
+                <shadowDistance>2</shadowDistance> 
+                <shadowColor>FFFFFFFF</shadowColor>
+			    <visible>control.isvisible(24)</visible>
+			</control>
+            
+			<control>
+                <id>18</id>
+                <description>DVD mode</description>
+                <type>button</type>
+                <label>Full Disc</label>
+                <onup>24</onup>	
+                <ondown>3</ondown>
+                <textXOff>62</textXOff>
+                <textYOff>16</textYOff>
+				<width>425</width>
+                <textcolor>ffffffff</textcolor>
+                <textcolorNoFocus>FF00537C</textcolorNoFocus>
+                <shadowAngle>120</shadowAngle> 
+                <shadowDistance>2</shadowDistance> 
+                <shadowColor>FFFFFFFF</shadowColor>
+			    <visible>control.isvisible(18)</visible>
+			</control>
+            
+        </control>
+            
+    </controls>
+</window>
