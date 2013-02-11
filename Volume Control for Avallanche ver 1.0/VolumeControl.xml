@@ -1,0 +1,1275 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+    
+	<id>7971</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	
+	<controls>
+
+		<control>
+			<description>default background</description>
+			<type>image</type>
+			<id>1</id>
+			<posY>0</posY>
+			<posX>0</posX>
+			<width>1920</width>
+			<height>1080</height>
+			<keepaspectratio>no</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture>hover_volumecontrol.png</texture>
+			<animation effect="fade" time="300">visible</animation>
+			<animation effect="fade" time="300" delay="300">hidden</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+			<animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>			
+		</control>		
+        
+        <control>
+            <description>viewport</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>0</posX>
+            <posY>92</posY>
+            <width>1893</width>
+            <height>795</height>
+            <texture>viewport_settings.png</texture>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+        
+        <control>
+            <description>Avallanche logo</description>
+            <type>image</type>
+            <id>1</id>
+            <posX>20</posX>
+            <posY>-40</posY>
+            <width>200</width>
+            <height>200</height>
+            <keepaspectratio>yes</keepaspectratio>
+			<texture>Avallanche logo.png</texture>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+        
+        <control>
+            <type>label</type>
+            <description>Volume Control label</description>
+            <id>121</id>
+            <posX>250</posX>
+            <posY>38</posY>
+            <label>Volume Control</label>
+            <font>font22</font>
+            <textcolor>FF00537C</textcolor>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+        
+		<!-- *** Button *** -->
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<layout>StackLayout(0, Vertical, true)</layout>
+			<posX>70</posX>
+			<posY>156</posY>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+            
+			<control>
+				<id>2</id>
+				<description>Profiles</description>
+				<type>button</type>
+				<label>Profiles</label>
+				<onleft>77</onleft>
+				<onright>10</onright>
+				<onup>77</onup>
+				<ondown>5</ondown>
+                <textXOff>62</textXOff>
+                <textYOff>16</textYOff>
+				<width>425</width>
+                <textcolor>ffffffff</textcolor>
+                <textcolorNoFocus>FF00537C</textcolorNoFocus>
+			</control>
+            
+			<control>
+				<id>5</id>
+				<description>Devices</description>
+				<type>button</type>
+				<label>Devices</label>
+				<onleft>77</onleft>
+				<onright>10</onright>
+				<onup>2</onup>
+				<ondown>3</ondown>
+                <textXOff>62</textXOff>
+                <textYOff>16</textYOff>
+				<width>425</width>
+                <textcolor>ffffffff</textcolor>
+                <textcolorNoFocus>FF00537C</textcolorNoFocus>
+			</control>
+            
+			<control>
+				<id>3</id>
+				<description>Activate Adjustments</description>
+				<type>checkbutton</type>
+				<label>Activate Adjustments</label>
+				<onleft>77</onleft>
+				<onright>10</onright>
+				<onup>5</onup>
+				<ondown>4</ondown>
+                <textXOff>62</textXOff>
+                <textYOff>16</textYOff>
+				<width>425</width>
+                <textcolor>ffffffff</textcolor>
+                <textcolorNoFocus>FF00537C</textcolorNoFocus>
+			</control>
+            
+			<control>
+				<id>4</id>
+				<description>Channel Mode</description>
+				<type>checkbutton</type>
+				<label>Channel Mode</label>
+				<onleft>77</onleft>
+				<onright>10</onright>
+				<onup>3</onup>
+				<ondown>10</ondown>
+                <textXOff>62</textXOff>
+                <textYOff>16</textYOff>
+				<width>425</width>
+                <textcolor>ffffffff</textcolor>
+                <textcolorNoFocus>FF00537C</textcolorNoFocus>
+			</control>
+            
+		</control>
+
+		<!-- *** Volume Control Peak Left Channel *** -->
+		<control>
+			<description>VolumeControl Peak Left Channel Image</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>713</posX>
+			<posY>263</posY>
+            <width>125</width>
+            <height>365</height>
+			<keepaspectratio>no</keepaspectratio>
+			<texture>#VolumeControl.ImagePeakChannel0</texture>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+        
+		<control>
+			<type>image</type>
+			<id>1</id>
+			<posX>700</posX>
+			<posY>220</posY>
+			<width>150</width>
+			<height>450</height>
+			<keepaspectratio>no</keepaspectratio>
+			<texture>background_volume.png</texture>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+
+		<control>
+			<description>VolumeControl Peak Left Channel Text</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>700</posX>
+			<posY>220</posY>
+			<width>150</width>
+            <font>fontB11</font>
+            <align>center</align>
+            <textcolor>FF00537C</textcolor>
+			<label>#VolumeControl.LabelPeakChannel0</label>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+        
+		<control>
+			<description>VolumeControl Peak Channel 0 Value</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>700</posX>
+			<posY>670</posY>
+			<width>150</width>
+            <font>fontB11</font>
+            <align>center</align>
+            <textcolor>FF00537C</textcolor>
+			<label>#VolumeControl.LevelPeakChannel0</label>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+
+		<!-- *** Volume Control Peak Right Channel *** -->
+		<control>
+			<description>VolumeControl Peak Right Channel Image</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>863</posX>
+			<posY>263</posY>
+            <width>125</width>
+            <height>365</height>
+			<keepaspectratio>no</keepaspectratio>
+			<texture>#VolumeControl.ImagePeakChannel1</texture>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+        
+		<control>
+			<type>image</type>
+			<id>1</id>
+			<posX>850</posX>
+			<posY>220</posY>
+			<width>150</width>
+			<height>450</height>
+			<keepaspectratio>no</keepaspectratio>
+			<texture>background_volume.png</texture>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+
+		<control>
+			<description>VolumeControl Peak Right Channel Text</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>850</posX>
+			<posY>220</posY>
+			<width>150</width>
+            <font>fontB11</font>
+            <align>center</align>
+            <textcolor>FF00537C</textcolor>
+			<label>#VolumeControl.LabelPeakChannel1</label>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+        
+		<control>
+			<description>VolumeControl Peak Right Value</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>850</posX>
+			<posY>670</posY>
+			<width>150</width>
+            <font>fontB11</font>
+            <align>center</align>
+            <textcolor>FF00537C</textcolor>
+			<label>#VolumeControl.LevelPeakChannel1</label>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+
+		<!-- *** Volume Control Level Channel 0 *** -->
+		<control>
+			<description>VolumeControl Level Channel 0 Image</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>1113</posX>
+			<posY>265</posY>
+            <width>85</width>
+            <height>365</height>
+			<keepaspectratio>no</keepaspectratio>
+			<texture>#VolumeControl.ImageChannel0</texture>
+			<visible>control.IsVisible(50)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+        
+		<control>
+			<type>image</type>
+			<id>1</id>
+			<posX>1100</posX>
+			<posY>220</posY>
+			<width>110</width>
+			<height>450</height>
+			<keepaspectratio>no</keepaspectratio>
+			<texture>background_volume.png</texture>
+			<visible>control.IsVisible(50)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+
+		<control>
+			<description>VolumeControl Level Channel 0 Text</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>1095</posX>
+			<posY>225</posY>
+			<width>120</width>
+            <font>AvalonLight10</font>
+            <align>center</align>
+            <textcolor>FF00537C</textcolor>
+			<label>#VolumeControl.LabelChannel0</label>
+			<visible>control.IsVisible(50)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+        
+		<control>
+			<description>VolumeControl Mute Channel 0 Text</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>1100</posX>
+			<posY>660</posY>
+			<width>120</width>
+            <font>AvalonLight10</font>
+            <align>center</align>
+            <textcolor>FF00537C</textcolor>
+			<label>#VolumeControl.StateChannel0</label>
+			<visible>control.IsVisible(50)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+        
+		<control>
+			<description>VolumeControl Level Channel 0 Value</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>1100</posX>
+			<posY>690</posY>
+			<width>120</width>
+            <font>AvalonLight10</font>
+            <align>center</align>
+            <textcolor>FF00537C</textcolor>
+			<label>#VolumeControl.LevelChannel0</label>
+			<visible>control.IsVisible(50)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+
+		<!-- *** Volume Control Level Channel 1 *** -->
+		<control>
+			<description>VolumeControl Level Channel 1 Image</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>1213</posX>
+			<posY>265</posY>
+            <width>85</width>
+            <height>365</height>
+			<keepaspectratio>no</keepaspectratio>
+			<texture>#VolumeControl.ImageChannel1</texture>
+			<visible>control.IsVisible(55)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+        
+		<control>
+			<type>image</type>
+			<id>1</id>
+			<posX>1200</posX>
+			<posY>220</posY>
+			<width>110</width>
+			<height>450</height>
+			<keepaspectratio>no</keepaspectratio>
+			<texture>background_volume.png</texture>
+			<visible>control.IsVisible(55)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+
+		<control>
+			<description>VolumeControl Level Channel 1 Text</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>1195</posX>
+			<posY>225</posY>
+			<width>120</width>
+            <font>AvalonLight10</font>
+            <align>center</align>
+            <textcolor>FF00537C</textcolor>
+			<label>#VolumeControl.LabelChannel1</label>
+			<visible>control.IsVisible(55)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+        
+		<control>
+			<description>VolumeControl Mute Channel 1 Text</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>1200</posX>
+			<posY>660</posY>
+			<width>120</width>
+            <font>AvalonLight10</font>
+            <align>center</align>
+            <textcolor>FF00537C</textcolor>
+			<label>#VolumeControl.StateChannel1</label>
+			<visible>control.IsVisible(55)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+        
+		<control>
+			<description>VolumeControl Level Channel 1 Value</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>1200</posX>
+			<posY>690</posY>
+			<width>120</width>
+            <font>AvalonLight10</font>
+            <align>center</align>
+            <textcolor>FF00537C</textcolor>
+			<label>#VolumeControl.LevelChannel1</label>
+			<visible>control.IsVisible(55)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+
+		<!-- *** Volume Control Level Channel 2 *** -->
+		<control>
+			<description>VolumeControl Level Channel 2 Image</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>1313</posX>
+			<posY>265</posY>
+            <width>85</width>
+            <height>365</height>
+			<keepaspectratio>no</keepaspectratio>
+			<texture>#VolumeControl.ImageChannel2</texture>
+			<visible>control.IsVisible(60)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+        
+		<control>
+			<type>image</type>
+			<id>1</id>
+			<posX>1300</posX>
+			<posY>220</posY>
+			<width>110</width>
+			<height>450</height>
+			<keepaspectratio>no</keepaspectratio>
+			<texture>background_volume.png</texture>
+			<visible>control.IsVisible(60)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+
+		<control>
+			<description>VolumeControl Level Channel 2 Text</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>1295</posX>
+			<posY>225</posY>
+			<width>120</width>
+            <font>AvalonLight10</font>
+            <align>center</align>
+            <textcolor>FF00537C</textcolor>
+			<label>#VolumeControl.LabelChannel2</label>
+			<visible>control.IsVisible(60)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+        
+		<control>
+			<description>VolumeControl Mute Channel 2 Text</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>1300</posX>
+			<posY>660</posY>
+			<width>120</width>
+            <font>AvalonLight10</font>
+            <align>center</align>
+            <textcolor>FF00537C</textcolor>
+			<label>#VolumeControl.StateChannel2</label>
+			<visible>control.IsVisible(60)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+        
+		<control>
+			<description>VolumeControl Level Channel 2 Value</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>1300</posX>
+			<posY>690</posY>
+			<width>120</width>
+            <font>AvalonLight10</font>
+            <align>center</align>
+            <textcolor>FF00537C</textcolor>
+			<label>#VolumeControl.LevelChannel2</label>
+			<visible>control.IsVisible(60)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+
+		<!-- *** Volume Control Level Channel 3 *** -->
+		<control>
+			<description>VolumeControl Level Channel 3 Image</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>1413</posX>
+			<posY>265</posY>
+            <width>85</width>
+            <height>365</height>
+			<keepaspectratio>no</keepaspectratio>
+			<texture>#VolumeControl.ImageChannel3</texture>
+			<visible>control.IsVisible(65)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+        
+		<control>
+			<type>image</type>
+			<id>1</id>
+			<posX>1400</posX>
+			<posY>220</posY>
+			<width>110</width>
+			<height>450</height>
+			<keepaspectratio>no</keepaspectratio>
+			<texture>background_volume.png</texture>
+			<visible>control.IsVisible(65)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+
+		<control>
+			<description>VolumeControl Level Channel 3 Text</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>1395</posX>
+			<posY>225</posY>
+			<width>120</width>
+            <font>AvalonLight10</font>
+            <align>center</align>
+            <textcolor>FF00537C</textcolor>
+			<label>#VolumeControl.LabelChannel3</label>
+			<visible>control.IsVisible(65)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+        
+		<control>
+			<description>VolumeControl Mute Channel 3 Text</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>1400</posX>
+			<posY>660</posY>
+			<width>120</width>
+            <font>AvalonLight10</font>
+            <align>center</align>
+            <textcolor>FF00537C</textcolor>
+			<label>#VolumeControl.StateChannel3</label>
+			<visible>control.IsVisible(65)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+        
+		<control>
+			<description>VolumeControl Level Channel 3 Value</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>1400</posX>
+			<posY>690</posY>
+			<width>120</width>
+            <font>AvalonLight10</font>
+            <align>center</align>
+            <textcolor>FF00537C</textcolor>
+			<label>#VolumeControl.LevelChannel3</label>
+			<visible>control.IsVisible(65)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+
+		<!-- *** Volume Control Level Channel 4 *** -->
+		<control>
+			<description>VolumeControl Level Channel 4 Image</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>1513</posX>
+			<posY>265</posY>
+            <width>85</width>
+            <height>365</height>
+			<keepaspectratio>no</keepaspectratio>
+			<texture>#VolumeControl.ImageChannel4</texture>
+			<visible>control.IsVisible(70)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+        
+		<control>
+			<type>image</type>
+			<id>1</id>
+			<posX>1500</posX>
+			<posY>220</posY>
+			<width>110</width>
+			<height>450</height>
+			<keepaspectratio>no</keepaspectratio>
+			<texture>background_volume.png</texture>
+			<visible>control.IsVisible(70)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+
+		<control>
+			<description>VolumeControl Level Channel 4 Text</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>1495</posX>
+			<posY>225</posY>
+			<width>120</width>
+            <font>AvalonLight10</font>
+            <align>center</align>
+            <textcolor>FF00537C</textcolor>
+			<label>#VolumeControl.LabelChannel4</label>
+			<visible>control.IsVisible(70)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+
+		<control>
+			<description>VolumeControl Mute Channel 4 Text</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>1500</posX>
+			<posY>660</posY>
+			<width>120</width>
+            <font>AvalonLight10</font>
+            <align>center</align>
+            <textcolor>FF00537C</textcolor>
+			<label>#VolumeControl.StateChannel4</label>
+			<visible>control.IsVisible(70)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+        
+		<control>
+			<description>VolumeControl Level Channel 4 Value</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>1500</posX>
+			<posY>690</posY>
+			<width>120</width>
+            <font>AvalonLight10</font>
+            <align>center</align>
+            <textcolor>FF00537C</textcolor>
+			<label>#VolumeControl.LevelChannel4</label>
+			<visible>control.IsVisible(70)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+
+		<!-- *** Volume Control Level Channel 5 *** -->
+		<control>
+			<description>VolumeControl Level Channel 5 Image</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>1613</posX>
+			<posY>265</posY>
+            <width>85</width>
+            <height>365</height>
+			<keepaspectratio>no</keepaspectratio>
+			<texture>#VolumeControl.ImageChannel5</texture>
+			<visible>control.IsVisible(75)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+        
+		<control>
+			<type>image</type>
+			<id>1</id>
+			<posX>1600</posX>
+			<posY>220</posY>
+			<width>110</width>
+			<height>450</height>
+			<keepaspectratio>no</keepaspectratio>
+			<texture>background_volume.png</texture>
+			<visible>control.IsVisible(75)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+
+		<control>
+			<description>VolumeControl Level Channel 5 Text</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>1595</posX>
+			<posY>225</posY>
+			<width>120</width>
+            <font>AvalonLight10</font>
+            <align>center</align>
+            <textcolor>FF00537C</textcolor>
+			<label>#VolumeControl.LabelChannel5</label>
+			<visible>control.IsVisible(75)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+        
+		<control>
+			<description>VolumeControl Mute Channel 5 Text</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>1600</posX>
+			<posY>660</posY>
+			<width>120</width>
+            <font>AvalonLight10</font>
+            <align>center</align>
+            <textcolor>FF00537C</textcolor>
+			<label>#VolumeControl.StateChannel5</label>
+			<visible>control.IsVisible(75)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+
+		<control>
+			<description>VolumeControl Level Channel 5 Value</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>1600</posX>
+			<posY>690</posY>
+			<width>120</width>
+            <font>AvalonLight10</font>
+            <align>center</align>
+            <textcolor>FF00537C</textcolor>
+			<label>#VolumeControl.LevelChannel5</label>
+			<visible>control.IsVisible(75)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+
+		<!-- *** Channel Handling Indicator *** -->
+		<control>
+			<description>Channel Handling Indicator</description>
+			<type>label</type>
+			<id>20</id>
+			<posX>10</posX>
+			<posY>10</posY>
+			<label></label>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+
+		<!-- *** Master Volume Up Button *** -->
+        <control>
+			<description>Master Volume Up Button</description>
+            <type>button</type>
+            <id>10</id>
+            <posX>770</posX>
+            <posY>710</posY>
+            <width>45</width>
+            <height>45</height>
+			<onleft>4</onleft>
+			<onright>12</onright>
+			<onup>4</onup>
+			<ondown>12</ondown>
+            <textureFocus>button_volume_up_focus.png</textureFocus>
+            <textureNoFocus>button_volume_up_nofocus.png</textureNoFocus>
+			<visible>control.IsVisible(20)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+
+		<!-- *** Master Mute Button *** -->
+        <control>
+			<type>button</type>
+            <id>12</id>
+            <posX>835</posX>
+            <posY>710</posY>
+            <width>45</width>
+            <height>45</height>
+			<onleft>10</onleft>
+			<onright>11</onright>
+			<onup>10</onup>
+			<ondown>11</ondown>
+			<textureFocus>button_muteon_focus.png</textureFocus>
+			<textureNoFocus>button_muteon_nofocus.png</textureNoFocus>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+
+		<!-- *** Master Volume Down Button *** -->
+        <control>
+			<description>Master Volume Down Button</description>
+            <type>button</type>
+            <id>11</id>
+            <posX>900</posX>
+            <posY>710</posY>
+            <width>45</width>
+            <height>45</height>
+			<onleft>12</onleft>
+			<onright>51</onright>
+			<onup>12</onup>
+			<ondown>51</ondown>
+            <textureFocus>button_volume_down_focus.png</textureFocus>
+            <textureNoFocus>button_volume_down_nofocus.png</textureNoFocus>
+			<visible>control.IsVisible(20)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+
+		<!-- *** Channel 0 Volume Channel Indicator *** -->
+		<control>
+			<description>Channel 0 Volume Channel Indicator</description>
+			<type>label</type>
+			<id>50</id>
+			<posX>100</posX>
+			<posY>100</posY>
+			<label></label>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+
+		<!-- *** Channel 0 Volume Up Button *** -->
+        <control>
+			<description>Channel 0 Volume Up Button</description>
+            <type>button</type>
+            <id>51</id>
+            <posX>1140</posX>
+            <posY>710</posY>
+            <width>45</width>
+            <height>45</height>
+			<onleft>11</onleft>
+			<onright>52</onright>
+			<onup>11</onup>
+			<ondown>52</ondown>
+            <textureFocus>button_volume_up_focus.png</textureFocus>
+            <textureNoFocus>button_volume_up_nofocus.png</textureNoFocus>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+
+		<!-- *** Channel 0 Volume Down Button *** -->
+        <control>
+			<description>Channel 0 Volume Down Button</description>
+            <type>button</type>
+            <id>52</id>
+            <posX>1140</posX>
+            <posY>760</posY>
+            <width>45</width>
+            <height>45</height>
+			<onleft>51</onleft>
+			<onright>56</onright>
+			<onup>51</onup>
+			<ondown>56</ondown>
+            <textureFocus>button_volume_down_focus.png</textureFocus>
+            <textureNoFocus>button_volume_down_nofocus.png</textureNoFocus>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+
+		<!-- *** Channel 1 Volume Channel Indicator *** -->
+		<control>
+			<description>Channel 1 Volume Channel Indicator</description>
+			<type>label</type>
+			<id>55</id>
+			<posX>10</posX>
+			<posY>10</posY>
+			<label></label>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+
+		<!-- *** Channel 1 Volume Up Button *** -->
+        <control>
+			<description>Channel 1 Volume Up Button</description>
+            <type>button</type>
+            <id>56</id>
+            <posX>1240</posX>
+            <posY>710</posY>
+            <width>45</width>
+            <height>45</height>
+			<onleft>52</onleft>
+			<onright>57</onright>
+			<onup>52</onup>
+			<ondown>57</ondown>
+            <textureFocus>button_volume_up_focus.png</textureFocus>
+            <textureNoFocus>button_volume_up_nofocus.png</textureNoFocus>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+
+		<!-- *** Channel 1 Volume Down Button *** -->
+        <control>
+			<description>Channel 1 Volume Down Button</description>
+            <type>button</type>
+            <id>57</id>
+            <posX>1240</posX>
+            <posY>760</posY>
+            <width>45</width>
+            <height>45</height>
+			<onleft>56</onleft>
+			<onright>61</onright>
+			<onup>56</onup>
+			<ondown>61</ondown>
+            <textureFocus>button_volume_down_focus.png</textureFocus>
+            <textureNoFocus>button_volume_down_nofocus.png</textureNoFocus>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+
+		<!-- *** Channel 2 Volume Channel Indicator *** -->
+		<control>
+			<description>Channel 2 Volume Channel Indicator</description>
+			<type>label</type>
+			<id>60</id>
+			<posX>10</posX>
+			<posY>10</posY>
+			<label></label>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+
+		<!-- *** Channel 2 Volume Up Button *** -->
+        <control>
+			<description>Channel 2 Volume Up Button</description>
+            <type>button</type>
+            <id>61</id>
+            <posX>1340</posX>
+            <posY>710</posY>
+            <width>45</width>
+            <height>45</height>
+			<onleft>57</onleft>
+			<onright>62</onright>
+			<onup>57</onup>
+			<ondown>62</ondown>
+            <textureFocus>button_volume_up_focus.png</textureFocus>
+            <textureNoFocus>button_volume_up_nofocus.png</textureNoFocus>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+
+		<!-- *** Channel 2 Volume Down Button *** -->
+        <control>
+			<description>Channel 2 Volume Down Button</description>
+            <type>button</type>
+            <id>62</id>
+            <posX>1340</posX>
+            <posY>760</posY>
+            <width>45</width>
+            <height>45</height>
+			<onleft>61</onleft>
+			<onright>66</onright>
+			<onup>61</onup>
+			<ondown>66</ondown>
+            <textureFocus>button_volume_down_focus.png</textureFocus>
+            <textureNoFocus>button_volume_down_nofocus.png</textureNoFocus>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+
+		<!-- *** Channel 3 Volume Channel Indicator *** -->
+		<control>
+			<description>Channel 3 Volume Channel Indicator</description>
+			<type>label</type>
+			<id>65</id>
+			<posX>10</posX>
+			<posY>10</posY>
+			<label></label>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+
+		<!-- *** Channel 3 Volume Up Button *** -->
+        <control>
+			<description>Channel 3 Volume Up Button</description>
+            <type>button</type>
+            <id>66</id>
+            <posX>1440</posX>
+            <posY>710</posY>
+            <width>45</width>
+            <height>45</height>
+			<onleft>62</onleft>
+			<onright>67</onright>
+			<onup>62</onup>
+			<ondown>67</ondown>
+            <textureFocus>button_volume_up_focus.png</textureFocus>
+            <textureNoFocus>button_volume_up_nofocus.png</textureNoFocus>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+
+		<!-- *** Channel 3 Volume Down Button *** -->
+        <control>
+			<description>Channel 3 Volume Down Button</description>
+            <type>button</type>
+            <id>67</id>
+            <posX>1440</posX>
+            <posY>760</posY>
+            <width>45</width>
+            <height>45</height>
+			<onleft>66</onleft>
+			<onright>71</onright>
+			<onup>66</onup>
+			<ondown>71</ondown>
+            <textureFocus>button_volume_down_focus.png</textureFocus>
+            <textureNoFocus>button_volume_down_nofocus.png</textureNoFocus>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+
+		<!-- *** Channel 4 Volume Channel Indicator *** -->
+		<control>
+			<description>Channel 4 Volume Channel Indicator</description>
+			<type>label</type>
+			<id>70</id>
+			<posX>10</posX>
+			<posY>10</posY>
+			<label></label>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+
+		<!-- *** Channel 4 Volume Up Button *** -->
+        <control>
+			<description>Channel 4 Volume Up Button</description>
+            <type>button</type>
+            <id>71</id>
+            <posX>1540</posX>
+            <posY>710</posY>
+            <width>45</width>
+            <height>45</height>
+			<onleft>67</onleft>
+			<onright>72</onright>
+			<onup>67</onup>
+			<ondown>72</ondown>
+            <textureFocus>button_volume_up_focus.png</textureFocus>
+            <textureNoFocus>button_volume_up_nofocus.png</textureNoFocus>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+
+		<!-- *** Channel 4 Volume Down Button *** -->
+        <control>
+			<description>Channel 4 Volume Down Button</description>
+            <type>button</type>
+            <id>72</id>
+            <posX>1540</posX>
+            <posY>760</posY>
+            <width>45</width>
+            <height>45</height>
+			<onleft>71</onleft>
+			<onright>76</onright>
+			<onup>71</onup>
+			<ondown>76</ondown>
+            <textureFocus>button_volume_down_focus.png</textureFocus>
+            <textureNoFocus>button_volume_down_nofocus.png</textureNoFocus>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+
+		<!-- *** Channel 5 Volume Channel Indicator *** -->
+		<control>
+			<description>Channel 5 Volume Channel Indicator</description>
+			<type>label</type>
+			<id>75</id>
+			<posX>10</posX>
+			<posY>10</posY>
+			<label></label>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+
+		<!-- *** Channel 5 Volume Up Button *** -->
+        <control>
+			<description>Channel 5 Volume Up Button</description>
+            <type>button</type>
+            <id>76</id>
+            <posX>1640</posX>
+            <posY>710</posY>
+            <width>45</width>
+            <height>45</height>
+			<onleft>72</onleft>
+			<onright>77</onright>
+			<onup>72</onup>
+			<ondown>77</ondown>
+            <textureFocus>button_volume_up_focus.png</textureFocus>
+            <textureNoFocus>button_volume_up_nofocus.png</textureNoFocus>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+
+		<!-- *** Channel 5 Volume Down Button *** -->
+        <control>
+			<description>Channel 5 Volume Down Button</description>
+            <type>button</type>
+            <id>77</id>
+            <posX>1640</posX>
+            <posY>760</posY>
+            <width>45</width>
+            <height>45</height>
+			<onleft>76</onleft>
+			<onright>2</onright>
+			<onup>76</onup>
+			<ondown>2</ondown>
+            <textureFocus>button_volume_down_focus.png</textureFocus>
+            <textureNoFocus>button_volume_down_nofocus.png</textureNoFocus>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+
+		<!-- *** Device Information *** -->
+		<control>
+			<description>Device Count</description>
+			<type>label</type>
+			<id>1</id>
+			<label>#VolumeControl.DeviceCount device(s) found</label>
+			<posX>100</posX>
+			<posY>820</posY>
+            <font>AvalonLight10</font>
+            <textcolor>FF00537C</textcolor>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+        
+		<control>
+			<description>Device Count</description>
+			<type>label</type>
+			<id>1</id>
+			<label> - #VolumeControl.DeviceCount devices enabled</label>
+			<posX>258</posX>
+			<posY>820</posY>
+            <font>AvalonLight10</font>
+            <textcolor>FF00537C</textcolor>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+        
+		<control>
+			<description>Device</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<label>Default device: #VolumeControl.DefaultSoundDeviceName - #VolumeControl.ChannelCount Channel(s), Output range between #VolumeControl.MinimumDecibel and #VolumeControl.MaximumDecibel (#VolumeControl.DefaultSoundDeviceState)</label>
+			<posX>720</posX>
+			<posY>835</posY>
+			<width>1000</width>
+            <align>center</align>
+            <font>AvalonLight10</font>
+            <textcolor>FF00537C</textcolor>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+		</control>
+        
+	</controls>
+</window>

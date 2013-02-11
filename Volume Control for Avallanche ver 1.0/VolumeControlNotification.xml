@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<controls>
+
+		<!-- *** VolumeControl Mute Image *** -->
+		<control>
+			<description>Volume Mute image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>555</posX>
+			<posY>250</posY>
+			<width>250</width>
+			<height>250</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>#VolumeControl.ImageMuted</texture>
+			<visible>string.equals(#VolumeControl.MasterVolumeNotificationVisible,true)</visible>
+		</control>
+
+		<!-- *** VolumeControl Channel Level *** -->
+		<control>
+			<description>current condition label</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>555</posX>
+			<posY>510</posY>
+			<width>250</width>
+			<label>#VolumeControl.LevelChannel0</label>
+			<font>font18bold</font>
+			<align>center</align>
+			<textcolor>80ffffff</textcolor>
+			<visible>string.equals(#VolumeControl.MasterVolumeNotificationVisible,true)</visible>
+		</control>
+
+	</controls>
+</window>
