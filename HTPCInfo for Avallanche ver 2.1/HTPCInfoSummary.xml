@@ -1,0 +1,536 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<window>
+    
+    <controls>
+        
+        <!-- *** Processor Image *** -->
+        <control>
+            <description>Processor Image</description>
+            <type>image</type>
+            <id>1</id>
+            <posX>605</posX>
+            <posY>160</posY>
+            <width>64</width>
+            <height>64</height>
+            <keepaspectratio>yes</keepaspectratio>
+            <texture>htpcinfo_system.png</texture>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <!-- *** Processor Label *** -->
+        <control>
+            <description>Processor Label</description>
+            <type>fadelabel</type>
+            <id>1</id>
+            <posX>700</posX>
+            <posY>150</posY>
+            <width>115</width>
+            <label>#HTPCInfo.TranslationProcessor</label>
+			<font>fontB11</font>
+            <textcolor>FF00537C</textcolor>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <!-- *** Processor Usage *** -->
+        <control>
+            <description>Processor Usage Label</description>
+            <type>label</type>
+            <id>1</id>
+            <posX>1000</posX>
+            <posY>160</posY>
+            <label>#HTPCInfo.TranslationProcessorUsage</label>
+			<font>font11</font>
+            <textcolor>FF00537C</textcolor>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>Processor Usage value</description>
+            <type>label</type>
+            <id>1</id>
+            <posX>1300</posX>
+            <posY>160</posY>
+			<label>#HTPCInfo.ProcessorUsage% - #HTPCInfo.SensorTemperature0</label>
+			<font>font11</font>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <!-- *** GPU Usage *** -->
+        <control>
+            <description>GPU Usage label</description>
+            <type>label</type>
+            <id>1</id>
+            <posX>1000</posX>
+            <posY>190</posY>
+            <label>#HTPCInfo.TranslationSensorTypeGraphicProcessorUsage</label>
+			<font>font11</font>
+            <textcolor>FF00537C</textcolor>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>GPU Usage value</description>
+            <id>1</id>
+            <posX>1300</posX>
+            <posY>190</posY>
+            <label>#HTPCInfo.GPUSensorUsage0% - #HTPCInfo.GPUSensorTemperature1</label>
+			<font>font11</font>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <!-- *** Uptime *** -->
+        <control>
+            <description>Uptime Label</description>
+            <type>label</type>
+            <id>1</id>
+            <posX>1000</posX>
+            <posY>220</posY>
+            <label>#HTPCInfo.TranslationUpTime</label>
+			<font>font11</font>
+            <textcolor>FF00537C</textcolor>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>Uptime value</description>
+            <type>label</type>
+            <id>1</id>
+            <posX>1300</posX>
+            <posY>220</posY>
+            <width>250</width>
+            <label>#HTPCInfo.Uptime</label>
+			<font>font11</font>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <!-- *** Boot time *** -->
+        <control>
+            <description>Bootime Label</description>
+            <type>label</type>
+            <id>1</id>
+            <posX>1000</posX>
+            <posY>250</posY>
+            <label>#HTPCInfo.TranslationBootTime</label>
+			<font>font11</font>
+            <textcolor>FF00537C</textcolor>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>Boottime value</description>
+            <type>label</type>
+            <id>1</id>
+            <posX>1300</posX>
+            <posY>250</posY>
+            <width>250</width>
+            <label>#HTPCInfo.BootTime</label>
+			<font>font11</font>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <!-- *** Memory *** -->
+        <control>
+            <description>Memory Image</description>
+            <type>image</type>
+            <id>1</id>
+            <posX>605</posX>
+            <posY>300</posY>
+            <width>64</width>
+            <height>64</height>
+            <keepaspectratio>yes</keepaspectratio>
+            <texture>htpcinfo_device.png</texture>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>Memory Label</description>
+            <type>fadelabel</type>
+            <id>1</id>
+            <posX>700</posX>
+            <posY>290</posY>
+            <label>#HTPCInfo.TranslationMemory</label>
+			<font>fontB11</font>
+            <textcolor>FF00537C</textcolor>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <!-- *** Memory Usage *** -->
+        <control>
+            <description>Memory Usage Label</description>
+            <type>label</type>
+            <id>1</id>
+            <posX>1000</posX>
+            <posY>315</posY>
+            <label>#HTPCInfo.TranslationMemoryUsage</label>
+			<font>font11</font>
+            <textcolor>FF00537C</textcolor>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>Memory Usage value</description>
+            <type>label</type>
+            <id>1</id>
+            <posX>1300</posX>
+            <posY>315</posY>
+            <label>#HTPCInfo.MemoryPercentUsed% (#HTPCInfo.MemoryAvailable #HTPCInfo.TranslationFree)</label>
+			<font>font11</font>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <!-- *** Pagefile Usage *** -->
+        <control>
+            <description>Pagefile Usage Label</description>
+            <type>label</type>
+            <id>1</id>
+            <posX>1000</posX>
+            <posY>345</posY>
+            <label>#HTPCInfo.TranslationMemoryPagefileUsage</label>
+			<font>font11</font>
+            <textcolor>FF00537C</textcolor>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>Pagefile Usage value</description>
+            <type>label</type>
+            <id>1</id>
+            <posX>1300</posX>
+            <posY>345</posY>
+            <width>250</width>
+            <label>#HTPCInfo.PagefileUsed%</label>
+			<font>font11</font>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <!-- *** Alert Status *** -->
+        <control>
+            <description>Alert Status Image</description>
+            <type>image</type>
+            <id>1</id>
+            <posX>605</posX>
+            <posY>440</posY>
+            <width>64</width>
+            <height>64</height>
+            <keepaspectratio>yes</keepaspectratio>
+            <texture>htpcinfo_sensor.png</texture>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>Alert Status label</description>
+            <type>label</type>
+            <id>1</id>
+            <posX>700</posX>
+            <posY>430</posY>
+			<font>fontB11</font>
+            <textcolor>FF00537C</textcolor>
+            <label>#HTPCInfo.TranslationAlert</label>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>Alert system sensor label</description>
+            <type>label</type>
+            <id>1</id>
+            <posX>1000</posX>
+            <posY>450</posY>
+			<font>font11</font>
+            <textcolor>FF00537C</textcolor>
+            <label>#HTPCInfo.TranslationSensorTemperature</label>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>Alert system sensor value</description>
+            <type>label</type>
+            <id>1</id>
+            <posX>1300</posX>
+            <posY>450</posY>
+            <label>#HTPCInfo.AlertSystemSensorStatus</label>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+			<font>font11</font>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>Alert voltage sensor label</description>
+            <type>label</type>
+            <id>1</id>
+            <posX>1000</posX>
+            <posY>480</posY>
+            <label>#HTPCInfo.TranslationSensorVoltage</label>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+			<font>font11</font>
+            <textcolor>FF00537C</textcolor>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>Alert voltage sensor value</description>
+            <type>label</type>
+            <id>1</id>
+            <posX>1300</posX>
+            <posY>480</posY>
+            <label>#HTPCInfo.AlertSystemPowerStatus</label>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+			<font>font11</font>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>Alert system sensor drive label</description>
+            <type>label</type>
+            <id>1</id>
+            <posX>1000</posX>
+            <posY>510</posY>
+			<font>font11</font>
+            <textcolor>FF00537C</textcolor>
+            <label>#HTPCInfo.TranslationSensorTypeHarddisk</label>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>Alert system sensor drive value</description>
+            <type>label</type>
+            <id>1</id>
+            <posX>1300</posX>
+            <posY>510</posY>
+            <label>#HTPCInfo.AlertDiskCapacityStatus</label>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+			<font>font11</font>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <!-- *** Energy Consumption *** -->
+        <control>
+            <description>Energy Consumption Image</description>
+            <type>image</type>
+            <id>1</id>
+            <posX>605</posX>
+            <posY>580</posY>
+            <width>64</width>
+            <height>64</height>
+            <keepaspectratio>yes</keepaspectratio>
+            <texture>htpcinfo_computer.png</texture>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>Energy Consumption Label</description>
+            <type>label</type>
+            <id>1</id>
+            <posX>700</posX>
+            <posY>570</posY>
+            <label>#HTPCInfo.TranslationEnergyConsumption</label>
+			<font>fontB11</font>
+            <textcolor>FF00537C</textcolor>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>Energy Consumption Value</description>
+            <type>label</type>
+            <id>1</id>
+            <posX>1300</posX>
+            <posY>600</posY>
+            <label>#HTPCInfo.EnergyConsumptionPower - #HTPCInfo.EnergyConsumptionCost - #HTPCInfo.TranslationUpTime - #HTPCInfo.EnergyConsumptionMinute</label>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+			<font>font11</font>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <!-- *** SMART Status *** -->
+        <control>
+            <description>SMART Status Image</description>
+            <type>image</type>
+            <id>1</id>
+            <posX>605</posX>
+            <posY>690</posY>
+            <width>64</width>
+            <height>64</height>
+            <keepaspectratio>yes</keepaspectratio>
+            <texture>htpcinfo_sensor.png</texture>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>SMART Status Label</description>
+            <type>label</type>
+            <id>1</id>
+            <posX>700</posX>
+            <posY>680</posY>
+            <label>#HTPCInfo.TranslationSMART</label>
+			<font>fontB11</font>
+            <textcolor>FF00537C</textcolor>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>smart disk 1 label</description>
+            <type>label</type>
+            <id>1</id>
+            <posX>1000</posX>
+            <posY>690</posY>
+            <label>#HTPCInfo.Drive1SMARTDiskName</label>
+			<font>font11</font>
+            <textcolor>FF00537C</textcolor>
+            <width>200</width>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>smart disk 1 value</description>
+            <type>label</type>
+            <id>1</id>
+            <posX>1300</posX>
+            <posY>690</posY>
+            <label>#HTPCInfo.Drive1SMARTHealthStatus (#HTPCInfo.Drive1SMARTHealthPercent)</label>
+			<font>font11</font>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>smart disk 2 label</description>
+            <type>label</type>
+            <id>1</id>
+            <posX>1000</posX>
+            <posY>730</posY>
+            <label>#HTPCInfo.Drive2SMARTDiskName</label>
+			<font>font11</font>
+            <textcolor>FF00537C</textcolor>
+            <width>200</width>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>smart disk 2 value</description>
+            <type>label</type>
+            <id>1</id>
+            <posX>1300</posX>
+            <posY>730</posY>
+            <label>#HTPCInfo.Drive2SMARTHealthStatus (#HTPCInfo.Drive2SMARTHealthPercent)</label>
+			<font>font11</font>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>smart disk 3 label</description>
+            <type>label</type>
+            <id>1</id>
+            <posX>1000</posX>
+            <posY>770</posY>
+            <label>#HTPCInfo.Drive3SMARTDiskName</label>
+			<font>font11</font>
+            <textcolor>FF00537C</textcolor>
+            <width>200</width>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>smart disk 3 value</description>
+            <type>label</type>
+            <id>1</id>
+            <posX>1300</posX>
+            <posY>770</posY>
+            <label>#HTPCInfo.Drive3SMARTHealthStatus (#HTPCInfo.Drive3SMARTHealthPercent)</label>
+			<font>font11</font>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>smart disk 4 label</description>
+            <type>label</type>
+            <id>1</id>
+            <posX>1000</posX>
+            <posY>810</posY>
+            <label>#HTPCInfo.Drive4SMARTDiskName</label>
+			<font>font11</font>
+            <textcolor>FF00537C</textcolor>
+            <width>200</width>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+        <control Style="RealWhiteColor">
+            <description>smart disk 4 value</description>
+            <type>label</type>
+            <id>1</id>
+            <posX>1300</posX>
+            <posY>810</posY>
+            <label>#HTPCInfo.Drive4SMARTHealthStatus (#HTPCInfo.Drive4SMARTHealthPercent)</label>
+			<font>font11</font>
+            <visible>string.equals(#HTPCInfo.SectionView,Summary)</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+        </control>
+        
+    </controls>
+    
+</window>
