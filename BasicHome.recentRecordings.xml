@@ -1,0 +1,575 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<window>
+    
+	<controls>
+        
+		<!-- Dummy -->
+        
+		<!--<control>
+			<description>dummy (visible when nothing is playing)</description>
+			<type>label</type>
+			<id>384551</id>
+			<posX>2000</posX>
+			<posY>200</posY>
+			<label>x</label>
+			<visible>!Player.HasAudio+!Player.HasVideo</visible>
+		</control>
+        
+		<control>
+			<description>dummy (has text when active recordings)</description>
+			<type>label</type>
+			<id>384552</id>
+			<posX>2000</posX>
+			<posY>200</posY>
+			<label>#latestMediaHandler.tvrecordings.active1.title#latestMediaHandler.tvrecordings.active2.title#latestMediaHandler.tvrecordings.active3.title</label>
+		</control>
+        
+		<control>
+			<description>dummy (has text when scheduled recordings)</description>
+			<type>label</type>
+			<id>384553</id>
+			<posX>2000</posX>
+			<posY>200</posY>
+			<label>#latestMediaHandler.tvrecordings.scheduled1.title#latestMediaHandler.tvrecordings.scheduled2.title#latestMediaHandler.tvrecordings.scheduled3.title</label>
+		</control>-->
+        
+		    <!--******************** Active Recordings ********************-->
+			<control>
+				<id>1</id>
+				<type>image</type>
+                <posX>50</posX>
+                <posY>220</posY>
+				<height>24</height>
+				<width>24</width>
+				<texture>tv_is_unavailable.png</texture>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.active1.title,)</visible>
+                <animation effect="fade" time="250">WindowOpen</animation>
+                <animation effect="fade" time="250">WindowClose</animation>
+                <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+                <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+			</control>
+            
+			<control>
+				<id>1</id>
+				<type>image</type>
+                <posX>90</posX>
+                <posY>205</posY>
+				<height>50</height>
+                <keepaspectratio>yes</keepaspectratio>
+				<texture>#latestMediaHandler.tvrecordings.active1.channelLogo</texture>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.active1.title,)</visible>
+                <animation effect="fade" time="250">WindowOpen</animation>
+                <animation effect="fade" time="250">WindowClose</animation>
+                <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+                <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+			</control>
+        
+			<control>
+				<id>1</id>
+				<type>image</type>
+                <posX>90</posX>
+                <posY>277</posY>
+				<height>24</height>
+				<width>24</width>
+				<texture>tv_is_unavailable.png</texture>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.active2.title,)</visible>
+                <animation effect="fade" time="250">WindowOpen</animation>
+                <animation effect="fade" time="250">WindowClose</animation>
+                <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+                <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+			</control>
+        
+			<control>
+				<id>1</id>
+				<type>image</type>
+                <posX>550</posX>
+                <posY>365</posY>
+				<height>50</height>
+                <keepaspectratio>yes</keepaspectratio>
+				<texture>#latestMediaHandler.tvrecordings.active2.channelLogo</texture>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.active2.title,)</visible>
+                <animation effect="fade" time="250">WindowOpen</animation>
+                <animation effect="fade" time="250">WindowClose</animation>
+                <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+                <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+			</control>
+        
+			<control>
+				<id>1</id>
+				<type>image</type>
+                <posX>90</posX>
+                <posY>334</posY>
+				<height>24</height>
+				<width>24</width>
+				<texture>tv_is_unavailable.png</texture>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.active3.title,)</visible>
+                <animation effect="fade" time="250">WindowOpen</animation>
+                <animation effect="fade" time="250">WindowClose</animation>
+                <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+                <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+			</control>
+        
+			<control>
+				<id>1</id>
+				<type>image</type>
+                <posX>550</posX>
+                <posY>410</posY>
+				<height>50</height>
+                <keepaspectratio>yes</keepaspectratio>
+				<texture>#latestMediaHandler.tvrecordings.active3.channelLogo</texture>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.active3.title,)</visible>
+                <animation effect="fade" time="250">WindowOpen</animation>
+                <animation effect="fade" time="250">WindowClose</animation>
+                <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+                <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+			</control>
+            
+		<control>
+			<description>group active recordings</description>
+			<id>384555</id>
+			<type>group</type>
+			<posX>160</posX>
+			<posY>202</posY>
+			<dimColor>0xffffffff</dimColor>
+			<layout>StackLayout(5, Vertical, true)</layout>
+                <animation effect="fade" time="250">WindowOpen</animation>
+                <animation effect="fade" time="250">WindowClose</animation>
+                <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+                <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+
+			<control>
+				<id>1</id>
+				<type>fadelabel</type>
+				<height>24</height>
+				<width>900</width>
+                <font>fontB11</font>
+                <textcolor>FF00537C</textcolor>
+				<label>#latestMediaHandler.tvrecordings.active1.title</label>
+				<wrapString> ... </wrapString>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.active1.title,)</visible>
+			</control>
+            
+			<control>
+				<id>1</id>
+				<type>fadelabel</type>
+				<height>24</height>
+				<width>900</width>
+                <font>AvalonLight10</font>
+                <textcolor>FF00537C</textcolor>
+				<label>(#latestMediaHandler.tvrecordings.active1.startTime - #latestMediaHandler.tvrecordings.active1.endTime)</label>
+				<wrapString> ... </wrapString>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.active1.title,)</visible>
+			</control>
+            
+			<!--<control>
+				<id>1</id>
+				<type>fadelabel</type>
+				<height>24</height>
+				<width>900</width>
+				<label>#latestMediaHandler.tvrecordings.active1.title (#latestMediaHandler.tvrecordings.active1.startTime - #latestMediaHandler.tvrecordings.active1.endTime, #latestMediaHandler.tvrecordings.active1.genre)</label>
+				<wrapString> ... </wrapString>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.active1.title,)</visible>
+			</control>-->
+            
+			<control>
+				<id>1</id>
+				<type>fadelabel</type>
+				<height>24</height>
+				<width>900</width>
+                <font>fontB11</font>
+                <textcolor>FF00537C</textcolor>
+				<label>#latestMediaHandler.tvrecordings.active2.title</label>
+				<wrapString> ... </wrapString>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.active2.title,)</visible>
+			</control>
+            
+			<control>
+				<id>1</id>
+				<type>fadelabel</type>
+				<height>24</height>
+				<width>900</width>
+                <font>AvalonLight10</font>
+                <textcolor>FF00537C</textcolor>
+				<label>(#latestMediaHandler.tvrecordings.active2.startTime - #latestMediaHandler.tvrecordings.active2.endTime)</label>
+				<wrapString> ... </wrapString>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.active2.title,)</visible>
+			</control>
+            
+			<!--<control>
+				<id>1</id>
+				<type>fadelabel</type>
+				<height>24</height>
+				<width>900</width>
+				<label>#latestMediaHandler.tvrecordings.active2.title (#latestMediaHandler.tvrecordings.active2.startTime - #latestMediaHandler.tvrecordings.active2.endTime, #latestMediaHandler.tvrecordings.active2.genre)</label>
+				<wrapString> ... </wrapString>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.active2.title,)</visible>
+			</control>-->
+            
+			<control>
+				<id>1</id>
+				<type>fadelabel</type>
+				<height>24</height>
+				<width>900</width>
+                <font>fontB11</font>
+                <textcolor>FF00537C</textcolor>
+				<label>#latestMediaHandler.tvrecordings.active3.title</label>
+				<wrapString> ... </wrapString>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.active3.title,)</visible>
+			</control>
+            
+			<control>
+				<id>1</id>
+				<type>fadelabel</type>
+				<height>24</height>
+				<width>900</width>
+                <font>AvalonLight10</font>
+                <textcolor>FF00537C</textcolor>
+				<label>(#latestMediaHandler.tvrecordings.active3.startTime - #latestMediaHandler.tvrecordings.active3.endTime)</label>
+				<wrapString> ... </wrapString>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.active3.title,)</visible>
+			</control>
+            
+			<!--<control>
+				<id>1</id>
+				<type>fadelabel</type>
+				<height>24</height>
+				<width>900</width>
+				<label>#latestMediaHandler.tvrecordings.active3.title (#latestMediaHandler.tvrecordings.active3.startTime - #latestMediaHandler.tvrecordings.active3.endTime, #latestMediaHandler.tvrecordings.active3.genre)</label>
+				<wrapString> ... </wrapString>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.active3.title,)</visible>
+			</control>-->
+            
+                <!--<animation effect="fade" time="250">WindowOpen</animation>
+                <animation effect="fade" time="250">WindowClose</animation>
+                <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+                <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+                <visible>!string.equals(#latestMediaHandler.tvrecordings.active1.title#latestMediaHandler.tvrecordings.active2.title#latestMediaHandler.tvrecordings.active3.title,)</visible>-->
+		    </control>
+        
+		    <!--******************** Scheduled Recordings ********************-->
+			<control>
+				<id>1</id>
+				<type>image</type>
+                <posX>590</posX>
+                <posY>918</posY>
+				<height>24</height>
+				<width>24</width>
+				<texture>tv_is_available.png</texture>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.scheduled1.title,)</visible>
+                <animation effect="fade" time="250">WindowOpen</animation>
+                <animation effect="fade" time="250">WindowClose</animation>
+                <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+                <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+			</control>
+        
+			<control>
+				<id>1</id>
+				<type>image</type>
+                <posX>630</posX>
+                <posY>903</posY>
+				<height>50</height>
+                <keepaspectratio>yes</keepaspectratio>
+				<texture>#latestMediaHandler.tvrecordings.scheduled1.channelLogo</texture>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.scheduled1.title,)</visible>
+                <animation effect="fade" time="250">WindowOpen</animation>
+                <animation effect="fade" time="250">WindowClose</animation>
+                <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+                <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+			</control>
+        
+			<control>
+				<id>1</id>
+				<type>image</type>
+                <posX>590</posX>
+                <posY>973</posY>
+				<height>24</height>
+				<width>24</width>
+				<texture>tv_is_available.png</texture>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.scheduled2.title,)</visible>
+                <animation effect="fade" time="250">WindowOpen</animation>
+                <animation effect="fade" time="250">WindowClose</animation>
+                <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+                <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+			</control>
+        
+			<control>
+				<id>1</id>
+				<type>image</type>
+                <posX>630</posX>
+                <posY>960</posY>
+				<height>50</height>
+                <keepaspectratio>yes</keepaspectratio>
+				<texture>#latestMediaHandler.tvrecordings.scheduled2.channelLogo</texture>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.scheduled2.title,)</visible>
+                <animation effect="fade" time="250">WindowOpen</animation>
+                <animation effect="fade" time="250">WindowClose</animation>
+                <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+                <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+			</control>
+        
+			<control>
+				<id>1</id>
+				<type>image</type>
+                <posX>590</posX>
+                <posY>1028</posY>
+				<height>24</height>
+				<width>24</width>
+				<texture>tv_is_available.png</texture>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.scheduled3.title,)</visible>
+                <animation effect="fade" time="250">WindowOpen</animation>
+                <animation effect="fade" time="250">WindowClose</animation>
+                <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+                <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+			</control>
+
+			<control>
+				<id>1</id>
+				<type>image</type>
+                <posX>630</posX>
+                <posY>1017</posY>
+				<height>50</height>
+                <keepaspectratio>yes</keepaspectratio>
+				<texture>#latestMediaHandler.tvrecordings.scheduled3.channelLogo</texture>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.scheduled3.title,)</visible>
+                <animation effect="fade" time="250">WindowOpen</animation>
+                <animation effect="fade" time="250">WindowClose</animation>
+                <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+                <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+			</control>
+            
+		<control>
+			<description>group scheduled recordings 3</description>
+			<id>384556</id>
+			<type>group</type>
+			<posX>700</posX>
+			<posY>900</posY>
+			<dimColor>0xffffffff</dimColor>
+			<layout>StackLayout(5, Vertical, true)</layout>
+		      <animation effect="fade" time="250">WindowOpen</animation>
+		      <animation effect="fade" time="250">WindowClose</animation>
+		      <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+		      <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+            
+			<control>
+				<id>1</id>
+				<type>fadelabel</type>
+				<height>24</height>
+				<width>900</width>
+                <font>fontB11</font>
+                <textcolor>FF00537C</textcolor>
+				<label>#latestMediaHandler.tvrecordings.scheduled1.title</label>
+				<wrapString> ... </wrapString>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.scheduled1.title,)</visible>
+			</control>
+            
+			<control>
+				<id>1</id>
+				<type>fadelabel</type>
+				<height>24</height>
+				<width>900</width>
+                <font>AvalonLight10</font>
+                <textcolor>FF00537C</textcolor>
+				<label>(#latestMediaHandler.tvrecordings.scheduled1.startDate #latestMediaHandler.tvrecordings.scheduled1.startTime - #latestMediaHandler.tvrecordings.scheduled1.endTime)</label>
+				<wrapString> ... </wrapString>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.scheduled1.title,)</visible>
+			</control>
+            
+			<control>
+				<id>1</id>
+				<type>fadelabel</type>
+				<height>24</height>
+				<width>900</width>
+                <font>fontB11</font>
+                <textcolor>FF00537C</textcolor>
+				<label>#latestMediaHandler.tvrecordings.scheduled2.title</label>
+				<wrapString> ... </wrapString>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.scheduled2.title,)</visible>
+			</control>
+            
+			<control>
+				<id>1</id>
+				<type>fadelabel</type>
+				<height>24</height>
+				<width>900</width>
+                <font>AvalonLight10</font>
+                <textcolor>FF00537C</textcolor>
+				<label>(#latestMediaHandler.tvrecordings.scheduled2.startDate #latestMediaHandler.tvrecordings.scheduled2.startTime - #latestMediaHandler.tvrecordings.scheduled2.endTime)</label>
+				<wrapString> ... </wrapString>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.scheduled2.title,)</visible>
+			</control>
+            
+			<control>
+				<id>1</id>
+				<type>fadelabel</type>
+				<height>24</height>
+				<width>900</width>
+                <font>fontB11</font>
+                <textcolor>FF00537C</textcolor>
+				<label>#latestMediaHandler.tvrecordings.scheduled3.title</label>
+				<wrapString> ... </wrapString>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.scheduled3.title,)</visible>
+			</control>
+            
+			<control>
+				<id>1</id>
+				<type>fadelabel</type>
+				<height>24</height>
+				<width>900</width>
+                <font>AvalonLight10</font>
+                <textcolor>FF00537C</textcolor>
+				<label>(#latestMediaHandler.tvrecordings.scheduled3.startDate #latestMediaHandler.tvrecordings.scheduled3.startTime - #latestMediaHandler.tvrecordings.scheduled3.endTime)</label>
+				<wrapString> ... </wrapString>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.scheduled3.title,)</visible>
+			</control>
+            
+		      <!--<animation effect="fade" time="250">WindowOpen</animation>
+		      <animation effect="fade" time="250">WindowClose</animation>
+		      <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+		      <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+         	  <visible>string.equals(#latestMediaHandler.tvrecordings.active1.title,)+!string.equals(#latestMediaHandler.tvrecordings.scheduled1.title#latestMediaHandler.tvrecordings.scheduled2.title#latestMediaHandler.tvrecordings.scheduled3.title,)</visible>-->
+		</control>
+        
+            <!-- Scheduled Recordings (show only 2-# active recordings) -->
+        
+			<!--<control>
+				<id>1</id>
+				<type>image</type>
+				<height>24</height>
+				<width>24</width>
+				<texture>tv_is_available.png</texture>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.scheduled1.title,)+string.equals(#latestMediaHandler.tvrecordings.active3.title,)</visible>
+                <animation effect="fade" time="250">WindowOpen</animation>
+                <animation effect="fade" time="250">WindowClose</animation>
+                <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+                <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+			</control>
+        
+			<control>
+				<id>1</id>
+				<type>image</type>
+				<height>32</height>
+				<width>32</width>
+				<texture>#latestMediaHandler.tvrecordings.scheduled1.channelLogo</texture>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.scheduled1.title,)+string.equals(#latestMediaHandler.tvrecordings.active3.title,)</visible>
+                <animation effect="fade" time="250">WindowOpen</animation>
+                <animation effect="fade" time="250">WindowClose</animation>
+                <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+                <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+			</control>
+        
+			<control>
+				<id>1</id>
+				<type>image</type>
+				<height>24</height>
+				<width>24</width>
+				<texture>tv_is_available.png</texture>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.scheduled2.title,)+string.equals(#latestMediaHandler.tvrecordings.active2.title,)</visible>
+                <animation effect="fade" time="250">WindowOpen</animation>
+                <animation effect="fade" time="250">WindowClose</animation>
+                <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+                <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+			</control>
+        
+			<control>
+				<id>1</id>
+				<type>image</type>
+				<height>32</height>
+				<width>32</width>
+				<texture>#latestMediaHandler.tvrecordings.scheduled2.channelLogo</texture>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.scheduled2.title,)+string.equals(#latestMediaHandler.tvrecordings.active2.title,)</visible>
+                <animation effect="fade" time="250">WindowOpen</animation>
+                <animation effect="fade" time="250">WindowClose</animation>
+                <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+                <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+			</control>
+            
+		<control>
+			<description>group scheduled recordings 2</description>
+			<id>384556</id>
+			<type>group</type>
+			<posX>160</posX>
+			<posY>265</posY>
+			<layout>StackLayout(22, Vertical, true)</layout>
+            
+			<control>
+				<id>1</id>
+				<type>fadelabel</type>
+				<height>24</height>
+				<width>900</width>
+				<label>#latestMediaHandler.tvrecordings.scheduled1.title (#latestMediaHandler.tvrecordings.scheduled1.startDate #latestMediaHandler.tvrecordings.scheduled1.startTime - #latestMediaHandler.tvrecordings.scheduled1.endTime)</label>
+				<wrapString> ... </wrapString>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.scheduled1.title,)+string.equals(#latestMediaHandler.tvrecordings.active3.title,)</visible>
+			</control>
+            
+			<control>
+				<id>1</id>
+				<type>fadelabel</type>
+				<height>24</height>
+				<width>900</width>
+				<label>#latestMediaHandler.tvrecordings.scheduled2.title (#latestMediaHandler.tvrecordings.scheduled2.startDate #latestMediaHandler.tvrecordings.scheduled2.startTime - #latestMediaHandler.tvrecordings.scheduled2.endTime)</label>
+				<wrapString> ... </wrapString>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.scheduled2.title,)+string.equals(#latestMediaHandler.tvrecordings.active2.title,)</visible>
+			</control>
+            
+		      <animation effect="fade" time="250">WindowOpen</animation>
+		      <animation effect="fade" time="250">WindowClose</animation>
+		      <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+		      <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+         	  <visible>!string.equals(#latestMediaHandler.tvrecordings.active1.title,)+string.equals(#latestMediaHandler.tvrecordings.active2.title,)+!string.equals(#latestMediaHandler.tvrecordings.scheduled1.title#latestMediaHandler.tvrecordings.scheduled2.title#latestMediaHandler.tvrecordings.scheduled3.title,)</visible>
+		</control>-->
+        
+            <!-- Scheduled Recordings (show only 1-# active recordings) -->
+        
+			<!--<control>
+				<id>1</id>
+				<type>image</type>
+				<height>24</height>
+				<width>24</width>
+				<texture>tv_is_available.png</texture>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.scheduled1.title,)+string.equals(#latestMediaHandler.tvrecordings.active3.title,)</visible>
+                <animation effect="fade" time="250">WindowOpen</animation>
+                <animation effect="fade" time="250">WindowClose</animation>
+                <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+                <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+			</control>
+        
+			<control>
+				<id>1</id>
+				<type>image</type>
+				<height>32</height>
+				<width>32</width>
+				<texture>#latestMediaHandler.tvrecordings.scheduled1.channelLogo</texture>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.scheduled1.title,)+string.equals(#latestMediaHandler.tvrecordings.active3.title,)</visible>
+                <animation effect="fade" time="250">WindowOpen</animation>
+                <animation effect="fade" time="250">WindowClose</animation>
+                <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+                <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+			</control>
+            
+		<control>
+			<description>group scheduled recordings 1</description>
+			<id>384556</id>
+			<type>group</type>
+			<posX>160</posX>
+			<posY>310</posY>
+			<layout>StackLayout(22, Vertical, true)</layout>
+            
+			<control>
+				<id>1</id>
+				<type>fadelabel</type>
+				<height>24</height>
+				<width>900</width>
+				<label>#latestMediaHandler.tvrecordings.scheduled1.title (#latestMediaHandler.tvrecordings.scheduled1.startDate #latestMediaHandler.tvrecordings.scheduled1.startTime - #latestMediaHandler.tvrecordings.scheduled1.endTime)</label>
+				<wrapString> ... </wrapString>
+				<visible>!string.equals(#latestMediaHandler.tvrecordings.scheduled1.title,)+string.equals(#latestMediaHandler.tvrecordings.active3.title,)</visible>
+			</control>
+            
+		      <animation effect="fade" time="250">WindowOpen</animation>
+		      <animation effect="fade" time="250">WindowClose</animation>
+		      <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+		      <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+         	  <visible>!string.equals(#latestMediaHandler.tvrecordings.active2.title,)+string.equals(#latestMediaHandler.tvrecordings.active3.title,)+!string.equals(#latestMediaHandler.tvrecordings.scheduled1.title#latestMediaHandler.tvrecordings.scheduled2.title#latestMediaHandler.tvrecordings.scheduled3.title,)</visible>
+		</control>-->
+        
+	</controls>
+</window>
