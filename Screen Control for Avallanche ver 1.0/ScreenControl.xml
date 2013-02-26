@@ -1,0 +1,700 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+    
+    <id>7975</id>
+    <defaultcontrol>10</defaultcontrol>
+    <allowoverlay>yes</allowoverlay>
+    
+    <controls>
+        
+        <!-- *** Import *** -->
+        <import>common.time.xml</import>
+        
+        <control>
+            <description>default background</description>
+            <type>image</type>
+            <id>1</id>
+            <posY>0</posY>
+            <posX>0</posX>
+            <width>1920</width>
+            <height>1080</height>
+            <keepaspectratio>no</keepaspectratio>
+            <centered>yes</centered>
+            <zoom>yes</zoom>
+            <texture>hover_my tv.jpg</texture>
+            <animation effect="fade" time="300">visible</animation>
+            <animation effect="fade" time="300" delay="300">hidden</animation>
+            <animation effect="fade" time="0">WindowClose</animation>
+            <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+        </control>
+        
+        <control>
+            <description>viewport image</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>0</posX>
+            <posY>92</posY>
+            <width>1893</width>
+            <height>795</height>
+            <texture>viewport_settings.png</texture>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>Avallanche logo</description>
+            <type>image</type>
+            <id>1</id>
+            <posX>20</posX>
+            <posY>-40</posY>
+            <width>200</width>
+            <height>200</height>
+            <keepaspectratio>yes</keepaspectratio>
+            <texture>Avallanche logo.png</texture>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <type>label</type>
+            <description>Screen Control label</description>
+            <id>121</id>
+            <posX>250</posX>
+            <posY>38</posY>
+            <label>Screen Control</label>
+            <font>font22</font>
+            <textcolor>FF00537C</textcolor>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!-- *** Button *** -->
+        <control>
+            <type>group</type>
+            <description>group element</description>
+            <layout>StackLayout(25, Vertical, true)</layout>
+            <posX>70</posX>
+            <posY>156</posY>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+            
+            <control>
+                <description>ScreenJump enabled</description>
+                <type>checkbutton</type>
+                <id>10</id>
+                <label>Screen Jump</label>
+                <onleft>10</onleft>
+                <onright>11</onright>
+                <onup>5</onup>
+                <ondown>30</ondown>
+                <width>425</width>
+                <textcolor>FF00537C</textcolor>
+                <textcolorNoFocus>ffffffff</textcolorNoFocus>
+                <font>fontB14</font>
+            </control>
+            
+            <control>
+                <description>Power enabled</description>
+                <type>checkbutton</type>
+                <id>30</id>
+                <label>Power</label>
+                <onleft>30</onleft>
+                <onright>31</onright>
+                <onup>10</onup>
+                <ondown>20</ondown>
+                <width>425</width>
+                <textcolor>FF00537C</textcolor>
+                <textcolorNoFocus>ffffffff</textcolorNoFocus>
+                <font>fontB14</font>
+            </control>
+            
+            <control>
+                <description>SpeechRecognition enabled</description>
+                <type>checkbutton</type>
+                <id>20</id>
+                <label>Speech Recognition</label>
+                <onleft>20</onleft>
+                <onright>21</onright>
+                <onup>30</onup>
+                <ondown>50</ondown>
+                <width>425</width>
+                <textcolor>FF00537C</textcolor>
+                <textcolorNoFocus>ffffffff</textcolorNoFocus>
+                <font>fontB14</font>
+            </control>
+            
+            <control>
+                <description>Resolution enabled</description>
+                <type>checkbutton</type>
+                <id>50</id>
+                <label>Resolution</label>
+                <onleft>50</onleft>
+                <onright>51</onright>
+                <onup>20</onup>
+                <ondown>5</ondown>
+                <width>425</width>
+                <textcolor>FF00537C</textcolor>
+                <textcolorNoFocus>ffffffff</textcolorNoFocus>
+                <font>fontB14</font>
+            </control>
+            
+            <control>
+                <description>Save settings on exit</description>
+                <type>checkbutton</type>
+                <id>5</id>
+                <label>Save settings on exit</label>
+                <onleft>5</onleft>
+                <onright>11</onright>
+                <onup>50</onup>
+                <ondown>10</ondown>
+                <width>425</width>
+                <textcolor>FF00537C</textcolor>
+                <textcolorNoFocus>ffffffff</textcolorNoFocus>
+                <font>fontB14</font>
+            </control>
+            
+        </control>
+        
+        <!-- *** ScreenJump *** -->
+        <control>
+            <description>ScreenJump Image</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>475</posX>
+            <posY>135</posY>
+            <width>25</width>
+            <height>25</height>
+            <texture>screencontrol_screenjump.png</texture>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>ScreenJump</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>700</posX>
+            <posY>160</posY>
+            <font>fontB14</font>
+            <textcolor>FF00537C</textcolor>
+            <label>Screen Jump</label>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <type>group</type>
+            <description>group element</description>
+            <layout>StackLayout(0, Vertical, true)</layout>
+            <posX>670</posX>
+            <posY>210</posY>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+            
+            <control>
+                <description>ScreenJump full screen prevention</description>
+                <type>checkbutton</type>
+                <id>11</id>
+                <label>prevent, if full screen is active</label>
+                <onleft>10</onleft>
+                <onright>21</onright>
+                <onup>51</onup>
+                <ondown>12</ondown>
+                <width>500</width>
+                <textcolor>FF00537C</textcolor>
+                <textcolorNoFocus>ffffffff</textcolorNoFocus>
+            </control>
+            
+        </control>
+        
+        <control>
+            <description>ScreenJump timeout</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>700</posX>
+            <posY>260</posY>
+            <textcolor>FF00537C</textcolor>
+            <label>Screen Jump timeout</label>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>ScreenJump timeout</description>
+            <type>spincontrol</type>
+            <id>12</id>
+            <posX>1100</posX>
+            <posY>265</posY>
+            <onleft>10</onleft>
+            <onright>21</onright>
+            <onup>11</onup>
+            <ondown>31</ondown>
+            <textcolor>FF00537C</textcolor>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!-- *** Power *** -->
+        <control>
+            <description>Power Image</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>475</posX>
+            <posY>270</posY>
+            <width>25</width>
+            <height>25</height>
+            <texture>screencontrol_power.png</texture>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>Power</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>700</posX>
+            <posY>330</posY>
+            <font>fontB14</font>
+            <textcolor>FF00537C</textcolor>
+            <label>Power</label>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <type>group</type>
+            <description>group element</description>
+            <layout>StackLayout(0, Vertical, true)</layout>
+            <posX>670</posX>
+            <posY>380</posY>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+            
+            <control>
+                <description>Power brightness enabled</description>
+                <type>checkbutton</type>
+                <id>31</id>
+                <label>Dim display</label>
+                <onleft>10</onleft>
+                <onright>21</onright>
+                <onup>12</onup>
+                <ondown>32</ondown>
+                <width>500</width>
+                <textcolor>FF00537C</textcolor>
+                <textcolorNoFocus>ffffffff</textcolorNoFocus>
+            </control>
+            
+            <control>
+                <description>Power screensaver enabled</description>
+                <type>checkbutton</type>
+                <id>32</id>
+                <label>Activate screensaver</label>
+                <onleft>10</onleft>
+                <onright>21</onright>
+                <onup>31</onup>
+                <ondown>33</ondown>
+                <width>500</width>
+                <textcolor>FF00537C</textcolor>
+                <textcolorNoFocus>ffffffff</textcolorNoFocus>
+            </control>
+            
+            <control>
+                <description>Power turnoff enabled</description>
+                <type>checkbutton</type>
+                <id>33</id>
+                <label>Turn off display</label>
+                <onleft>10</onleft>
+                <onright>21</onright>
+                <onup>32</onup>
+                <ondown>41</ondown>
+                <width>500</width>
+                <textcolor>FF00537C</textcolor>
+                <textcolorNoFocus>ffffffff</textcolorNoFocus>
+            </control>
+            
+            <control>
+                <description>Power switchoff enabled</description>
+                <type>checkbutton</type>
+                <id>41</id>
+                <label>Turn off display</label>
+                <onleft>10</onleft>
+                <onright>21</onright>
+                <onup>33</onup>
+                <ondown>37</ondown>
+                <width>500</width>
+                <textcolor>FF00537C</textcolor>
+                <textcolorNoFocus>ffffffff</textcolorNoFocus>
+            </control>
+            
+            <control>
+                <description>Power music prevention</description>
+                <type>checkbutton</type>
+                <id>37</id>
+                <label>Prevent, if music/radio is playing</label>
+                <onleft>10</onleft>
+                <onright>21</onright>
+                <onup>41</onup>
+                <ondown>38</ondown>
+                <width>500</width>
+                <textcolor>FF00537C</textcolor>
+                <textcolorNoFocus>ffffffff</textcolorNoFocus>
+            </control>
+            
+            <control>
+                <description>Power full screen prevention</description>
+                <type>checkbutton</type>
+                <id>38</id>
+                <label>Prevent, if full screen is active</label>
+                <onleft>10</onleft>
+                <onright>21</onright>
+                <onup>37</onup>
+                <ondown>34</ondown>
+                <width>500</width>
+                <textcolor>FF00537C</textcolor>
+                <textcolorNoFocus>ffffffff</textcolorNoFocus>
+            </control>
+            
+        </control>
+        
+        <control>
+            <description>Dim display timeout</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>700</posX>
+            <posY>625</posY>
+            <textcolor>FF00537C</textcolor>
+            <label>Dim display timeout</label>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>Dim display timeout</description>
+            <type>spincontrol</type>
+            <id>34</id>
+            <posX>1100</posX>
+            <posY>630</posY>
+            <onleft>10</onleft>
+            <onright>21</onright>
+            <onup>38</onup>
+            <ondown>35</ondown>
+            <textcolor>FF00537C</textcolor>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>Activate screensaver timeout</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>700</posX>
+            <posY>660</posY>
+            <textcolor>FF00537C</textcolor>
+            <label>Activate screensaver timeout</label>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>Activate screensaver timeout</description>
+            <type>spincontrol</type>
+            <id>35</id>
+            <posX>1100</posX>
+            <posY>665</posY>
+            <onleft>10</onleft>
+            <onright>21</onright>
+            <onup>34</onup>
+            <ondown>36</ondown>
+            <textcolor>FF00537C</textcolor>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>Turn off display timout</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>700</posX>
+            <posY>695</posY>
+            <textcolor>FF00537C</textcolor>
+            <label>Turn off display timout</label>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>Turn off display timout</description>
+            <type>spincontrol</type>
+            <id>36</id>
+            <posX>1100</posX>
+            <posY>700</posY>
+            <onleft>10</onleft>
+            <onright>21</onright>
+            <onup>35</onup>
+            <ondown>42</ondown>
+            <textcolor>FF00537C</textcolor>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>Turn off display timout</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>700</posX>
+            <posY>730</posY>
+            <textcolor>FF00537C</textcolor>
+            <label>Switch off display timout</label>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>Switch off display timout</description>
+            <type>spincontrol</type>
+            <id>42</id>
+            <posX>1100</posX>
+            <posY>735</posY>
+            <onleft>10</onleft>
+            <onright>21</onright>
+            <onup>36</onup>
+            <ondown>39</ondown>
+            <textcolor>FF00537C</textcolor>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>Default brightness level</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>700</posX>
+            <posY>765</posY>
+            <textcolor>FF00537C</textcolor>
+            <label>Default brightness level</label>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>Default brightness level</description>
+            <type>spincontrol</type>
+            <id>39</id>
+            <posX>1100</posX>
+            <posY>770</posY>
+            <onleft>10</onleft>
+            <onright>21</onright>
+            <onup>42</onup>
+            <ondown>40</ondown>
+            <textcolor>FF00537C</textcolor>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>Timeout brightness level</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>700</posX>
+            <posY>800</posY>
+            <textcolor>FF00537C</textcolor>
+            <label>Timeout brightness level</label>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>Timeout brightness level</description>
+            <type>spincontrol</type>
+            <id>40</id>
+            <posX>1100</posX>
+            <posY>805</posY>
+            <onleft>10</onleft>
+            <onright>21</onright>
+            <onup>39</onup>
+            <ondown>21</ondown>
+            <textcolor>FF00537C</textcolor>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <!-- *** SpeechRecognition *** -->
+        <control>
+            <description>SpeechRecognition Image</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>1400</posX>
+            <posY>300</posY>
+            <width>25</width>
+            <height>25</height>
+            <texture>screencontrol_speech.png</texture>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>SpeechRecognition</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1400</posX>
+            <posY>160</posY>
+            <font>fontB14</font>
+            <textcolor>FF00537C</textcolor>
+            <label>Speech Recognition</label>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <type>group</type>
+            <description>group element</description>
+            <layout>StackLayout(5, Vertical, true)</layout>
+            <posX>1370</posX>
+            <posY>220</posY>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+            
+            <control>
+                <description>SpeechRecognition startup</description>
+                <type>checkbutton</type>
+                <id>21</id>
+                <label>start listening at startup</label>
+                <onleft>11</onleft>
+                <onright>10</onright>
+                <onup>40</onup>
+                <ondown>22</ondown>
+                <width>450</width>
+                <textcolor>FF00537C</textcolor>
+                <textcolorNoFocus>ffffffff</textcolorNoFocus>
+            </control>
+            
+            <control>
+                <description>SpeechRecognition full screen prevention</description>
+                <type>checkbutton</type>
+                <id>22</id>
+                <label>prevent, if full screen is active</label>
+                <onleft>11</onleft>
+                <onright>10</onright>
+                <onup>21</onup>
+                <ondown>51</ondown>
+                <width>450</width>
+                <textcolor>FF00537C</textcolor>
+                <textcolorNoFocus>ffffffff</textcolorNoFocus>
+            </control>
+            
+        </control>
+        
+        <!-- *** Resolution *** -->
+        <control>
+            <description>Resolution Image</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>1400</posX>
+            <posY>500</posY>
+            <width>25</width>
+            <height>25</height>
+            <texture>screencontrol_resolution.png</texture>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>Resolution</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1400</posX>
+            <posY>330</posY>
+            <font>fontB14</font>
+            <textcolor>FF00537C</textcolor>
+            <label>Resolution</label>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <type>group</type>
+            <description>group element</description>
+            <layout>StackLayout(0, Vertical, true)</layout>
+            <posX>1370</posX>
+            <posY>370</posY>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+            
+            <control>
+                <description>Resolution set</description>
+                <type>button</type>
+                <id>51</id>
+                <label>Set resolution</label>
+                <onleft>11</onleft>
+                <onright>10</onright>
+                <onup>22</onup>
+                <ondown>11</ondown>
+                <font>AvalonLight12</font>
+                <textcolor>ffffffff</textcolor>
+                <textcolorNoFocus>FF00537C</textcolorNoFocus>
+            </control>
+            
+        </control>
+        
+    </controls>
+</window>

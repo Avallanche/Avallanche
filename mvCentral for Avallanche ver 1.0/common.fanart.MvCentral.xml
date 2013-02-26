@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+    
+	<controls>
+
+		<control>
+			<description>default background</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>background.png</texture>
+		</control>
+
+		<!--            :: Fanart ::            -->	
+
+		<control>
+			<description>DUMMY CONTROLL FOR FANART VISIBILITY CONDITION</description>
+			<type>label</type>
+			<id>91919291</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1</width>	
+		</control>
+
+		<control>
+			<description>DUMMY CONTROLL FOR FANART VISIBILITY CONDITION</description>
+			<type>label</type>
+			<id>91919292</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1</width>	
+		</control>
+
+		<control>
+			<description>DUMMY CONTROLL FOR FANART AVAILABILITY CONDITION</description>
+			<type>label</type>
+			<id>91919293</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1</width>	
+			<visible>no</visible>
+		</control>		   	   
+
+		<control>
+			<description>FANART BACKGROUND 1 (Listview)</description>
+			<id>897686</id>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>120</posY>
+			<width>1312</width>
+			<height>738</height>
+			<keepaspectratio>no</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture>#fanarthandler.music.backdrop1.selected</texture>  
+			<visible>[facadeview.list | facadeview.album] + [control.isvisible(91919291)+control.isvisible(91919293)]</visible>	
+			<animation effect="fade" time="300">visible</animation>
+			<animation effect="fade" time="300" delay="150">hidden</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+		</control>
+
+		<control>
+			<description>FANART BACKGROUND 2 (Listview)</description>
+			<id>897687</id>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>120</posY>
+			<width>1312</width>
+			<height>738</height>
+			<keepaspectratio>no</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture>#fanarthandler.music.backdrop2.selected</texture>  
+			<visible>[facadeview.list | facadeview.album] + [control.isvisible(91919292)+control.isvisible(91919293)]</visible>
+			<animation effect="fade" time="300">visible</animation>
+			<animation effect="fade" time="300" delay="150">hidden</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+		</control>	
+
+		<control>
+			<description>FANART BACKGROUND 1 (Filmstrip - Coverflow)</description>
+			<id>897686</id>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<keepaspectratio>no</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture>#fanarthandler.music.backdrop1.selected</texture>  
+			<visible>[facadeview.filmstrip|facadeview.coverflow] + [control.isvisible(91919291)+control.isvisible(91919293)]</visible>	
+			<animation effect="fade" time="300">visible</animation>
+			<animation effect="fade" time="300" delay="150">hidden</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+		</control>
+
+		<control>
+			<description>FANART BACKGROUND 2 (Filmstrip - Coverflow)</description>
+			<id>897687</id>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<keepaspectratio>no</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture>#fanarthandler.music.backdrop2.selected</texture>  
+			<visible>[facadeview.filmstrip|facadeview.coverflow] + [control.isvisible(91919292)+control.isvisible(91919293)]</visible>
+			<animation effect="fade" time="300">visible</animation>
+			<animation effect="fade" time="300" delay="150">hidden</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+		</control>	
+
+		<!--            :: Overlays ::            -->	
+		<control>
+			<description>background listview</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>overlay_long.png</texture>
+			<visible>[facadeview.list | facadeview.smallicons | facadeview.largeicons] + Control.IsVisible(50)</visible>
+			<animation effect="fade" time="450">WindowOpen</animation>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>	 
+		</control>
+
+		<control>
+			<description>background listview</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>overlay_long.png</texture>
+			<visible>window.istopmost(112013)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>	  		
+		</control>
+		
+<!--::::::::: Cover and Video Picture flying out - BEGIN ::::::::::::::::-->
+
+		<control>
+			<description>background listview poster enabled</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>243</posX>
+			<posY>120</posY>
+			<width>954</width>
+			<height>750</height>
+			<texture>viewport_poster_short.png</texture>
+			<visible>facadeview.list + Control.IsVisible(50) + string.equals(#Avalon.hidePoster,no)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+			<animation effect="slide" start="600" end="0" time="350" delay="350" reversible="false">visible</animation>
+			<animation effect="slide" start="0" end="600" time="150" reversible="false">hidden</animation>		
+			<animation effect="fade" time="350" delay="250" reversible="false">visible</animation>
+			<animation effect="fade" time="150" reversible="false">hidden</animation>	
+		</control>
+
+		<control>
+			<description>background listview poster enabled</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>241</posX>
+			<posY>120</posY>
+			<width>956</width>
+			<height>739</height>
+			<texture>viewport_poster.png</texture>
+			<visible>window.istopmost(112013)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+			<animation effect="slide" start="600" end="0" time="350" delay="350" reversible="false">visible</animation>
+			<animation effect="slide" start="0" end="600" time="150" reversible="false">hidden</animation>		
+			<animation effect="fade" time="350" delay="250" reversible="false">visible</animation>
+			<animation effect="fade" time="150" reversible="false">hidden</animation>	
+		</control>		
+
+		<control>
+			<description>Poster shadow</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>705</posX>
+			<posY>111</posY>
+			<width>450</width>
+			<height>446</height>
+			<texture>list_music_glow.png</texture>
+			<visible>facadeview.list+Control.IsVisible(50) + string.equals(#Avalon.hidePoster,no)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+			<animation effect="slide" start="600" end="0" time="350" delay="350" reversible="false">visible</animation>
+			<animation effect="slide" start="0" end="600" time="150" reversible="false">hidden</animation>		
+			<animation effect="fade" time="350" delay="250" reversible="false">visible</animation>
+			<animation effect="fade" time="150" reversible="false">hidden</animation>			
+		</control>
+
+		<control>
+			<description>Default Cover Art</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>762</posX>
+			<posY>169</posY>
+			<width>330</width>
+			<height>330</height>
+			<texture mask="poster_mask.png">DefaultFolderBackBig.png</texture>
+			<visible>facadeview.list + Control.IsVisible(50) + !Control.HasThumb(613140) + string.equals(#Avalon.hidePoster,no)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+			<animation effect="slide" start="600" end="0" time="350" delay="350" reversible="false">visible</animation>
+			<animation effect="slide" start="0" end="600" time="150" reversible="false">hidden</animation>		
+			<animation effect="fade" time="350" delay="250" reversible="false">visible</animation>
+			<animation effect="fade" time="150" reversible="false">hidden</animation>			
+		</control>
+
+		<control>
+			<description>Cover Art</description>
+			<type>image</type>
+			<id>613140</id>
+			<posX>762</posX>
+			<posY>169</posY>
+			<width>330</width>
+			<height>330</height>
+			<texture mask="poster_mask.png">#selectedthumb</texture>
+			<visible>facadeview.list+Control.IsVisible(50) + string.equals(#Avalon.hidePoster,no)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+			<animation effect="slide" start="600" end="0" time="350" delay="350" reversible="false">visible</animation>
+			<animation effect="slide" start="0" end="600" time="150" reversible="false">hidden</animation>		
+			<animation effect="fade" time="350" delay="250" reversible="false">visible</animation>
+			<animation effect="fade" time="150" reversible="false">hidden</animation>			
+		</control>
+
+		<control>
+			<description>Cover Art Frame</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>762</posX>
+			<posY>169</posY>
+			<width>330</width>
+			<height>330</height>
+			<texture mask="poster_mask.png">video_filmstrip_frame.png</texture>
+			<visible>facadeview.list+Control.IsVisible(50) + string.equals(#Avalon.hidePoster,no)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+			<animation effect="slide" start="600" end="0" time="350" delay="350" reversible="false">visible</animation>
+			<animation effect="slide" start="0" end="600" time="150" reversible="false">hidden</animation>		
+			<animation effect="fade" time="350" delay="250" reversible="false">visible</animation>
+			<animation effect="fade" time="150" reversible="false">hidden</animation>			
+		</control>
+            
+<!--:::::::::Cover and Video Picture flying out - END::::::::::::::::-->
+
+
+<!--::::::::: Backgrounds for Listview, Thumbnails, Filmstrip and Coverflow ::::::::::::::::-->
+		<control>
+			<description>Background Listview</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1</posX>
+			<posY>92</posY>
+			
+			<width>1893</width>
+			<height>795</height>
+			<texture>viewport_categories.png</texture>
+			<!--
+			<width>1893</width>
+			<height>646</height>
+			<texture>viewport_noposter_short.png</texture>
+            -->
+			<visible>facadeview.list + Control.IsVisible(50)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+		</control>
+
+		<control>
+			<description>Background Listview</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1</posX>
+			<posY>92</posY>
+			
+			<width>1893</width>
+			<height>795</height>
+			<texture>viewport_categories.png</texture>
+			<!--
+			<width>1893</width>
+			<height>796</height>
+			<texture>viewport_noposter.png</texture>
+			-->
+			<visible>window.istopmost(112013)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+		</control>		
+
+		<control>
+			<description>RSS Background</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>739</posY>
+			<width>1865</width>
+			<height>96</height>
+			<texture>basichome_rss_bg.png</texture>
+			<visible>window.istopmost(112013)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+		</control>		
+
+		<control>
+			<description>Viewport Shadow Poster Disabled</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>729</posX>
+			<posY>120</posY>
+			<width>467</width>
+			<height>590</height>
+			<texture>viewport_shadow_short.png</texture>
+			<visible>facadeview.list + Control.IsVisible(50) + string.equals(#Avalon.hidePoster,yes)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+			<animation effect="fade" time="0" delay="0">visible</animation>
+			<animation effect="fade" start="100" end="0" time="0" delay="0">hidden</animation>
+		</control>
+
+		<control>
+			<description>Background Thumbs</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1</posX>
+			<posY>85</posY>
+			<width>1893</width>
+			<height>801</height>
+			<texture>viewport_thumbs2.png</texture>
+			<!--<texture>viewport_thumbs_short.png</texture>-->
+			<visible>[facadeview.smallicons | facadeview.largeicons] + Control.IsVisible(50)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+		</control>
+
+		<control>
+			<description>Filmstrip and Coverflow Overlay</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>filmstrip_fanart_overlay.png</texture>
+			<visible>[facadeview.filmstrip | facadeview.coverflow] + Control.IsVisible(50)</visible>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		
+<!-- Selected Item Artist Name (Listview, Thumbnail, Filmstrip and Coverflow)-->
+		<control>
+			<description>Selected item Label Artist Name (Listview)</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>1832</posX>
+			<posY>956</posY>
+			<width>1170</width>
+			<font>fontB16</font>
+			<align>right</align>
+			<label>#mvCentral.Hierachy: #selecteditem</label>
+			<visible>[facadeview.list|facadeview.album]+!control.isvisible(53)</visible>
+			<animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+		</control>
+		
+		<control>
+			<description>Selected item Label Artist Name (Thumbnails)</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>1832</posX>
+			<posY>956</posY>
+			<width>1170</width>
+			<font>fontB16</font>
+			<align>right</align>
+			<label>#selecteditem</label>
+			<visible>[facadeview.smallicons | facadeview.largeicons]+!control.isvisible(53)</visible>
+			<animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+		</control>
+
+		<control>
+			<description>Selected item Label Artist (Filmstrip - Coverflow)</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>0</posX>
+			<posY>980</posY>
+			<width>1920</width>
+			<align>center</align>
+			<label>#mvCentral.Hierachy | #selecteditem</label>
+			<font>fontB16</font>
+			<visible>[[facadeview.filmstrip | facadeview.coverflow]]+!control.isvisible(53)</visible>
+			<animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+		</control>	
+        
+	</controls>
+</window>
