@@ -168,10 +168,10 @@
             <description>ScreenJump Image</description>
             <type>image</type>
             <id>0</id>
-            <posX>475</posX>
-            <posY>135</posY>
-            <width>25</width>
-            <height>25</height>
+            <posX>680</posX>
+            <posY>130</posY>
+            <width>75</width>
+            <height>75</height>
             <texture>screencontrol_screenjump.png</texture>
             <animation effect="fade" time="250">WindowOpen</animation>
             <animation effect="fade" time="250">WindowClose</animation>
@@ -183,7 +183,7 @@
             <description>ScreenJump</description>
             <type>label</type>
             <id>0</id>
-            <posX>700</posX>
+            <posX>800</posX>
             <posY>160</posY>
             <font>fontB14</font>
             <textcolor>FF00537C</textcolor>
@@ -257,10 +257,10 @@
             <description>Power Image</description>
             <type>image</type>
             <id>0</id>
-            <posX>475</posX>
-            <posY>270</posY>
-            <width>25</width>
-            <height>25</height>
+            <posX>680</posX>
+            <posY>300</posY>
+            <width>75</width>
+            <height>75</height>
             <texture>screencontrol_power.png</texture>
             <animation effect="fade" time="250">WindowOpen</animation>
             <animation effect="fade" time="250">WindowClose</animation>
@@ -272,7 +272,7 @@
             <description>Power</description>
             <type>label</type>
             <id>0</id>
-            <posX>700</posX>
+            <posX>800</posX>
             <posY>330</posY>
             <font>fontB14</font>
             <textcolor>FF00537C</textcolor>
@@ -571,10 +571,10 @@
             <description>SpeechRecognition Image</description>
             <type>image</type>
             <id>0</id>
-            <posX>1400</posX>
-            <posY>300</posY>
-            <width>25</width>
-            <height>25</height>
+            <posX>1380</posX>
+            <posY>130</posY>
+            <width>75</width>
+            <height>75</height>
             <texture>screencontrol_speech.png</texture>
             <animation effect="fade" time="250">WindowOpen</animation>
             <animation effect="fade" time="250">WindowClose</animation>
@@ -586,7 +586,7 @@
             <description>SpeechRecognition</description>
             <type>label</type>
             <id>0</id>
-            <posX>1400</posX>
+            <posX>1500</posX>
             <posY>160</posY>
             <font>fontB14</font>
             <textcolor>FF00537C</textcolor>
@@ -612,7 +612,7 @@
                 <description>SpeechRecognition startup</description>
                 <type>checkbutton</type>
                 <id>21</id>
-                <label>start listening at startup</label>
+                <label>start listening on startup</label>
                 <onleft>11</onleft>
                 <onright>10</onright>
                 <onup>40</onup>
@@ -626,7 +626,7 @@
                 <description>SpeechRecognition full screen prevention</description>
                 <type>checkbutton</type>
                 <id>22</id>
-                <label>prevent, if full screen is active</label>
+                <label>prevent, if fullscreen is active</label>
                 <onleft>11</onleft>
                 <onright>10</onright>
                 <onup>21</onup>
@@ -643,10 +643,10 @@
             <description>Resolution Image</description>
             <type>image</type>
             <id>0</id>
-            <posX>1400</posX>
-            <posY>500</posY>
-            <width>25</width>
-            <height>25</height>
+            <posX>1380</posX>
+            <posY>300</posY>
+            <width>75</width>
+            <height>75</height>
             <texture>screencontrol_resolution.png</texture>
             <animation effect="fade" time="250">WindowOpen</animation>
             <animation effect="fade" time="250">WindowClose</animation>
@@ -658,7 +658,7 @@
             <description>Resolution</description>
             <type>label</type>
             <id>0</id>
-            <posX>1400</posX>
+            <posX>1500</posX>
             <posY>330</posY>
             <font>fontB14</font>
             <textcolor>FF00537C</textcolor>
@@ -674,7 +674,7 @@
             <description>group element</description>
             <layout>StackLayout(0, Vertical, true)</layout>
             <posX>1370</posX>
-            <posY>370</posY>
+            <posY>380</posY>
             <animation effect="fade" time="250">WindowOpen</animation>
             <animation effect="fade" time="250">WindowClose</animation>
             <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
@@ -694,6 +694,123 @@
                 <textcolorNoFocus>FF00537C</textcolorNoFocus>
             </control>
             
+        </control>
+        
+        <control>
+            <type>image</type>
+            <id>1</id>
+            <posX>1370</posX>
+            <posY>460</posY>
+            <width>400</width>
+            <height>1</height>
+            <texture>weather_horizontal_bar_blue.png</texture>
+            <animation effect="fade" time="0">WindowClose</animation>
+            <animation effect="slide" start="-150,0" time="100">visible</animation>
+            <animation effect="fade" time="50">visible</animation>
+            <animation effect="fade" time="0">hidden</animation>
+        </control>
+        
+        <!-- *** Speech Recognition Analysis Section*** -->
+        
+        <control>
+            <description>Speech Recognition Analysis Label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1370</posX>
+            <posY>500</posY>
+            <font>fontB14</font>
+            <textcolor>FF00537C</textcolor>
+            <label>Speech Recognition Analysis</label>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>Speech Recognition Active Label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1370</posX>
+            <posY>570</posY>
+            <textcolor>FF00537C</textcolor>
+            <label>Speech recognition active?</label>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>Speech Recognition Image</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>1700</posX>
+            <posY>550</posY>
+            <width>75</width>
+            <height>75</height>
+            <texture>screencontrol_listening.png</texture>
+            <visible>string.equals(#ScreenControl.SpeechRecognitionModeState)</visible>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>Speech Recognition Input Result Label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1370</posX>
+            <posY>650</posY>
+            <textcolor>FF00537C</textcolor>
+            <label>Speech recognition input result?</label>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>Speech Recognition Input Result</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1370</posX>
+            <posY>690</posY>
+            <textcolor>ffffffff</textcolor>
+            <label>Speech input string.equals(#ScreenControl.SpeechRecognitionModeResult)</label>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>Speech Recognition Audio Level Result Label</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1370</posX>
+            <posY>760</posY>
+            <textcolor>FF00537C</textcolor>
+            <label>Speech recognition audio level result?</label>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+        </control>
+        
+        <control>
+            <description>Speech Recognition Audio Level Result</description>
+            <type>label</type>
+            <id>0</id>
+            <posX>1370</posX>
+            <posY>800</posY>
+            <textcolor>ffffffff</textcolor>
+            <label>Audio level equals #ScreenControl.SpeechRecognitionModeAudioLevel</label>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
         </control>
         
     </controls>
