@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+    
+  <id>25650</id>
+  <defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+    
+  <controls>
+    
+        <!-- *** Import *** -->
+        <import>common.time.xml</import>
+        <import>common.overlay.xml</import>
+    
+		<control>
+			<description>default background</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<keepaspectratio>no</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture>hover_radiotime.png</texture>
+			<animation effect="fade" time="300">visible</animation>
+			<animation effect="fade" time="300" delay="300">hidden</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+			<animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>			
+		</control>	
+    
+        <control>
+            <description>Overlay</description>
+            <type>image</type>
+            <id>0</id>
+            <posX>0</posX>
+            <posY>0</posY>
+            <width>1920</width>
+            <height>1080</height>
+            <texture>overlay_long.png</texture>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>	
+    
+		<control>
+			<description>Viewport</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>10</posX>
+			<posY>90</posY>
+			<width>1880</width>
+			<height>800</height>
+			<texture>viewport_music_list_fanart.png</texture>
+			<animation effect="fade" time="300">visible</animation>
+			<animation effect="fade" time="300" delay="300">hidden</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+			<animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>			
+		</control>	
+    
+        <control>
+            <description>Avallanche logo</description>
+            <type>image</type>
+            <id>1</id>
+            <posX>20</posX>
+            <posY>-40</posY>
+            <width>200</width>
+            <height>200</height>
+            <keepaspectratio>yes</keepaspectratio>
+			<texture>Avallanche logo.png</texture>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+    
+        <control>
+            <type>label</type>
+            <id>1</id>
+            <posX>250</posX>
+            <posY>38</posY>
+            <label>Radio Time</label>
+            <font>font22</font>
+            <textcolor>FF00537C</textcolor>
+            <animation effect="fade" time="250">WindowOpen</animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+            <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>		
+        </control>
+    
+        <!-- *** Hidden Menu *** -->
+        <control>
+            <id>1</id>
+            <type>image</type>
+            <posX>0</posX>
+            <posY>440</posY>
+            <width>64</width>
+            <height>199</height>
+            <texture>hiddenmenu_tab.png</texture>
+            <visible>[facadeview.list | facadeview.smallicons | facadeview.largeicons]+[Control.HasFocus(50)|Control.HasFocus(80)] + !string.contains(#Avalon.HiddenMenu, false)</visible>
+            <animation effect="slide" start="-60,0" time="250" delay="400">WindowOpen</animation>
+            <animation effect="slide" start="0,0" end="-60,0" time="250" delay="100">WindowClose</animation>
+        </control>
+    
+        <control>
+            <type>actiongroup</type>
+            <description>action menu</description>
+            <defaultcontrol>3</defaultcontrol>
+            <onexit>50</onexit>
+            <buttonX>0</buttonX>
+            <buttonY>0</buttonY>
+            <buttonwidth>106</buttonwidth>
+            <buttonheight>720</buttonheight>
+            <textureFocus>-</textureFocus>
+            <textureNoFocus>-</textureNoFocus>
+            <width>275</width>
+            <height>900</height>
+            <dimColor>00ffffff</dimColor>
+        
+        <control>
+            <type>image</type>
+            <id>0</id>
+            <posY>15</posY>
+            <posX>0</posX>
+            <width>631</width>
+            <height>1044</height>
+            <texture>menu_bg.png</texture>
+            <visible>!Control.HasFocus(50)+![Control.HasFocus(50)|Control.HasFocus(80)]</visible>
+            <animation effect="fade" start="100" end="0" time="0">WindowClose</animation>
+            <animation effect="slide" start="-250,0" end="0,0" time="250" acceleration="-1.4" reversible="false">visible</animation>
+            <animation effect="slide" start="0,0" end="-250,0" time="200" acceleration="1.4" reversible="false">hidden</animation>
+        </control>
+            
+        <control>
+            <description>group element</description>
+            <type>group</type>
+            <visible>!Control.HasFocus(50)</visible>
+            <animation effect="fade" start="100" end="0" time="0">WindowClose</animation>
+            <animation effect="slide" start="-250,0" end="0,0" time="250" acceleration="-1.4" reversible="false">visible</animation>
+            <animation effect="slide" start="0,0" end="-250,0" time="200" acceleration="1.4" reversible="false">hidden</animation>
+            
+            <control Style="HiddenMenuMenu">
+                <description>Menu label</description>
+                <type>label</type>
+                <id>1</id>
+                <posX>128</posX>
+                <posY>80</posY>
+                <label>924</label>
+                <font>AvalonLight20</font>
+                <textcolor>FF00537C</textcolor>
+                <visible>!Control.HasFocus(50)+control.isvisible(50)</visible>
+                <animation effect="fade" start="100" end="0" time="0">WindowClose</animation>
+                <animation effect="slide" start="-250,0" end="0,0" time="250" acceleration="-1.4" reversible="false">visible</animation>
+                <animation effect="slide" start="0,0" end="-250,0" time="200" acceleration="1.4" reversible="false">hidden</animation>
+            </control>
+        
+            <control>
+                <type>image</type>
+                <id>0</id>
+                <posY>290</posY>
+                <posX>128</posX>
+                <width>376</width>
+                <height>3</height>
+                <texture>hiddenmenu_separator.png</texture>
+                <visible>!Control.HasFocus(50)+control.isvisible(50)</visible>
+                <animation effect="fade" time="0">WindowClose</animation>
+                <animation effect="slide" start="-150,0" time="100">visible</animation>
+                <animation effect="fade" time="50">visible</animation>
+                <animation effect="fade" time="0">hidden</animation>
+            </control>
+        
+            <control>
+                <type>image</type>
+                <id>0</id>
+                <posY>614</posY>
+                <posX>123</posX>
+                <width>376</width>
+                <height>3</height>
+                <texture>hiddenmenu_separator.png</texture>
+                <visible>!Control.HasFocus(50)+control.isvisible(50)</visible>
+                <animation effect="fade" time="0">WindowClose</animation>
+                <animation effect="slide" start="-150,0" time="100">visible</animation>
+                <animation effect="fade" time="50">visible</animation>
+                <animation effect="fade" time="0">hidden</animation>
+            </control>
+        
+            <control>
+                <type>image</type>
+                <id>0</id>
+                <posY>799</posY>
+                <posX>128</posX>
+                <width>376</width>
+                <height>3</height>
+                <texture>hiddenmenu_separator.png</texture>
+                <visible>!Control.HasFocus(50)+control.isvisible(50)</visible>
+                <animation effect="fade" time="0">WindowClose</animation>
+                <animation effect="slide" start="-150,0" time="100">visible</animation>
+                <animation effect="fade" time="50">visible</animation>
+                <animation effect="fade" time="0">hidden</animation>
+            </control>
+        
+            <control Style="HiddenMenuSubmenu">
+                <description>Playlist label</description>
+                <type>label</type>
+                <id>1</id>
+                <posX>128</posX>
+                <posY>296</posY>
+                <label>136</label>
+                <visible>!Control.HasFocus(50)+![Control.HasFocus(50)|Control.HasFocus(80)]</visible>
+                <animation effect="fade" start="100" end="0" time="0">WindowClose</animation>
+                <animation effect="slide" start="-250,0" end="0,0" time="250" acceleration="-1.4" reversible="false">visible</animation>
+                <animation effect="slide" start="0,0" end="-250,0" time="200" acceleration="1.4" reversible="false">hidden</animation>
+            </control>
+            
+            <control Style="HiddenMenuSubmenu">
+                <description>Search label</description>
+                <type>label</type>
+                <id>1</id>
+                <posX>128</posX>
+                <posY>618</posY>
+                <label>#RadioTime.Translation.Search.Label</label>
+                <visible>!Control.HasFocus(50)+![Control.HasFocus(50)|Control.HasFocus(80)]</visible>
+                <animation effect="fade" start="100" end="0" time="0">WindowClose</animation>
+                <animation effect="slide" start="-250,0" end="0,0" time="250" acceleration="-1.4" reversible="false">visible</animation>
+                <animation effect="slide" start="0,0" end="-250,0" time="200" acceleration="1.4" reversible="false">hidden</animation>
+            </control>
+            
+            <control Style="HiddenMenuSubmenu">
+                <description>Jump to label</description>
+                <type>label</type>
+                <id>1</id>
+                <posX>128</posX>
+                <posY>805</posY>
+                <label>1065</label>
+                <visible>!Control.HasFocus(50)+![Control.HasFocus(50)|Control.HasFocus(80)]</visible>
+                <animation effect="fade" start="100" end="0" time="0">WindowClose</animation>
+                <animation effect="slide" start="-250,0" end="0,0" time="250" acceleration="-1.4" reversible="false">visible</animation>
+                <animation effect="slide" start="0,0" end="-250,0" time="200" acceleration="1.4" reversible="false">hidden</animation>
+            </control>
+        
+            <control>
+                <description>group element</description>
+                <type>group</type>
+                <visible>!Control.HasFocus(50)</visible>
+                <posX>69</posX>
+                <posY>155</posY>
+                <layout>StackLayout(0, Vertical, true)</layout>
+                <animation effect="fade" time="0">WindowClose</animation>
+                <animation effect="slide" start="-150,0" time="100">visible</animation>
+                <animation effect="fade" time="50">visible</animation>
+                <animation effect="fade" time="0">hidden</animation>
+            
+                <control>
+                    <description>Switch view</description>
+                    <type>button</type>
+                    <id>3</id>
+                    <width>497</width>
+                    <height>64</height>
+                    <textXOff>58</textXOff>
+                    <label></label>
+                    <textureFocus>hiddenmenu_item_selected.png</textureFocus>
+                    <textureNoFocus>-</textureNoFocus>
+                    <onright>50</onright>
+                    <onup>4</onup>
+                    <ondown>2</ondown>
+                </control>
+                    
+                <control>
+                    <description>Sort Button</description>
+                    <type>sortbutton</type>
+                    <id>2</id>
+                    <width>497</width>
+                    <height>64</height>
+                    <textXOff>58</textXOff>
+                    <label></label>
+                    <textureFocus>hiddenmenu_item_selected.png</textureFocus>
+                    <textureNoFocus>-</textureNoFocus>
+                    <onright>50</onright>
+                    <onup>3</onup>
+                    <ondown>8</ondown>
+                </control>
+                    
+                <control>
+                    <description>blank Button</description>
+                    <type>button</type>
+                    <id>1</id>
+                    <width>497</width>
+                    <height>64</height>
+                    <textXOff>58</textXOff>
+                    <label></label>
+                    <textureFocus>hiddenmenu_item_selected.png</textureFocus>
+                    <textureNoFocus>-</textureNoFocus>
+                    <onright>50</onright>
+                </control>
+                    
+                <control>
+                    <description>genres</description>
+                    <type>button</type>
+                    <id>8</id>
+                    <width>497</width>
+                    <height>64</height>
+                    <textXOff>58</textXOff>
+                    <label>#RadioTime.Translation.Genres.Label</label>
+                    <textureFocus>hiddenmenu_item_selected.png</textureFocus>
+                    <textureNoFocus>-</textureNoFocus>
+                    <onright>50</onright>
+                    <onup>2</onup>
+                    <ondown>6</ondown>
+                </control>
+                    
+                <control>
+                    <description>My Presets</description>
+                    <type>button</type>
+                    <id>6</id>
+                    <width>497</width>
+                    <height>64</height>
+                    <textXOff>58</textXOff>
+                    <label>#RadioTime.Translation.Presets.Label</label>
+                    <textureFocus>hiddenmenu_item_selected.png</textureFocus>
+                    <textureNoFocus>-</textureNoFocus>
+                    <onright>50</onright>
+                    <onup>8</onup>
+                    <ondown>11</ondown>
+                </control>
+                    
+                <control>
+                    <description>Fast Presets</description>
+                    <type>button</type>
+                    <id>11</id>
+                    <width>497</width>
+                    <height>64</height>
+                    <textXOff>58</textXOff>
+                    <label>#RadioTime.Translation.FastPresets.Label</label>
+                    <textureFocus>hiddenmenu_item_selected.png</textureFocus>
+                    <textureNoFocus>-</textureNoFocus>
+                    <onright>50</onright>
+                    <onup>6</onup>
+                    <ondown>10</ondown>
+                </control>
+                    
+                <control>
+                    <description>Random</description>
+                    <type>button</type>
+                    <id>10</id>
+                    <width>497</width>
+                    <height>64</height>
+                    <textXOff>58</textXOff>
+                    <label>#RadioTime.Translation.Random.Label</label>
+                    <textureFocus>hiddenmenu_item_selected.png</textureFocus>
+                    <textureNoFocus>-</textureNoFocus>
+                    <onright>50</onright>
+                    <onup>11</onup>
+                    <ondown>5</ondown>
+                </control>
+                    
+                <control>
+                    <description>blank Button</description>
+                    <type>button</type>
+                    <id>1</id>
+                    <width>497</width>
+                    <height>64</height>
+                    <textXOff>58</textXOff>
+                    <label></label>
+                    <textureFocus>hiddenmenu_item_selected.png</textureFocus>
+                    <textureNoFocus>-</textureNoFocus>
+                    <onright>50</onright>
+                </control>
+                    
+                <control>
+                    <description>Search Button</description>
+                    <type>button</type>
+                    <id>5</id>
+                    <width>497</width>
+                    <height>64</height>
+                    <textXOff>58</textXOff>
+                    <label>#RadioTime.Translation.Search.Label</label>
+                    <textureFocus>hiddenmenu_item_selected.png</textureFocus>
+                    <textureNoFocus>-</textureNoFocus>
+                    <onright>50</onright>
+                    <onup>10</onup>
+                    <ondown>7</ondown>
+                </control>
+                    
+                <control>
+                    <description>Search Artist Button</description>
+                    <type>button</type>
+                    <id>7</id>
+                    <width>497</width>
+                    <height>64</height>
+                    <textXOff>58</textXOff>
+                    <label>#RadioTime.Translation.SearchArtist.Label</label>
+                    <textureFocus>hiddenmenu_item_selected.png</textureFocus>
+                    <textureNoFocus>-</textureNoFocus>
+                    <onright>50</onright>
+                    <onup>5</onup>
+                    <ondown>9</ondown>
+                </control>
+                    
+                <control>
+                    <description>blank Button</description>
+                    <type>button</type>
+                    <id>1</id>
+                    <width>497</width>
+                    <height>64</height>
+                    <textXOff>58</textXOff>
+                    <label></label>
+                    <textureFocus>hiddenmenu_item_selected.png</textureFocus>
+                    <textureNoFocus>-</textureNoFocus>
+                    <onright>50</onright>
+                </control>
+                    
+                <control>
+                    <description>Now playing</description>
+                    <type>button</type>
+                    <id>9</id>
+                    <width>497</width>
+                    <height>64</height>
+                    <textXOff>58</textXOff>
+                    <label>#RadioTime.Translation.NowPlaying.Label</label>
+                    <textureFocus>hiddenmenu_item_selected.png</textureFocus>
+                    <textureNoFocus>-</textureNoFocus>
+                    <onright>50</onright>
+                    <onup>7</onup>
+                    <ondown>4</ondown>
+                </control>
+                    
+                <control>
+                    <description>Home</description>
+                    <type>button</type>
+                    <id>4</id>
+                    <width>497</width>
+                    <height>64</height>
+                    <textXOff>58</textXOff>
+                    <label>#RadioTime.Translation.Home.Label</label>
+                    <textureFocus>hiddenmenu_item_selected.png</textureFocus>
+                    <textureNoFocus>-</textureNoFocus>
+                    <onright>50</onright>
+                    <onup>9</onup>
+                    <ondown>3</ondown>
+                </control>
+            
+            </control>
+        
+        </control>
+        
+    </control>
+    
+    <!-- *** Import *** -->
+    <import>common.facade.music.xml</import>
+    
+    <control>
+      <id>51</id>
+      <description>Station Logo</description>
+      <type>image</type>
+      <posX>130</posX>
+      <posY>80</posY>
+      <width>600</width>
+      <height>600</height>
+      <keepaspectratio>yes</keepaspectratio>
+      <centered>yes</centered>
+      <visible>facadeview.list</visible>
+      <animation effect="fade" time="250">WindowOpen</animation>
+      <animation effect="fade" time="250">WindowClose</animation>
+      <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+      <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+      <animation effect="slide" start="890,0" end="0,0" time="350" reversible="true" condition="control.hasthumb(51)">conditional</animation>
+      <animation effect="fade" time="200" delay="150" reversible="true" condition="control.hasthumb(51)">conditional</animation>
+    </control>
+    
+    <control>
+      <type>image</type>
+      <id>1</id>
+      <posX>260</posX>
+      <posY>210</posY>
+      <width>310</width>
+      <height>310</height>
+      <texture mask="Picturethumbmask.png">Picturethumbframe.png</texture>
+      <visible>facadeview.list+control.hasthumb(51)</visible>
+      <animation effect="fade" time="250">WindowOpen</animation>
+      <animation effect="fade" time="250">WindowClose</animation>
+      <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+      <animation effect="slide" time="100" end="-1890,0">WindowClose</animation>
+      <animation effect="fade" time="200" delay="150" reversible="true" condition="control.hasthumb(51)">conditional</animation>
+      <animation effect="slide" start="890" end="0" time="350" reversible="false">visible</animation>
+      <animation effect="fade" time="350" reversible="false">visible</animation>
+    </control>
+    
+    <control>
+      <description>Meta label</description>
+      <type>fadelabel</type>
+      <id>47</id>
+      <posX>80</posX>
+      <posY>560</posY>
+      <width>700</width>
+      <align>center</align>  
+      <label>#RadioTime.Selected.Subtext</label>
+      <font>fontB16</font>
+      <visible>facadeview.list+control.hasthumb(51)</visible>
+      <animation effect="fade" time="250">WindowOpen</animation>
+      <animation effect="fade" time="250">WindowClose</animation>
+      <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+      <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+      <animation effect="slide" start="890,0" end="0,0" time="350" reversible="true" condition="control.hasthumb(51)">conditional</animation>
+      <animation effect="fade" time="350" reversible="true" condition="control.hasthumb(51)">conditional</animation>
+    </control>
+    
+    <control>
+      <description>Meta label</description>
+      <type>fadelabel</type>
+      <id>47</id>
+      <posX>80</posX>
+      <posY>610</posY>
+      <width>700</width>
+      <align>center</align>  
+      <label>#RadioTime.Selected.Format</label>
+      <font>AvalonLight14</font>
+      <textcolor>ffa9d0f7</textcolor>
+      <visible>facadeview.list+control.hasthumb(51)</visible>
+      <animation effect="fade" time="250">WindowOpen</animation>
+      <animation effect="fade" time="250">WindowClose</animation>
+      <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+      <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+      <animation effect="slide" start="890" end="0" time="350" reversible="false">visible</animation>
+      <animation effect="slide" start="0" end="890" time="150" reversible="false">hidden</animation>
+      <animation effect="fade" time="350" reversible="false">visible</animation>
+      <animation effect="fade" time="150" reversible="false">hidden</animation>
+    </control>
+    
+    <control>
+      <id>81</id>
+      <description>Star Rating</description>
+      <type>imagelist</type>
+      <posX>465</posX>
+      <posY>650</posY>
+      <width>150</width>
+      <height>50</height>
+      <textureHeight>25</textureHeight>
+      <textureWidth>25</textureWidth>
+      <percentage>#RadioTime.Selected.Reliability</percentage>
+      <imagesToDraw>5</imagesToDraw>
+      <orientation>HORIZONTAL</orientation>
+      <align>center</align>
+      <subitems>
+      <subitem>starblue_rating.png</subitem>
+      <subitem>starwhite_rating.png</subitem>
+      </subitems>
+      <visible>facadeview.list+control.hasthumb(51)</visible>
+      <animation effect="fade" time="250">WindowOpen</animation>
+      <animation effect="fade" time="250">WindowClose</animation>
+      <animation effect="slide" time="250" start="-1890,0">WindowOpen</animation>
+      <animation effect="slide" time="250" end="-1890,0">WindowClose</animation>
+      <animation effect="slide" start="890" end="0" time="350" reversible="false">visible</animation>
+      <animation effect="slide" start="0" end="890" time="150" reversible="false">hidden</animation>
+      <animation effect="fade" time="350" reversible="false">visible</animation>
+      <animation effect="fade" time="150" reversible="false">hidden</animation>
+    </control>
+    
+  </controls>
+</window>

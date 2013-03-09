@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+    
+  <id>25652</id>
+  <defaultcontrol>155</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <define>#usePlayFanart:Yes</define>
+    
+  <controls>
+    
+    <control>
+      <type>image</type>
+      <description>BG</description>
+      <id>1</id>
+      <texture>Background.png</texture>
+      <width>1920</width>
+      <height>1080</height>
+      <shouldCache>true</shouldCache>
+    </control>
+    
+    <import>common.music.play.fanart.xml</import>
+    
+    <control>
+      <description>scraping bg</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>150</posX>
+      <posY>70</posY>
+      <width>350</width>
+      <height>75</height>
+      <texture>dialog_notify.png</texture>
+      <visible>control.isvisible(91919280)</visible>
+    </control>
+    
+    <control>
+      <id>0</id>
+      <type>image</type>
+      <posX>178</posX>
+      <posY>676</posY>
+      <width>1560</width>
+      <height>402</height>
+      <texture>music_nowplaying_bg.png</texture>
+      <visible>!Control.HasFocus(6106)</visible>
+      <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+    </control>
+    
+    <control>
+      <description>details bg</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>179</posX>
+      <posY>66</posY>
+      <width>1560</width>
+      <height>704</height>
+      <texture>music_details_bg1.png</texture>
+      <visible>Control.HasFocus(155)|Control.HasFocus(166)</visible>
+      <animation effect="fade" start="100" end="0" time="200" reversible="false">Hidden</animation>
+      <animation effect="fade" start="0" end="100" delay="150" time="400" reversible="false">Visible</animation>
+      <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+    </control>
+    
+    <control>
+      <description>clock bg</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>1480</posX>
+      <posY>748</posY>
+      <width>188</width>
+      <height>80</height>
+      <texture>osd_clock_bg.png</texture>
+      <visible>!Control.HasFocus(6106)</visible>
+      <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+    </control>
+    
+    <control>
+      <type>label</type>
+      <id>1</id>
+      <description>Clock</description>
+      <posX>1497</posX>
+      <posY>792</posY>
+      <width>144</width>
+      <font>AvalonLight14</font>
+      <align>center</align>
+      <label>#time</label>
+      <textcolor>ff85cffe</textcolor>
+      <visible>!Control.HasFocus(6106)</visible>
+      <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+    </control>
+    
+    <control>
+      <description>Animated EQ BG</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>1480</posX>
+      <posY>840</posY>
+      <width>188</width>
+      <height>80</height>
+      <texture>EQ_bg.png</texture>
+      <visible>!Control.HasFocus(6106)</visible>
+      <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+    </control>
+    
+    <control>
+      <description>Animated EQ</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>1495</posX>
+      <posY>852</posY>
+      <width>158</width>
+      <height>55</height>
+      <texture>MusicPlayingNow_EQ.gif</texture>
+      <visible>player.playing+!Control.HasFocus(6106)</visible>
+      <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+    </control>
+    
+    <control>
+      <id>0</id>
+      <type>image</type>
+      <visible>!Control.HasFocus(6106)</visible>
+      <posX>250</posX>
+      <posY>746</posY>
+      <width>250</width>
+      <height>250</height>
+      <texture mask="basichome_music_mask.png">DefaultMyradioBig.png</texture>
+      <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="0">WindowClose</animation>
+    </control>
+    
+    <!--buttons-->
+    
+    <control>
+      <description>Dummy</description>
+      <type>button</type>
+      <id>6100</id>
+      <posX>2000</posX>
+      <posY>2000</posY>
+      <width>50</width>
+      <height>50</height>
+      <onup>155</onup>
+      <ondown>6106</ondown>
+      <onleft>6106</onleft>
+      <onright>155</onright>
+      <label>-</label>
+      <font>10</font>
+      <textcolor>white</textcolor>
+      <visible>!Control.HasFocus(6106)</visible>
+    </control>
+    
+    <control>
+      <description>Overview</description>
+      <type>button</type>
+      <id>6101</id>
+      <posX>223</posX>
+      <posY>651</posY>
+      <width>311</width>
+      <height>99</height>
+      <label>Overview</label>
+      <font>fontB11</font>
+      <textcolor>white</textcolor>
+      <textcolorNoFocus>ffffffff</textcolorNoFocus>
+      <textYOff>-10</textYOff>
+      <textalign>center</textalign>
+      <textureFocus>-</textureFocus>
+      <textureNoFocus>NP_tab_left_nofocus.png</textureNoFocus>
+      <visible>!Control.HasFocus(6106)</visible>
+      <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+    </control>
+    
+    <control>
+      <description>Overview focus</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>223</posX>
+      <posY>651</posY>
+      <width>311</width>
+      <height>99</height>
+      <texture>NP_tab_left_focus.png</texture>
+      <visible>Control.HasFocus(155)|Control.HasFocus(166)</visible>
+      <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+    </control>
+    
+    <control>
+      <description>Overview nofocus 2</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>517</posX>
+      <posY>651</posY>
+      <width>311</width>
+      <height>99</height>
+      <texture>NP_tab_middle_nofocus.png</texture>
+      <visible>!Control.HasFocus(6106)</visible>
+      <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+    </control>
+    
+    <control>
+      <description>Overview focus 2</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>517</posX>
+      <posY>651</posY>
+      <width>311</width>
+      <height>99</height>
+      <texture>NP_tab_middle_focus.png</texture>
+      <visible>Control.HasFocus(155)|Control.HasFocus(166)</visible>
+      <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+    </control>
+    
+    <control>
+      <description>Overview nofocus 3</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>811</posX>
+      <posY>651</posY>
+      <width>311</width>
+      <height>99</height>
+      <texture>NP_tab_middle_nofocus.png</texture>
+      <visible>!Control.HasFocus(6106)</visible>
+      <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+    </control>
+    
+    <control>
+      <description>Overview focus 3</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>811</posX>
+      <posY>651</posY>
+      <width>311</width>
+      <height>99</height>
+      <texture>NP_tab_middle_focus.png</texture>
+      <visible>Control.HasFocus(155)|Control.HasFocus(166)</visible>
+      <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+    </control>
+    
+    <control>
+      <description>Overview nofocus 4</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>1105</posX>
+      <posY>651</posY>
+      <width>311</width>
+      <height>99</height>
+      <texture>NP_tab_middle_nofocus.png</texture>
+      <visible>!Control.HasFocus(6106)</visible>
+      <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+    </control>
+    
+    <control>
+      <description>Overview focus 4</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>1105</posX>
+      <posY>651</posY>
+      <width>311</width>
+      <height>99</height>
+      <texture>NP_tab_middle_focus.png</texture>
+      <visible>Control.HasFocus(155)|Control.HasFocus(166)</visible>
+      <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+    </control>
+    
+    <control>
+      <description>Overview nofocus 5</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>1399</posX>
+      <posY>651</posY>
+      <width>294</width>
+      <height>99</height>
+      <texture>NP_tab_right_nofocus.png</texture>
+      <visible>!Control.HasFocus(6106)</visible>
+      <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+    </control>
+    
+    <control>
+      <description>Overview focus 5</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>1399</posX>
+      <posY>651</posY>
+      <width>294</width>
+      <height>99</height>
+      <texture>NP_tab_right_focus.png</texture>
+      <visible>Control.HasFocus(155)|Control.HasFocus(166)</visible>
+      <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+    </control>
+    
+    <control>
+      <description>DUMMY Full Fanart</description>
+      <type>button</type>
+      <id>6106</id>
+      <posX>2100</posX>
+      <posY>651</posY>
+      <width>294</width>
+      <height>99</height>
+      <onup>6100</onup>
+      <ondown>6100</ondown>
+      <onleft>6100</onleft>
+      <onright>6100</onright>
+      <label>-</label>
+      <font>fontB11</font>
+      <textcolor>white</textcolor>
+      <textcolorNoFocus>ffffffff</textcolorNoFocus>
+      <textYOff>-10</textYOff>
+      <textalign>center</textalign>
+      <textureFocus>-</textureFocus>
+      <textureNoFocus>-</textureNoFocus>
+      <visible>!Control.HasFocus(155)|!Control.HasFocus(166)|!Control.HasFocus(6100)</visible>
+    </control>
+    
+    <!--******************-->
+    
+    <control>
+      <id>0</id>
+      <description>album art image</description>
+      <type>image</type>
+      <posX>250</posX>
+      <posY>746</posY>
+      <width>250</width>
+      <height>250</height>
+      <texture mask="basichome_music_mask.png">#fanarthandler.music.artisthumb.play</texture>
+      <keepaspectratio>yes</keepaspectratio>
+      <centered>yes</centered>
+      <zoom>yes</zoom>
+      <visible>!Control.HasFocus(6106)</visible>
+      <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+    </control>
+    
+    <control>
+      <id>0</id>
+      <description>album art image</description>
+      <type>image</type>
+      <posX>250</posX>
+      <posY>746</posY>
+      <width>250</width>
+      <height>250</height>
+      <texture mask="basichome_music_mask.png">basichome_music_frame.png</texture>
+      <keepaspectratio>yes</keepaspectratio>
+      <centered>yes</centered>
+      <zoom>yes</zoom>
+      <visible>!Control.HasFocus(6106)</visible>
+      <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+    </control>
+    
+    <control>
+      <id>0</id>
+      <description>title label</description>
+      <type>fadelabel</type>
+      <posX>545</posX>
+      <posY>751</posY>
+      <width>924</width>
+      <font>fontB16</font>
+      <label>#Play.Current.Title</label>
+      <visible>!Control.HasFocus(6106)</visible>
+      <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+    </control>
+    
+    <control Style="BlueColor">
+      <id>0</id>
+      <description>artist label</description>
+      <type>fadelabel</type>
+      <posX>545</posX>
+      <posY>809</posY>
+      <width>924</width>
+      <font>fontB16</font>
+      <label>#Play.Current.Artist</label>
+      <visible>!Control.HasFocus(6106)</visible>
+      <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+    </control>
+    
+    <control Style="BlueColor">
+      <id>0</id>
+      <description>station label</description>
+      <type>fadelabel</type>
+      <posX>545</posX>
+      <posY>869</posY>
+      <width>924</width>
+      <font>fontB14</font>
+      <label>#Play.Current.Album</label>
+      <visible>!Control.HasFocus(6106)</visible>
+      <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+    </control>
+    
+    <control>
+      <id>0</id>
+      <description>track duration label</description>
+      <type>label</type>
+      <visible>player.hasmedia</visible>
+      <posX>548</posX>
+      <posY>953</posY>
+      <label>#currentplaytime</label>
+      <align>left</align>
+      <font>font11</font>
+      <visible>!Control.HasFocus(6106)</visible>
+      <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+    </control>
+    
+    <!--<control><id>0</id><description>Artist label</description><type>fadelabel</type><posX>60</posX><posY>222</posY><width>460</width><height>28</height><font>font14</font><label>#RadioTime.Play.Description</label><animation effect="fade" time="70" reversible="false">visible</animation></control>-->
+    <!--<control><id>0</id><description>track label</description><type>fadelabel</type><posX>60</posX><posY>262</posY><width>460</width><height>28</height><font>font14</font><label>#RadioTime.Play.Location</label><animation effect="fade" time="70" reversible="false">visible</animation></control>-->
+    <!--<control><description>play logo</description><type>image</type><id>1</id><posX>1000</posX><posY>435</posY><width>52</width><height>52</height><align>LEFT</align><texture>play_enabled.png</texture><animation effect="fade" time="70" reversible="false">visible</animation></control>-->
+    
+    <control>
+      <id>166</id>
+      <description>list genres</description>
+      <type>listcontrol</type>
+      <onright>155</onright>
+      <onleft>6100</onleft>
+      <posX>544</posX>
+      <posY>425</posY>
+      <width>350</width>
+      <height>168</height>
+      <font>AvalonLight14</font>
+      <textXOff>20</textXOff>
+      <textXOff3>10</textXOff3>
+      <IconXOff>1980</IconXOff>
+      <textcolor>white</textcolor>
+      <dimColor>ffffffff</dimColor>
+      <textcolorNoFocus>ffffffff</textcolorNoFocus>
+      <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+      <animation effect="slide" delay="200" start="0,700" end="0,0" time="0" reversible="true" condition="![Control.HasFocus(6100)|Control.HasFocus(6106)]">conditional</animation>
+    </control>
+    
+    <control>
+      <id>155</id>
+      <description>list similar</description>
+      <type>listcontrol</type>
+      <onleft>166</onleft>
+      <onright>6100</onright>
+      <posX>944</posX>
+      <posY>425</posY>
+      <width>533</width>
+      <height>268</height>
+      <font>AvalonLight14</font>
+      <textXOff>20</textXOff>
+      <textXOff3>10</textXOff3>
+      <IconXOff>1980</IconXOff>
+      <textcolor>white</textcolor>
+      <dimColor>ffffffff</dimColor>
+      <textcolorNoFocus>ffffffff</textcolorNoFocus>
+      <animation effect="fade" start="0" end="100" time="300" delay="350">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+      <animation effect="slide" delay="200" start="0,700" end="0,0" time="0" reversible="true" condition="![Control.HasFocus(6100)|Control.HasFocus(6106)]">conditional</animation>
+    </control>
+    
+    <!--******************-->
+    
+    <control>
+      <type>fadelabel</type>
+      <posX>531</posX>
+      <posY>35</posY>
+      <width>711</width>
+    </control>
+    
+    <import>RadioTimePlayingNow.overview.xml</import>
+    <import>RadioTimePlayingNow.fanart.xml</import>
+    <import>BasicHome.scraper.xml</import>
+    
+  </controls>
+</window>

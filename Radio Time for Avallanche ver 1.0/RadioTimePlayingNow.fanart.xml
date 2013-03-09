@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+    
+  <controls>
+    
+    <!-- FULL Fanart -->
+    
+    <control>
+      <description>Fanart Overlay</description>
+      <type>image</type>
+      <id>0</id>
+      <width>1518</width>
+      <height>267</height>
+      <posX>202</posX>
+      <posY>814</posY>
+      <texture>MyFilms_fanart info_panel.png</texture>
+      <visible>Control.HasFocus(6106)</visible>
+      <animation effect="fade" time="250">Visible</animation>
+      <animation effect="fade" time="0">WindowClose</animation>
+    </control>
+    
+    <control>
+      <type>fadelabel</type>
+      <description>Title (Fanart View)</description>
+      <id>1</id>
+      <posX>270</posX>
+      <posY>906</posY>
+      <width>1390</width>
+      <align>center</align>
+      <font>fontB20</font>
+      <label>#Play.Current.Artist - #Play.Current.Title</label>
+      <visible>Control.HasFocus(6106)</visible>
+      <animation effect="fade" time="250">Visible</animation>
+      <animation effect="fade" time="0">WindowClose</animation>
+    </control>
+    
+    <control Style="InfoValueDetails">
+      <type>fadelabel</type>
+      <description>Year and Category (Fanart View)</description>
+      <id>1</id>
+      <posX>270</posX>
+      <posY>956</posY>
+      <width>1390</width>
+      <align>center</align>
+      <font>AvalonLight14</font>
+      <label>#Play.Current.Album</label>
+      <visible>Control.HasFocus(6106)</visible>
+      <animation effect="fade" time="250">Visible</animation>
+      <animation effect="fade" time="0">WindowClose</animation>
+    </control>
+    
+    <control>
+      <id>0</id>
+      <description>track duration label</description>
+      <type>label</type>
+      <visible>player.hasmedia</visible>
+      <posX>404</posX>
+      <posY>983</posY>
+      <label>#currentplaytime</label>
+      <align>left</align>
+      <font>font11</font>
+      <visible>Control.HasFocus(6106)</visible>
+      <animation effect="fade" time="250">Visible</animation>
+      <animation effect="fade" time="0">WindowClose</animation>
+    </control>
+    
+  </controls>
+</window>
